@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      (function(w,d,id){
+        w.dataLayer=w.dataLayer||[];
+        var start=new Date().getTime(),
+            evts=['pointerdown','keydown','touchstart','scroll','mousemove'];
+        function load(){
+          if(w.__gtmLoaded)return;w.__gtmLoaded=true;
+          evts.forEach(function(e){w.removeEventListener(e,load,{passive:true});});
+          w.dataLayer.push({'gtm.start':start,event:'gtm.js'});
+          var j=d.createElement('script');j.async=true;
+          j.src='https://www.googletagmanager.com/gtm.js?id='+id;
+          d.head.appendChild(j);
+        }
+        evts.forEach(function(e){w.addEventListener(e,load,{once:true,passive:true});});
+        w.addEventListener('load',function(){
+          setTimeout(function(){
+            (w.requestIdleCallback||function(cb){cb();})(load,{timeout:2000});
+          },3500);
+        });
+      })(window,document,'GTM-NWWXG6DV');
+    </script>
+
+    <!-- App Basics -->
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/qkrbiz-logo.png" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- PWA -->
+    <meta name="theme-color" content="#96006B" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Qkrbiz" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Qkrbiz" />
+
+    <!-- Verification -->
+    <meta name="p:domain_verify" content="716c21afcc9502ee29a585ee93e9f816" />
+
+    <!-- Preload critical fonts: body (400), nav/buttons (500), headings (600).
+         Light (300) is rarely used — it loads on demand via font-display: swap. -->
+    <link rel="preload" href="/fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/Poppins-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!--head-outlet-->
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWWXG6DV" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="root"><!--ssr-outlet--></div>
+    <!--ssr-data-->
+    <script type="module" src="/src/entry-client.jsx"></script>
+  </body>
+</html>
