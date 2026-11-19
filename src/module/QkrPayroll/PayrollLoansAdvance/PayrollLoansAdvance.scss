@@ -1,0 +1,307 @@
+@use '@/styles/base/index';
+
+.four-steps {
+    padding: 2.85rem 0rem;
+    background-color: index.$color-magenta-800;
+    .heading-title {
+        .border-magenta-rounded{
+            color: index.$color-white;
+            border-color: index.$color-white;;
+        }
+        h2,p{
+            color: index.$color-white;
+        }
+    }
+    .stage-card {
+        background-color: index.$color-white;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        .stage-badge {
+            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            height: 3rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+        }
+         &.light-green{
+            border: 1px solid index.$color-forest-green-300;
+             .stage-badge{
+                background-color: index.$color-forest-green-300;
+             }
+        }
+        &.light-info{
+        border: 1px solid index.$color-deepsky-200;
+         .stage-badge{
+            background-color: index.$color-deepsky-200;
+          }
+        }
+        &.light-magenta{
+          border: 1px solid index.$color-magenta-100;
+         .stage-badge{
+            background-color: index.$color-magenta-100;
+          }
+        }
+        .stage-title {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .stage-desc {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+    }
+}
+
+.payrol-management-stucture {
+    padding: 3.5rem 0rem;
+    &.light-magenta{
+         background-color:index.$color-magenta-50;
+    }
+    // .area {
+    //     display: flex;
+    //     gap: 2rem;
+
+    //     .left-area,
+    //     .right-area {
+    //         flex: 0 0 calc(50% - 1rem);
+    //         max-width: calc(50% - 1rem);
+    //         border-radius: 2.5rem;  
+    //     }
+    //     .right-area {
+    //         padding: 2rem;
+    //         background: index.$color-pink-100;
+    //         opacity: 0.9;
+    //         .img-fluid{
+    //           max-width: 100%;
+    //         }
+
+    //         .feature-item {
+    //             display: flex;
+    //             align-items: flex-start;
+    //             gap: 1rem;
+
+    //             &:not(:last-child) {
+    //                 margin-bottom: 1.5rem;
+    //             }
+
+    //             .icon-circle {
+    //                 flex-shrink: 0;
+    //                 width: 3.25rem;
+    //                 height: 3.25rem;
+    //                 border-radius: 50%;
+    //                 background: rgba(255, 255, 255, 0.35);
+    //             }
+
+    //             p {
+    //                 margin: 0;
+    //                 font-size: 1.25rem;
+    //                 line-height: 1.6;
+    //             }
+    //         }
+    //     }
+    // }    
+
+    .salary-feature-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1.5rem 0;
+
+        li {
+            padding: 1rem 0;
+            font-size: 1.125rem;
+            line-height: 1.6;
+            color: index.$color-gray-700;
+            border-bottom: 1px solid index.$color-gray-200;
+
+            &:first-child {
+                padding-top: 0;
+            }
+
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+    }
+    .salary-back-link {
+        display: inline-block;
+        text-decoration: underline;
+        font-size: 1.125rem;
+    }
+}
+.compliance-calendar{
+    padding: 4rem 0;
+
+    .compliance-pill {
+        display: inline-block;
+        color: index.$color-white;
+        border: 1px solid index.$color-white;
+        background-color: transparent;
+        padding: 0.625rem 2rem;
+        border-radius: 999px;
+    }
+
+    .compliance-card {
+        border-radius: 1rem;
+        padding: 1.75rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        &.card_1{
+            border-color:index.$color-green-100;
+            background-color: index.$color-green-100;
+            .compliance-action{
+                background-color: index.$color-green-300;
+            }
+
+        }
+        &.card_2{
+            border-color:index.$color-primary-100;
+            background-color: index.$color-primary-100;
+            .compliance-action{
+                background-color: index.$color-primary-300;
+            }
+        }
+        &.card_3{
+             border-color:index.$color-orange-100;
+             background-color: index.$color-orange-100;
+            .compliance-action{
+                    background-color: index.$color-orange-300;
+            } 
+        }
+        &.card_4{
+            border-color:index.$color-periwinkle-100;
+             background-color: index.$color-periwinkle-100;
+            .compliance-action{
+                background-color: index.$color-periwinkle-300;
+            }  
+        }
+        .compliance-tag {
+            margin-bottom: 1.5rem;
+            width: 3rem;
+            height: 3rem;
+        }
+        .compliance-title {
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+        .compliance-detail {
+            font-size: 0.85rem;
+            color: index.$color-gray-600;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        .compliance-desc {
+            font-size: 0.95rem;
+            color: index.$color-gray-700;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        .compliance-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: index.$color-magenta-700;
+            color: index.$color-gray-800;
+            font-size:0.95rem;
+            font-weight: 500;
+            padding: 0.6rem 1.25rem;
+            border-radius: 999px;
+            .check-icon {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 1.5rem;
+                height: 1.5rem;
+                border-radius: 50%;
+                background-color: index.$color-white;
+                color: index.$color-gray-800;
+                font-size: 1rem;
+                font-weight: 600;
+            }
+        }
+    }
+}
+.gratuity-bonus-section{
+    background-color: index.$color-gray-50;
+    .card{
+        border-radius: 1.5rem;
+        .card-body{
+            padding: 1.5rem;
+            img{
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+    .light-green{
+        border: 1px solid index.$color-forest-green-300;
+    }
+    .light-info{
+        border: 1px solid index.$color-deepsky-200;
+    }
+    .feature-list{
+        padding-top: 1rem;
+        list-style-type: none;
+        padding-left: 0;
+        li{
+            display: flex;
+            flex-direction: row;
+            padding: 0.5rem 0;
+            font-size: 1rem;
+            gap: 1rem;
+            .check-icon{
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 1.75rem;
+                height: 1.75rem;
+                padding: 0.5rem;
+                background-color: index.$color-green-200;
+                color: index.$color-green-600;
+                border-radius: 50%;
+            }
+        }  
+    }
+}
+.loan-reports{
+    padding: 2.85rem 0rem;
+    background-color: index.$color-gray-50;
+    .stage-card {
+        background-color: index.$color-gray-400;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        .stage-badge {
+            display: inline-block;
+            background-color: index.$color-gray-800;
+            color: index.$color-white;
+            font-size: 0.85rem;
+            padding: 0.5rem 0.85rem;
+            border-radius: 999px;
+            margin-bottom: 1rem;
+        }
+
+        .stage-title {
+            margin-bottom: 0.75rem;
+        }
+
+        .stage-desc {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+
+}
+@media (max-width: 991px) {
+
+}

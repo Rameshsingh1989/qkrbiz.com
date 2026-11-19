@@ -1,0 +1,292 @@
+@use '@/styles/base/index';
+
+// ── Payroll & compliance (approvals box) ──────────────────────────────
+.st-payroll {
+  .card {
+    background-color: index.$color-white;
+    border-radius: 1rem;
+    transition: 0.4s all;
+    .card-title {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .card-desc {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: index.$color-gray-700;
+      margin-bottom: 0;
+    }
+    .card-body {
+      padding: 1.5rem;
+    }
+     &:hover {
+      box-shadow: 0px 3px 12px index.$shadow-13;
+    }
+    &.card-plain {
+      border: 1px solid index.$color-gray-400;
+      .card-title { color: index.$color-gray-900; }
+    }
+    &.light-green {
+      border: 1px solid index.$color-forest-green-300;
+      .card-title { color: index.$color-forest-green-700; }
+      .card-note { color: index.$color-forest-green-700; background-color: index.$color-forest-green-50; }
+    }
+    &.light-olive {
+      border: 1px solid index.$color-warning-100;
+      .card-title { color: index.$color-forest-green-500; }
+      .card-note { color: index.$color-forest-green-500; background-color: index.$color-warning-50; }
+    }
+    &.light-deepsky {
+      border: 1px solid index.$color-deepsky-200;
+      .card-title { color: index.$color-deepsky-800; }
+      .card-note { color: index.$color-deepsky-800; background-color: index.$color-deepsky-50; }
+    }
+    &.light-magenta {
+      border: 1px solid index.$color-magenta-200;
+      .card-title { color: index.$color-magenta-700; }
+    }
+    &.light-warning {
+      border: 1px solid index.$color-warning-200;
+      .card-title { color: index.$color-warning-800; }
+      .card-note { color: index.$color-warning-800; background-color: index.$color-warning-100; }
+    }
+    &.light-periwinkle {
+      border: 1px solid index.$color-periwinkle-200;
+      .card-title { color: index.$color-periwinkle-800; }
+      .card-note { color: index.$color-periwinkle-800; background-color: index.$color-periwinkle-100; }
+    }
+    &.light-danger {
+      border: 1px solid index.$color-danger-100;
+      .card-title { color: index.$color-danger-800; }
+      .card-note { color: index.$color-danger-800; background-color: index.$color-danger-50; }
+    }
+  }
+  .lock-box {
+    padding: 1.75rem 1.5rem;
+    border-radius: 1rem;
+    background-color: index.$color-pink-50;
+    box-shadow: 0px 0px 14px rgba(index.$color-pink-500, 0.18);
+    .lock-title {
+      font-size: 1.35rem;
+      margin-bottom: 1rem;
+    }
+    .lock-desc {
+      font-size: 0.95rem;
+      color: index.$color-gray-800;
+    }
+    .lock-flow {
+      gap: 0.5rem 2.5rem;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      background-color: index.$color-pink-100;
+      .flow-step {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: index.$color-gray-900;
+      }
+      .flow-arrow {
+        color: index.$color-magenta-700;
+        font-size: 1.5rem;
+        font-weight: 800;
+      }
+    }
+  }
+}
+
+// ── Platform features (FeatureBuilt) ──────────────────────────────────
+.st-features {
+  .feature-built .feature-built-card .feature-list .feature-row {
+    .feature-name {
+      font-size: 1.15rem;
+      color: index.$color-gray-900;
+    }
+  }
+}
+
+// ── Remote & hybrid ───────────────────────────────────────────────────
+.st-remote {
+  .remote-card {
+    padding: 1.75rem 1.25rem;
+    border-radius: 1.25rem;
+    background-color: index.$color-white;
+    box-shadow: 0px 2px 12px index.$shadow-10;
+    transition: 0.4s all;
+    &:hover {
+      box-shadow: 0px 3px 16px index.$shadow-13;
+    }
+    .card-title {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      color: index.$color-gray-900;
+    }
+    p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: index.$color-gray-700;
+    }
+  }
+}
+
+// ── Best HRMS ranking table (all-magenta) ─────────────────────────────
+.st-best {
+  .table-wrap {
+    overflow-x: auto;
+    border-radius: 0.75rem;
+    box-shadow: 0px 0px 4px index.$shadow-10;
+  }
+  .rank-table {
+    width: 100%;
+    min-width: 48rem;
+    border-collapse: collapse;
+    background-color: index.$color-gray-100;
+    color: index.$color-white;
+    th {
+      padding: 1rem 1.5rem;
+      text-align: left;
+      font-weight: 600;
+      color: index.$color-gray-700;
+      background-color: index.$color-gray-300;
+      border-bottom: 1px solid rgba(index.$color-white, 0.25);
+    }
+    td {
+      padding: 1.15rem 1.5rem;
+      color: index.$color-white;
+      vertical-align: top;
+      border-bottom: 1px solid rgba(index.$color-white, 0.15);
+    }
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+    .col-sno {
+      text-align: center;
+      background-color: index.$color-magenta-800;
+      font-weight: 600;
+    }
+    .col-software {
+      white-space: nowrap;
+    }
+    tr.highlighted {
+      td {
+        background-color: index.$color-magenta-800;
+      }
+      .col-sno {
+        background-color: index.$color-magenta-700;
+      }
+    }
+  }
+  .list-note {
+    padding: 1.25rem 1.5rem;
+    border-radius: 0.75rem;
+    background-color: index.$color-pink-50;
+    border: 1px solid index.$color-pink-100;
+    p {
+      font-size: 0.85rem;
+      line-height: 1.7;
+      color: index.$color-gray-700;
+    }
+  }
+}
+
+// ── Why it pays off ───────────────────────────────────────────────────
+.st-pays {
+  background-color: index.$color-gray-100;
+  .pays-card {
+    padding: 1.75rem 1.75rem 2rem;
+    border-radius: 1.25rem;
+    background-color: index.$color-white;
+    .pays-value {
+      font-size: 2.125rem;
+      line-height: 1.2;
+    }
+    .pays-title {
+      font-size: 1.35rem;
+      margin-bottom: 1.5rem;
+      color: index.$color-gray-800;
+    }
+    p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: index.$color-gray-700;
+    }
+  }
+}
+
+// ── How to choose ─────────────────────────────────────────────────────
+.st-choose {
+  .choose-card {
+    padding: 1.75rem 1.5rem;
+    border-radius: 1rem;
+    background-color: index.$color-gray-100;
+    .choose-head {
+      gap: 1rem;
+      padding-bottom: 1.25rem;
+      margin-bottom: 0.75rem;
+      border-bottom: 1px solid index.$color-gray-500;
+      .choose-icon {
+        font-size: 2.1rem;
+      }
+      .card-title {
+        font-size: 1.35rem;
+      }
+    }
+    .check-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        position: relative;
+        padding: 0.45rem 0 0.45rem 2rem;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: index.$color-gray-800;
+        &:before {
+          content: "✓";
+          position: absolute;
+          left: 0.5rem;
+          top: 0.45rem;
+          font-weight: 700;
+        }
+      }
+    }
+    // must-haves / vendor questions: grey card, magenta accents
+    &.choose-must,
+    &.choose-ask {
+      .choose-icon,
+      .card-title,
+      .check-list li:before { color: index.$color-magenta-700; }
+    }
+    &.choose-flag {
+      background-color: index.$color-danger-100;
+      .choose-icon,
+      .check-list li:before { color: index.$color-danger-600; }
+      .card-title { color: index.$color-gray-900; }
+      .check-list li:before { content: "✕"; }
+    }
+    &.choose-ahead {
+      background-color: index.$color-green-100;
+      .choose-icon,
+      .card-title,
+      .check-list li:before { color: index.$color-green-600; }
+    }
+  }
+}
+
+// ── Responsive ────────────────────────────────────────────────────────
+@media (min-width: 992px) {
+  .st-remote .remote-col {
+    flex: 0 0 auto;
+    width: 18rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .st-payroll .lock-box .lock-flow {
+    gap: 0.5rem 1rem;
+    .flow-step {
+      font-size: 1rem;
+    }
+  }
+  .st-pays .pays-card .pays-value {
+    font-size: 1.75rem;
+  }
+}

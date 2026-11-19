@@ -1,0 +1,113 @@
+
+@use '@/styles/base/index'; 
+
+.features-design {
+  background-color: index.$color-white;
+  .card {
+    margin-bottom: 1.5rem;
+    background-color: index.$color-white;
+    border: 1px solid index.$color-gray-400;
+    @include index.border-radius(1rem);
+    @include index.transition(all 0.7s);
+    .card-header {
+      position: relative;
+      overflow: hidden;
+      height: auto;
+      padding: 2rem;
+      padding-bottom: 0rem;
+      text-align: center;
+      background-color: index.$color-white;
+      border-bottom: 0 solid index.$color-white;
+      @include index.border-top-left-radius(1rem);
+      @include index.border-top-right-radius(1rem);
+      @include index.border-bottom-left-radius(1rem);
+      @include index.border-bottom-right-radius(1rem);
+      img {
+        background-color: index.$color-white;
+        max-width: 100%;
+        border: 0.5rem solid index.$color-white;
+        border-bottom: unset;
+        @include index.border-top-left-radius(1rem);
+        @include index.border-top-right-radius(1rem);
+        @include index.border-bottom-right-radius(0rem);
+        @include index.border-bottom-left-radius(0rem);
+        @include index.transition(all 2s cubic-bezier(0.19, 1, 0.22, 1) 0ms);
+      }
+      &.clr-1 {
+        background-color: index.$color-orange-50;
+        img {
+          border-color: index.$color-orange-100;
+        }
+      }
+      &.clr-2 {
+        background-color: index.$color-pink-50;
+        img {
+          border-color: index.$color-pink-200;
+        }
+      }
+      &.clr-3 {
+        background-color: index.$color-danger-50;
+        img {
+          border-color: index.$color-danger-100;
+        }
+      }
+      &.clr-4 {
+        background-color: index.$color-primary-50;
+        img {
+          border-color: index.$color-primary-300;
+        }
+      }
+      &.clr-5 {
+        background-color: index.$color-violet-50;
+        img {
+          border-color: index.$color-violet-300;
+        }
+      }
+      &.clr-6 {
+        background-color: index.$color-pink-50;
+        img {
+          border-color: index.$color-pink-200;
+        }
+      }
+    }
+    .card-body {
+      background-color: index.$color-white;
+      padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+      @include index.border-bottom-left-radius(1rem);
+      @include index.border-bottom-right-radius(1rem);
+      h3 {
+        color: index.$color-magenta-700;
+        margin-top: 1rem;
+        padding-bottom: 0.25rem;
+        position: relative;
+        &:after {
+          position: absolute;
+          content: "";
+          bottom: 0;
+          left: 0;
+          width: 4rem;
+          height: 0.125rem;
+          background-color: index.$color-magenta-700;
+          opacity: 0.5;
+        }
+      }
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px){
+
+}
+@media (min-width: 1200px){
+
+}
+@media (min-width: 1400px){
+
+}
+@media (min-width: 1900px){
+
+}
+

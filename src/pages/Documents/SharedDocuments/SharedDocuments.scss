@@ -1,0 +1,77 @@
+@use '@/styles/base/index'; 
+
+.box-design {
+  .card {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: unset;
+    @include index.border-radius(2rem);
+    @include index.box-shadow(0px 0px 10px rgba(0, 0, 0, 0));
+    .card-body {
+      background-color: index.$color-white;
+      padding: 1.75rem;
+      @include index.border-radius(1.75rem);
+      @include index.box-shadow(0px 3px 20px rgba(0, 0, 0, 0.051));
+      .img-fluid {
+        width: 4.25rem;
+        height: 4.25rem;
+      }
+      h3 {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+      p {
+        margin-bottom: 0rem;
+      }
+    }
+    &.bg1 {
+      background-color: index.$color-pink-50;
+      .bottom-border {
+        &:after {
+          background-color: index.$color-pink-200;
+        }
+      }
+    }
+    &.bg2 {
+      background-color: index.$color-orange-50;
+      .bottom-border {
+        &:after {
+          background-color: index.$color-orange-100;
+        }
+      }
+    }
+    &.bg3 {
+      background-color: index.$color-pink-50;
+      .bottom-border {
+        &:after {
+          background-color: index.$color-pink-200;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+    
+  .box-design {
+    .card {
+      text-align: center;
+      padding: 0rem;
+      margin-bottom: 1.75rem;
+      .card-header {
+        @include index.border-radius(1.75rem);
+        padding-bottom: 1.5rem;
+      }
+      .card-body {
+        background-color: transparent;
+        .bottom-border {
+          &:after {
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}

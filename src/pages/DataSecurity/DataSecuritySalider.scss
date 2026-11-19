@@ -1,0 +1,101 @@
+
+    .slick-slide{
+      .topdiv{
+          .icons{
+              .img{
+                  &.PasswordPolicy_Icon{
+                      background: url('@/assets/images/feature/Security/PasswordPolicy_Icon.svg') no-repeat;
+                      background-size: 80% 70%;
+                      margin-left: 12%;
+                  }
+                  &.Infrastructure_Icon{
+                      background: url('@/assets/images/feature/Security/Infrastructure_Icon.svg') no-repeat;
+                      background-size: 100% 70%;
+                  }
+                  &.DataCennter_Icon{
+                      background: url('@/assets/images/feature/Security/DataCennter_Icon.svg') no-repeat;
+                      background-size: 100% 70%;
+                  }
+
+                  &.HostedApplication_icon{
+                    background: url('@/assets/images/feature/Security/HostedApplication_icon.svg') no-repeat;
+                    background-size: 100% 70%;
+                  }
+                  &.Network_icon{
+                    background: url('@/assets/images/feature/Security/Network_icon.svg') no-repeat;
+                    background-size: 100% 70%;
+                  }
+                  &.Identity_icon{
+                    background: url('@/assets/images/feature/Security/Identity_icon.svg') no-repeat;
+                    background-size: 100% 70%;
+                  }
+                  &.Infrastructure_ogical{
+                    background: url('@/assets/images/feature/Security/Infrastructure_ogical.svg') no-repeat;
+                    background-size: 100% 70%;
+                  }
+
+
+
+                  // &.Infrastructure_logical{
+                  //   background: url('@/assets/feature/Security/Infrastructure_logical.svg') no-repeat;
+                  //   background-size: 100% 70%;
+                  // }
+                  // &.lnetwork_ogical{
+                  //   background: url('@/assets/feature/Security/lnetwork_ogical.svg') no-repeat;
+                  //   background-size: 85% 70%;
+                  //   margin-left: 12%;                
+                  // }
+                  // &.identity_ogical{
+                  //   background: url('@/assets/feature/Security/identity_ogical.svg') no-repeat;
+                  //   background-size: 100% 70%;
+                  // }
+                  // &.hosted_ogical{
+                  //   background: url('@/assets/feature/Security/hosted_ogical.svg') no-repeat;
+                  //   background-size: 100% 70%;
+                  // }
+              }  
+          }
+      }
+    } 
+    .logical-security{
+      .bg-deepsky-extralight{
+         .ul-icon {
+            li{
+              &:before {
+                opacity: 0.9;
+                background: url("@/assets/images/tick-info.svg") no-repeat;
+                background-size: 100%;
+              }
+            }
+        } 
+      }
+      .bg-pink{
+         .ul-icon {
+          li{
+              &:before {
+                  background: url("@/assets/images/tick-pink.svg") no-repeat;
+                  background-size: 100%;
+              }
+            }
+        } 
+      }
+
+      .bottom-border {
+        &:after{
+          width: 12rem;
+        }  
+      }
+    }
+
+
+   
+    
+    @media (min-width: 992px) {
+      .multitab_content.logical-security .position-relative{
+         margin:2rem 2.5rem !important;
+      }
+        .multitab_content.logical-security .tab-content {
+            padding:1.5rem 2.5rem !important;
+        }
+
+    }

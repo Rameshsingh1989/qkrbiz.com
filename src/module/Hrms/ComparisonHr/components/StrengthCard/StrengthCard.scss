@@ -1,0 +1,85 @@
+@use '@/styles/base/index';
+
+.strength-section{
+    padding: 3rem 0;
+.strength-card {
+  border-radius: 16px;
+  padding: 10px;
+}
+
+.strength-card-success {
+  border: 1px solid index.$color-success-200;
+  background: index.$color-success-50;
+  .card-title{
+    color: index.$color-success-900;
+    border-bottom: 1px solid index.$color-success-200;
+  }
+  .strength-number {
+    background: rgba(index.$color-success-900, 0.7);
+   }
+   .strength-item h5 {
+      color: index.$color-success-900;
+   }
+}
+
+.strength-card-danger {
+  border: 1px solid index.$color-danger-200;
+  background: index.$color-danger-50;
+   .card-title{
+    color: index.$color-danger-900;
+    border-bottom: 1px solid index.$color-danger-200;
+
+  }
+  .strength-number {
+    background:  rgba(index.$color-danger-900, 0.7) ;
+    }
+    .strength-item h5 {
+      color: index.$color-danger-900;
+   }
+}
+
+.strength-card .card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding-bottom: 0.5rem;
+}
+
+.strength-item {
+  padding: 18px 0;
+}
+
+.strength-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  color: index.$color-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+
+.strength-item h5 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.strength-item p {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.strength-source {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+}
+
+@media (max-width: 767px) {
+ .strength-section{
+    padding: 2rem 0;
+  }
+}

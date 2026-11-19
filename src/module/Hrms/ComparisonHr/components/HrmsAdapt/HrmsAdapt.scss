@@ -1,0 +1,60 @@
+@use '@/styles/base/index';
+
+.hrms-adapt{
+  padding: 3.5rem 0;
+  margin-top: 1rem;
+  .card{
+       border-radius: .75rem;
+       border: unset;
+      .feature-badge {
+        color: index.$color-danger-500;
+      }
+      .card-header{
+        background-color: transparent;
+        color:index.$color-white ;
+        font-weight: 500;
+        border-bottom: 1px solid index.$color-gray-500;
+      }
+      .card-body{
+        h3{
+          color:index.$color-white ;
+        }
+        .feature-note {
+          padding: 1rem 1.25rem;
+          border-radius: 0.75rem;
+          font-weight: 500;
+          margin: 1.5rem 0;
+        }
+
+      }
+
+      &.theme-dark-green{
+        background-color: index.$color-success-800;
+          .card-header{
+            border-color: rgba(index.$color-success-600, 0.6);
+          }
+          .card-body{
+            background-color: transparent;
+            color: index.$color-white;
+            .feature-note {
+              background-color: index.$color-success-50;
+              color: index.$color-success-800;
+            }
+          }      
+      }
+      &.theme-magenta {
+        background-color: index.$color-magenta-800;
+        .card-header{
+          border-color: rgba(index.$color-magenta-600, 0.7);
+        }
+        .card-body{
+          background-color: transparent;
+          color: index.$color-white;
+          .feature-note {
+            background-color: index.$color-magenta-100;
+            color: index.$color-magenta-800;
+          }
+        }
+      }
+  }
+}

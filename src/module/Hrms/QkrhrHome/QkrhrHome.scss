@@ -1,0 +1,283 @@
+@use '@/styles/base/index';
+
+.hrms-problems{
+    padding: 2.5rem 0;
+    .problem-card{
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        border-radius: 1.5rem;
+        padding: 1.5rem;
+        height: 100%;
+        .problem-head{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            .problem-icon{
+                width: 3.5rem;
+                height: 3.5rem;
+                padding: 0.75rem;
+                border-radius: 0.85rem;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.25rem;
+                flex-shrink: 0;
+                img{
+                    max-width:100%
+                }
+            }
+
+        }
+        .problem-content{
+            position: relative;
+            background:rgba(255,255,255, 0.72);
+            border-radius: 1rem;
+            padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+            flex: 1 1 auto;
+            overflow: hidden;
+            .problem-subtitle{
+                position: relative;
+                z-index: 1;
+                font-size: 0.95rem;
+                color: index.$color-pink-700;
+                margin-bottom: 0.25rem;
+                border-radius: 1.5rem;
+                font-weight: 500;
+                // border: 1px solid index.$color-pink-700;
+            } 
+            p{
+                position: relative;
+                z-index: 1;
+                font-size: 1rem;
+                color: index.$color-gray-700;
+                line-height: 1.6;
+            }
+        }
+        &.bg-blue{
+            background-color: index.$color-alice-50;
+            .problem-icon{
+                background-color: index.$color-alice-400;
+                color: index.$color-alice-700;
+            }
+             .problem-subtitle{
+                color: index.$color-alice-700;
+             }
+        }
+        &.bg-gree{
+            background-color: index.$color-green-50;
+            .problem-icon{
+                background-color: index.$color-green-400;
+                color: index.$color-green-600;
+            }
+            .problem-subtitle{
+               color: index.$color-green-800;
+            }
+        }
+        &.bg-rose{
+            background-color: index.$color-danger-100;
+            .problem-icon{
+                background-color: index.$color-danger-300;
+                color: index.$color-danger-600;
+            }
+            .problem-subtitle{
+                color: index.$color-danger-700;
+            }
+        }
+        &.bg-violets{
+            background-color: index.$color-violet-100;
+            .problem-icon{
+                background-color: index.$color-violet-300;
+                color: index.$color-violet-700;
+            }
+            .problem-subtitle{
+               color: index.$color-violet-700;
+            }
+        }
+        &.bg-pink{
+            background-color: index.$color-pink-100;
+            .problem-icon{
+                background-color: index.$color-pink-300;
+                color: index.$color-pink-600;
+            }
+            .problem-subtitle{
+               color: index.$color-pink-700;
+            }
+        }
+        &.bg-viole{
+            background-color: index.$color-violet-100;
+            .problem-icon{
+                background-color: index.$color-violet-300;
+                color: index.$color-violet-700;
+            }
+            .problem-subtitle{
+               color: index.$color-violet-700;
+            }
+        }
+        &.bg-peach{
+            background-color: index.$color-orange-50;
+            .problem-icon{
+                background-color: index.$color-orange-300;
+                color: index.$color-orange-700;
+            }
+            .problem-subtitle{
+               color: index.$color-orange-700;
+            }
+        }
+    }
+}
+
+.videoShadow{
+  box-shadow: -1px 8px 22px rgba(0, 0, 0, 0.1607843137);
+}
+
+.hrms-city{
+    background-color: index.$color-pink-50;
+    padding: 3rem 0rem;
+    &.bg-magenta{
+      h2,p,a, .text-gradient{
+        color: index.$color-white;
+      }
+    }
+    .city-category-btn {
+        padding-bottom: 2rem;
+        .btn-outline-light{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: index.$color-white;
+            color: index.$color-gray-700;
+            padding: .75rem 1.25rem .75rem 1.125rem;
+            border: 1px solid index.$color-pink-50;
+            box-shadow: unset;
+            &:hover{
+                background-color: index.$color-white;
+                box-shadow:0px 5px 25px 0px rgba(207, 62, 226, 0.24) ;
+            }
+            .icons{
+                width: 2rem;
+                height: 1.75rem;
+                margin-right: 0.5rem;
+
+            }
+        }
+    }
+}
+.business-solutions{
+    position: relative;
+    background-color:index.$color-white;
+    .card{
+        .card-body{
+            padding: 1rem;
+            img{
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+    }
+}
+.what-makes-us{
+  background: transparent linear-gradient(180deg, index.$color-pink-50 0%, index.$color-pink-50 100%) 0% 0% no-repeat padding-box;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  .what-makes-us-bg{
+     background: url('@/assets/images/hrms/what-makes-us.svg') no-repeat;
+     background-size: 84%;
+     background-position: center;
+    .card{
+      margin-bottom: 1.5rem;
+      box-shadow: 0px 3px 8px index.$shadow-13;
+      border-radius: 16px;
+      .card-body{
+        padding: 1.5rem;
+        h3{
+            font-size: 1.25rem;
+        }
+      }
+    }
+    .bottom-space{
+        padding: 3rem; 
+        .img-fluid{
+          max-width: 80%;
+        }
+    }
+  }
+}
+@media (min-width:768px){
+}
+
+@media (min-width: 992px){
+    .hrms-problems{
+        .problem-card{
+            padding: 1.75rem;
+            gap: 1.25rem;
+            &.bg-violets{
+                .problem-content{
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        bottom: -0.5rem;
+                        width: 380px;
+                        height: 100px;
+                        background: url('@/assets/images/qkrpayroll/wrong-pt.svg') no-repeat;
+                        z-index: 0;
+                    }
+                }
+            }
+        }
+    }
+    .business-solutions{
+        .card{
+            .card-body{
+                padding: 1.5rem;
+            }
+        }
+    }
+     .what-makes-us{
+        padding-bottom: 0rem;
+        .what-makes-us-bg{
+        .item-end{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            .card{
+            width: 90%;
+            min-height: 15.5rem;
+            margin-bottom:3.5rem;
+            &.mr-4{
+                margin-right: 10%;
+            }
+            &.ml-4{
+                margin-left: 10%;
+            }
+            }
+            &.item-start{
+            align-items: flex-start;
+            }   
+        }
+        .bottom-space{
+            padding: 2rem;
+            padding-bottom: 0;
+            position: relative;
+            .img-fluid{
+            margin-bottom:-3.5rem;
+            max-width: 100%;
+            }
+        }
+        
+        }
+    }
+}
+
+@media (min-width:1400px){
+
+}
+
+@media (min-width:1900px){
+ 
+}
+
+@media (max-width:991px){
+
+}

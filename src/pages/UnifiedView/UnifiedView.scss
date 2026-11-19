@@ -1,0 +1,145 @@
+
+@use '@/styles/base/index';
+
+.all_features {
+  background-color: index.$color-white;
+  .card {
+    margin-bottom: 1.5rem;
+    background-color: index.$color-white;
+    border-color: none;
+    border: none;
+    @include index.border-radius(1rem);
+    @include index.transition(all 0.7s);
+    .card-header {
+      position: relative;
+      overflow: hidden;
+      padding: 0rem;
+      margin: 1rem 1rem 0rem 1rem;
+      background-color: index.$color-white;
+      border-bottom: 0 solid index.$color-white;
+      @include index.border-top-left-radius(1rem);
+      @include index.border-top-right-radius(1rem);
+      img {
+        font-weight: 600 !important;
+        font-weight: normal;
+        max-width: 100%;
+        @include index.border-radius(0.25rem);
+        @include index.transition(all 2s cubic-bezier(0.19, 1, 0.22, 1) 0ms);
+      }
+    }
+    .card-body {
+      background-color: index.$color-white;
+      padding: 1rem;
+      margin: 0rem 1rem 1rem 1rem;
+      @include index.border-bottom-left-radius(1rem);
+      @include index.border-bottom-right-radius(1rem);
+      min-height: auto;
+      h3 {
+        color: index.$color-magenta-700;
+        margin-top: 0.5rem;
+        position: relative;
+        &:after {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 3rem;
+          height: 2px;
+          background-color: index.$color-magenta-700;
+          // opacity:0.5;
+        }
+      }
+      p {
+        margin-bottom: 0;
+      }
+    }
+    &.clr-1 {
+      background-color: index.$color-orange-50;
+    }
+    &.clr-2 {
+      background-color: index.$color-pink-50;
+    }
+    &.clr-3 {
+      background-color: index.$color-magenta-50;
+    }
+    &.clr-4 {
+      background-color: index.$color-primary-50;
+    }
+    &.clr-5 {
+      background-color: index.$color-violet-50;
+    }
+    &.clr-6 {
+      background-color: index.$color-purple-100;
+    }
+  }
+}
+
+@media (min-width: 768px){
+
+    .features{
+      .card{
+        .card-header{
+          height: 12rem;
+        }
+        .card-body{
+          min-height: 9rem;
+        } 
+      } 
+    }
+}
+@media (min-width: 992px){
+
+    .features{
+      .card{
+        .card-header{
+          height: 12rem;
+        }
+        .card-body{
+          min-height: 9.5rem;
+        } 
+      } 
+    }  
+}       
+@media (min-width: 1200px){
+
+  .features{
+    .card{
+      .card-header{
+        height: 14rem;
+      }
+      .card-body{
+        min-height:10.5rem;
+        &.min-height{
+          min-height: 10.5rem;
+       }
+       &.max-height{
+         min-height: 8.5rem;
+      }
+      } 
+    } 
+  }     
+}
+@media (min-width: 1400px){
+ 
+  .features{
+    .card{
+      .card-header{
+        height: 14rem;
+      }
+      .card-body{
+        min-height: 11.5rem;
+        &.min-height{
+          min-height: 10.5rem;
+       }
+       &.max-height{
+         min-height: 8.5rem;
+      }
+      } 
+    } 
+  }     
+}
+@media (min-width: 1900px){
+    
+}
+
+
+

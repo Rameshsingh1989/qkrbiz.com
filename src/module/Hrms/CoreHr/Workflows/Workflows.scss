@@ -1,0 +1,19 @@
+@use '@/styles/base/index';
+
+// Only what Bootstrap has no utility for.
+
+// Sub-lines inside the drawn cards sit on their own line, in muted text.
+.wf-mock small {
+  display: block;
+  color: index.$color-gray-600;
+}
+
+.wf-avatar {
+  width: 2rem;
+  height: 2rem;
+  font-size: 0.75rem;
+}
+
+.wf-dashed {
+  border-style: dashed !important;
+}

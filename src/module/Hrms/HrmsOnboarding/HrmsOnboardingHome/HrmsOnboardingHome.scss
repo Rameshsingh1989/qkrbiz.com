@@ -1,0 +1,162 @@
+@use '@/styles/base/index';
+
+.onboarding-section{
+    padding: 2rem 0rem;
+    $icon-size: 90px;
+    $icon-colors: (
+        'offer-letters': index.$color-magenta-100,
+        'welcome': index.$color-danger-200,
+        'consent-forms': index.$color-alice-100,
+        'documents': index.$color-orange-200,
+        'policies': index.$color-primary-300,
+        'join': index.$color-pink-100
+    );
+    .feature-item {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        .divider {
+            display: none;
+        }
+        .icon-circle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: $icon-size;
+            height: $icon-size;
+            padding: 1.5rem;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            @each $name, $color in $icon-colors {
+            &.#{$name} {
+                background-color: $color;
+            }
+            }
+        }
+
+        .feature-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-description {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+    }
+}
+.onboarding-Features{
+    padding: 3rem 0rem;
+    .card{
+        background-color: index.$color-white;
+        border-radius: 1rem;
+        box-shadow: 0px 0px 2px index.$shadow-15 inset;
+       .card-body {
+            padding: 1.5rem;
+            font-size: 1.25rem;
+            color: index.$color-gray-800;
+       }    
+    }
+}
+
+.hr-operations{
+    background-color:index.$color-gray-100 ;
+}
+.bg-shap-left {
+    position: relative;
+    z-index: 1;
+    padding: 75px 0;
+    .shape {
+        position: absolute;
+        z-index: -1;
+        &.shape-1 {
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            left: -70px;
+        }
+        &.shape-2 {
+            bottom: 0;
+            right: 50px;
+        }
+    }
+}
+.bg-shap-right {
+    position: relative;
+    z-index: 1;
+    padding: 75px 0;
+    .shape {
+        position: absolute;
+        z-index: -1;
+        &.shape-1 {
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            right: -70px;
+        }
+        &.shape-2 {
+            bottom: 0;
+            left: 50px;
+        }
+    }
+}
+
+
+// @media (min-width: 768px){
+
+// }
+@media (min-width: 992px){
+  .onboarding-section{
+        .feature-item {
+            position: relative;
+            z-index: 2;
+            .divider {
+                 display: block;
+                position: absolute;
+                z-index: 1;
+                width: 100%;
+                height: 2px;
+                background-image: url('@/assets/images/hrms/EmployeeOnboarding/onboarding-line.svg');
+                background-repeat: no-repeat;
+                background-size: 32% 60%;
+                top: 45px;
+                right: -100%;
+             }
+        }
+    }
+}       
+@media (min-width: 1200px){
+    .onboarding-section{
+        .feature-item {
+             .divider {
+                background-size: 32% 60%;
+                top: 45px;
+                right: -100%;
+             }
+        }
+    } 
+}
+
+@media (min-width: 1400px){
+    .onboarding-section{
+        .feature-item {
+             .divider {
+                background-size: 32% 60%;
+                top: 45px;
+                right: -100%;
+             }
+        }
+    } 
+}
+@media (min-width: 1900px){
+    .onboarding-section{
+        .feature-item {
+             .divider {
+                background-size: 100% 60%;
+                top: 45px;
+                right: -60%;
+             }
+        }
+    }
+     
+}

@@ -1,0 +1,104 @@
+@use '@/styles/base/index';
+
+.cookie-consent-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1080;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 32px;
+  background-color: index.$color-white;
+  border-top: 1px solid index.$color-gray-500;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+
+  &__content {
+    max-width: 900px;
+  }
+
+  &__title {
+    margin: 0 0 6px;
+    font-size: 16px;
+    font-weight: 600;
+    color: index.$color-gray-800;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: index.$color-gray-600;
+
+    a {
+      color: index.$color-magenta-700;
+      font-weight: 600;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+}
+
+.cookie-btn {
+  display: inline-block;
+  min-width: 200px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  &--primary {
+    background-color: index.$color-magenta-700;
+    color: index.$color-white;
+    border: 1px solid index.$color-magenta-700;
+
+    &:hover {
+      background-color: index.$color-magenta-800;
+    }
+  }
+
+  &--outline {
+    background-color: index.$color-white;
+    color: index.$color-gray-800;
+    border: 1px solid index.$color-gray-800;
+
+    &:hover {
+      background-color: index.$color-gray-800;
+      color: index.$color-white;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .cookie-consent-banner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 16px;
+
+    &__actions {
+      width: 100%;
+    }
+  }
+
+  .cookie-btn {
+    width: 100%;
+    min-width: 0;
+  }
+}

@@ -1,0 +1,94 @@
+@use '@/styles/base/index';
+
+.premium-should-section{
+  padding: 3.5rem 0;
+  .premium-should-card {
+    .card-header{
+      font-weight: 600;
+
+    }
+     .card-body{
+        .feature-list {
+          li {
+            gap: 0.75rem;
+          }
+        }
+        .feature-icon {
+          flex-shrink: 0;
+          width: 1.75rem;
+          height: 1.75rem;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          font-size: 0.95rem;
+        }
+        .feature-icon-cross {
+          color: index.$color-gray-700;
+          font-size: 1.25rem;
+        }
+        .feature-badge {
+          color: index.$color-danger-800;
+        }
+        .feature-note {
+          background-color: index.$color-gray-100;
+          color: index.$color-gray-700;
+          padding: 1rem 1.25rem;
+          border-radius: 0.75rem;
+          font-weight: 500;
+          margin: 1.5rem 0;
+        }
+      }
+    &.theme-magenta {
+      .card-header{
+        &.bg-magenta{
+          background-color: index.$color-magenta-700;
+          color: index.$color-white;
+        }
+      }
+      .card-body{
+        .feature-icon-check {
+          background-color: index.$color-magenta-100;
+          color: index.$color-magenta-700;
+        }
+        .feature-note {
+          background-color: index.$color-magenta-100;
+          color: index.$color-gray-700;
+        }
+      }
+    }
+    &.theme-purple{
+      .card-header{
+        &.bg-purple{
+          background-color: index.$color-violet-600;
+          color: index.$color-white;
+        }
+      }
+      .card-body{
+        .feature-icon-check {
+          background-color: index.$color-gray-300;
+          color: index.$color-gray-600;
+        }
+      }
+    }
+    &.theme-green{
+      .card-header{
+        &.bg-green{
+          background-color: index.$color-success-900;
+          color: index.$color-white;
+        }
+      }
+      .card-body{
+        .feature-icon-check {
+          background-color: index.$color-gray-300;
+          color: index.$color-gray-600;
+        }
+        .btn-green{
+              background-color:index.$color-success-900;
+              color:index.$color-white;
+        }
+      }
+    }
+
+  }
+}

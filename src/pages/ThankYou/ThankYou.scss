@@ -1,0 +1,104 @@
+@use '@/styles/base/index'; 
+
+.card{
+    &.thnak-you{
+        margin-bottom: 1.5rem;
+        border-radius: 1rem;
+        border: unset;
+        box-shadow: 0px 2px 20px rgba(154,178,255, 0.25);
+        .card-body{
+            padding: 2.5rem;
+        }
+    }   
+}
+
+.thank-sec{
+    .bg-pink-light{
+        background-color: index.$color-pink-50 !important;
+        .card-body{
+            border: 1px solid index.$color-pink-500;
+        }
+    }
+    .bg-info-light{
+        background-color: index.$color-alice-50 !important;
+        .card-body{
+            border: 1px solid index.$color-alice-600;
+            &.bg-br-unset{
+                min-height:auto;
+                background-color:unset;
+                border:unset
+            }
+        }
+    }
+    .card{
+        padding: 1.75rem;
+        margin-bottom: 1.5rem;
+        border: unset;
+        border-radius: 0.7rem;
+        .card-body{
+            padding: 1.5rem 2rem;
+            background-color: index.$color-white;
+            border-radius: 0.7rem;
+            p{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+.thankyou-social{
+    .d-flex{
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        border-radius: 1rem;
+        box-shadow: 0px 1px 20px rgba(154,178,255, 0.25);
+        .flex-grow-1{
+            text-align: left;
+            padding-left: 0.5rem;
+        }
+    }    
+}
+@media (min-width: 992px) {
+    .card{
+        &.thnak-you{
+            margin-bottom: 4rem;
+        }
+    }
+    .thank-sec{
+        .card{
+            .card-body{
+                padding: 2rem 1rem;
+                min-height: 19rem;
+            }
+        }
+    } 
+}
+@media (min-width: 1200px) {
+    .thank-sec{
+        .card{
+            .card-body{
+                padding: 2rem 1rem;
+                min-height: 18rem;
+            }
+        }
+    } 
+}
+@media (min-width: 1400px) {
+    .thank-sec{
+        .card{
+            .card-body{
+                padding: 2rem 1rem;
+                min-height: 21rem;
+            }
+        }
+    } 
+}
+@media (min-width: 1900px) {
+    .thank-sec{
+        .card{
+            .card-body{
+                padding: 2rem 2.5rem;
+                min-height: auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,122 @@
+@use '@/styles/base/index';
+
+.same-platform {
+    padding: 2.5rem 0rem;
+    .every-stakeholder-tabs{
+        background-color: index.$color-magenta-50;
+        margin-bottom: 2.5rem;
+        padding: 0.25rem 0.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-radius:50rem;
+        .stage-tab {
+             flex: 1 1 0;
+             font-size: 0.85rem;
+             font-weight: 600;
+             padding: 0.75rem 1rem;
+             background-color: unset;
+             border: none;
+             border-radius:50rem;
+             &.active{
+                color: index.$color-gray-800;
+                background-color: index.$color-white;
+             }
+        }
+    }
+    .every-stakeholder-card{
+        .every-stakeholder-body{
+            padding: 1.75rem;
+            border-radius: 1rem;
+            box-shadow: 0 2px 7px index.$shadow-16;
+        }
+        .every-stakeholder-info{
+            .info-features{
+                padding-top: 1rem;
+                list-style-type: none;
+                padding-left: 0;
+                li{
+                    display: flex;
+                    flex-direction: row;
+                    padding: 0.5rem 0;
+                    font-size: 1.125rem;
+                    gap: 1rem;
+                    .check-icon{
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 1.75rem;
+                        height: 1.75rem;
+                        padding: 0.5rem;
+                        background-color: index.$color-magenta-700;
+                        color: index.$color-white;
+                        border-radius: 50%;
+                    }
+                }  
+            }
+        }
+        .every-stakeholder-preview{
+            .img-fluid{
+                border-radius: 1.5rem;
+
+            }
+        }
+        &.bg-successes{
+                .every-stakeholder-tabs{
+                    background-color: index.$color-green-200;
+                }
+                .every-stakeholder-body{
+                    .info-features{
+                        li{
+                            .check-icon{
+                                 background-color:index.$color-green-400;
+                            }
+                            
+                        }
+                    }
+                }
+        }
+        &.bg-dangers{
+            .every-stakeholder-tabs{
+                background-color: index.$color-danger-200;
+            }
+            .every-stakeholder-body{
+                .info-features{
+                    li{
+                        .check-icon{
+                               background-color: index.$color-danger-400;
+                        }
+                        
+                    }
+                }
+            }
+        }
+        &.bg-voilet{
+            .every-stakeholder-tabs{
+                background-color: index.$color-purple-200;
+            }
+            .every-stakeholder-body{
+                .info-features{
+                    li{
+                        .check-icon{
+                              background-color: index.$color-purple-300;
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .same-platform {
+        .every-stakeholder-tabs{
+            padding: 1rem 1.25rem;
+            .stage-tab {
+                padding: 1.25rem 1rem;
+                font-size: 1.25rem;
+            }
+        }
+    }
+}

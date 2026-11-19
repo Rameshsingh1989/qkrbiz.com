@@ -1,0 +1,160 @@
+@use '@/styles/base/index';
+
+.payroll-stages {
+    padding: 2.85rem 0rem;
+    .stage-card {
+        background-color: index.$color-gray-100;
+        border-radius: 1rem;
+        padding: 1.75rem;
+
+        .stage-badge {
+            display: inline-block;
+            background-color: index.$color-magenta-700;
+            color: index.$color-white;
+            font-size: 0.95rem;
+            padding: 0.5rem 1.5rem;
+            border-radius: 999px;
+            margin-bottom: 1.5rem;
+        }
+
+        .stage-title {
+            margin-bottom: 1rem;
+        }
+
+        .stage-desc {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+    }
+}
+
+.payrol-management-stucture {
+    padding: 2.85rem 0rem;
+    .salary-feature-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1.5rem 0;
+
+        li {
+            padding: 1rem 0;
+            font-size: 1.125rem;
+            line-height: 1.6;
+            color: index.$color-gray-700;
+            border-bottom: 1px solid index.$color-gray-200;
+
+            &:first-child {
+                padding-top: 0;
+            }
+
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+    }
+    .salary-back-link {
+        display: inline-block;
+        text-decoration: underline;
+        font-size: 1.125rem;
+    }
+}
+.compliance-fear {
+    background-color: index.$color-magenta-700;
+    padding: 4rem 0;
+    h2, p{
+       color: index.$color-white;
+    }
+    .border-magenta-rounded{
+      color: index.$color-white;
+      border-color: index.$color-white;
+    }
+    .compliance-pill {
+        display: inline-block;
+        color: index.$color-white;
+        border: 1px solid index.$color-white;
+        background-color: transparent;
+        padding: 0.625rem 2rem;
+        border-radius: 999px;
+    }
+
+    .compliance-card {
+        background-color: index.$color-white;
+        border-radius: 1rem;
+        padding: 1.75rem;
+        display: flex;
+        flex-direction: column;
+        .compliance-tag {
+            display: inline-block;
+            color: index.$color-pink-500;
+            font-size: 1.25rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.75rem;
+        }
+        .compliance-title {
+            margin-bottom: 0.5rem;
+        }
+        .compliance-detail {
+            font-size: 0.85rem;
+            color: index.$color-gray-700;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        .compliance-desc {
+            font-size: 0.95rem;
+            color: index.$color-gray-700;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        .compliance-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            align-self: flex-start;
+            background-color: index.$color-magenta-700;
+            color: index.$color-white;
+            font-size:1rem;
+            padding: 0.6rem 1.25rem;
+            border-radius: 999px;
+            .check-icon {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 1.5rem;
+                height: 1.5rem;
+                border-radius: 50%;
+                background-color: index.$color-white;
+                color: index.$color-magenta-700;
+                font-size: 1rem;
+                font-weight: 600;
+            }
+        }
+    }
+}
+.finance-auditors{
+    padding: 2.85rem 0rem;
+    .stage-card {
+        background-color: index.$color-gray-100;
+        border-radius: 1rem;
+        padding: 1.5rem;
+
+        .stage-badge {
+            display: inline-block;
+            background-color: index.$color-gray-800;
+            color: index.$color-white;
+            font-size: 0.85rem;
+            padding: 0.5rem 0.85rem;
+            border-radius: 999px;
+            margin-bottom: 1rem;
+        }
+
+        .stage-title {
+            margin-bottom: 0.75rem;
+        }
+
+        .stage-desc {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+    }
+}

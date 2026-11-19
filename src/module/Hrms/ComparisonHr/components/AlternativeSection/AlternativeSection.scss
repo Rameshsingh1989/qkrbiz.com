@@ -1,0 +1,23 @@
+@use '@/styles/base/index';
+
+.alternative{
+    padding: 2.5rem 0 1rem 0;
+    .fn-2{
+       color: index.$color-magenta-700;
+       font-size: 1.5rem !important;
+
+    }
+    .heading-title {
+        &.mb-5{
+            margin-bottom: 1rem !important;
+
+        }
+
+    }
+
+}
+@media (max-width: 767px) {
+    .alternative{   
+        padding-bottom: 0.25rem;
+    }
+}

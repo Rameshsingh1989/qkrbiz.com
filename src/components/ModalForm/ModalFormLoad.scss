@@ -1,0 +1,50 @@
+@use '@/styles/base/index';
+
+// .red-close{
+//     .btn-close{
+//            padding: 0.25rem;
+//            background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ff0000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414'/%3e%3c/svg%3e");
+//     }
+// }
+
+.modal-load{
+    .modal-content{
+            background-color:index.$color-magenta-100 ;
+            .modal-header{
+                padding-bottom: 0rem;
+                border-bottom: solid index.$color-magenta-100;
+            }
+            .img-fluids{
+               margin-left: -1rem;
+            }
+            .img-width{
+                width: 100px;
+
+            }
+    }
+}
+// .modal-header{
+//     &.bg-magenta-light{
+//             border-bottom: solid #FFEEF7;
+//     }
+
+// }
+// .modal-body{
+//     &.bg-magenta-light{
+//         border-bottom-left-radius: 0.5rem;
+//         border-bottom-right-radius: 0.5rem;
+//         .img-fluids{
+//              margin-left: -1rem;
+//         }
+//         .img-width{
+//             width: 100px;
+
+//         }
+           
+//     }
+// }
+@media (min-width: 1900px) {
+    .modal-load{
+            margin-top: 4rem !important;
+    }
+}

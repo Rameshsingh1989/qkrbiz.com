@@ -1,0 +1,929 @@
+/* Salary Slip Generator. Every class starts with "ssg-" so nothing clashes with your site. */
+
+.ssg,
+.ssg-print-root {
+  --ssg-accent: #96006b;        /* Qkrbiz magenta: buttons, net pay */
+  --ssg-accent-hover: #7a0057;
+  --ssg-accent-soft: #fbeef6;
+  --ssg-text: #1d2433;
+  --ssg-muted: #667085;
+  --ssg-faint: #98a2b3;
+  --ssg-border: #e4e7ec;
+  --ssg-subtle: #f7f8fa;
+  --ssg-surface: #ffffff;
+  --ssg-danger: #d92d20;
+  --ssg-radius: 12px;
+}
+
+.ssg *,
+.ssg *::before,
+.ssg *::after,
+.ssg-print-root *,
+.ssg-print-root *::before,
+.ssg-print-root *::after {
+  box-sizing: border-box;
+}
+
+.ssg {
+  color: var(--ssg-text);
+  scroll-margin-top: 96px; /* room for a fixed site header when the tool scrolls into view */
+}
+
+/* ---------- Steps ---------- */
+
+.ssg-steps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ssg-muted);
+}
+
+.ssg-steps li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ssg-steps li + li::before {
+  content: "";
+  width: 36px;
+  height: 2px;
+  background: var(--ssg-border);
+}
+
+.ssg-steps span {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  font-size: 13px;
+  border: 2px solid var(--ssg-border);
+  border-radius: 50%;
+}
+
+.ssg-steps .is-active {
+  color: var(--ssg-text);
+}
+
+.ssg-steps .is-active span {
+  color: #fff;
+  background: var(--ssg-accent);
+  border-color: var(--ssg-accent);
+}
+
+.ssg-steps .is-done span {
+  color: var(--ssg-accent);
+  border-color: var(--ssg-accent);
+}
+
+/* ---------- Step 1: form ---------- */
+
+.ssg-form {
+  display: grid;
+  gap: 20px;
+  min-width: 0;
+}
+
+.ssg-card {
+  min-width: 0;
+  margin: 0;
+  padding: 22px;
+  background: var(--ssg-surface);
+  border: 1px solid var(--ssg-border);
+  border-radius: var(--ssg-radius);
+}
+
+/* Puts the legend inside the card like a normal heading */
+.ssg-legend {
+  float: left;
+  width: 100%;
+  margin: 0 0 16px;
+  padding: 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ssg-text);
+}
+
+.ssg-legend + * {
+  clear: both;
+}
+
+.ssg-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.ssg-span-2 {
+  grid-column: span 2;
+}
+
+.ssg-span-full {
+  grid-column: 1 / -1;
+}
+
+.ssg-field {
+  display: grid;
+  align-content: start;
+  gap: 6px;
+  min-width: 0;
+}
+
+.ssg-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ssg-muted);
+}
+
+.ssg-label em {
+  font-style: normal;
+  font-weight: 400;
+}
+
+.ssg-input {
+  width: 100%;
+  min-width: 0;
+  height: 44px;
+  margin: 0;
+  padding: 0 12px;
+  font: inherit;
+  font-size: 16px; /* 16px stops iPhones zooming in on tap */
+  color: var(--ssg-text);
+  background: var(--ssg-surface);
+  border: 1px solid var(--ssg-border);
+  border-radius: 8px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+textarea.ssg-input {
+  height: auto;
+  padding: 10px 12px;
+  resize: vertical;
+}
+
+select.ssg-input {
+  padding-right: 8px;
+}
+
+.ssg-input::placeholder {
+  color: var(--ssg-faint);
+}
+
+.ssg-input:focus {
+  outline: none;
+  border-color: var(--ssg-accent);
+  box-shadow: 0 0 0 3px rgba(150, 0, 107, 0.15);
+}
+
+.ssg-input[readonly] {
+  background: var(--ssg-subtle);
+}
+
+.ssg-input[aria-invalid="true"] {
+  border-color: var(--ssg-danger);
+}
+
+.ssg-input[aria-invalid="true"]:focus {
+  box-shadow: 0 0 0 3px rgba(217, 45, 32, 0.15);
+}
+
+.ssg .ssg-error {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ssg-danger);
+}
+
+.ssg input[type="number"]::-webkit-outer-spin-button,
+.ssg input[type="number"]::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+.ssg input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.ssg-pair {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 10px;
+}
+
+.ssg-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+}
+
+.ssg-logo-thumb {
+  max-width: 64px;
+  max-height: 36px;
+  object-fit: contain;
+}
+
+/* Earnings and deductions */
+
+.ssg-pay-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 20px;
+}
+
+.ssg-rows {
+  display: grid;
+  gap: 10px;
+}
+
+.ssg-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 140px 64px;
+  align-items: center;
+  gap: 10px;
+}
+
+.ssg-amount {
+  position: relative;
+}
+
+.ssg-amount > span {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: var(--ssg-muted);
+  pointer-events: none;
+}
+
+.ssg-amount .ssg-input {
+  padding-left: 28px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.ssg-auto {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--ssg-muted);
+  cursor: pointer;
+}
+
+.ssg-auto input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: var(--ssg-accent);
+}
+
+.ssg-remove {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--ssg-muted);
+  background: var(--ssg-surface);
+  border: 1px solid var(--ssg-border);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.ssg-remove:hover {
+  color: #b42318;
+  border-color: #fda29b;
+}
+
+.ssg .ssg-hint {
+  grid-column: 1 / -1;
+  margin: -4px 0 0;
+  font-size: 13px;
+  color: var(--ssg-muted);
+}
+
+.ssg-rows + .ssg-error {
+  margin-top: 10px;
+}
+
+.ssg-add {
+  margin-top: 14px;
+  padding: 0;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ssg-accent);
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.ssg-add:hover {
+  text-decoration: underline;
+}
+
+/* Net pay + buttons, stuck to the bottom of the screen while filling the form */
+
+.ssg-submit-bar {
+  position: sticky;
+  bottom: 12px;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px 20px;
+  padding: 14px 20px;
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid var(--ssg-border);
+  border-radius: var(--ssg-radius);
+  box-shadow: 0 10px 30px -12px rgba(16, 24, 40, 0.3);
+}
+
+.ssg .ssg-summary {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin: 0;
+}
+
+.ssg-summary span {
+  font-size: 14px;
+  color: var(--ssg-muted);
+}
+
+.ssg-summary strong {
+  font-size: 22px;
+  color: var(--ssg-accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.ssg-summary .ssg-negative {
+  color: var(--ssg-danger);
+}
+
+.ssg-summary small {
+  grid-column: 1 / -1;
+  font-size: 13px;
+  color: var(--ssg-muted);
+}
+
+/* Buttons */
+
+.ssg-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ssg-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 20px;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.ssg-btn-sm {
+  height: 38px;
+  padding: 0 14px;
+  font-size: 14px;
+}
+
+.ssg-btn-primary {
+  color: #fff;
+  background: var(--ssg-accent);
+}
+
+.ssg-btn-primary:hover {
+  background: var(--ssg-accent-hover);
+}
+
+.ssg-btn-primary:disabled {
+  cursor: progress;
+  opacity: 0.75;
+}
+
+.ssg-btn-ghost {
+  color: var(--ssg-text);
+  background: var(--ssg-surface);
+  border-color: var(--ssg-border);
+}
+
+.ssg-btn-ghost:hover {
+  border-color: #c4c9d2;
+}
+
+.ssg-link {
+  padding: 0;
+  font: inherit;
+  font-size: 14px;
+  color: var(--ssg-muted);
+  text-decoration: underline;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.ssg-btn:focus-visible,
+.ssg-add:focus-visible,
+.ssg-remove:focus-visible,
+.ssg-link:focus-visible,
+.ssg-upload:focus-within {
+  outline: 2px solid var(--ssg-accent);
+  outline-offset: 2px;
+}
+
+.ssg-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Step 2: view & download ---------- */
+
+.ssg-view {
+  display: grid;
+  gap: 18px;
+}
+
+.ssg-toolbar,
+.ssg-sheet,
+.ssg-view .ssg-warning {
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.ssg-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 14px 20px;
+}
+
+.ssg-view-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.ssg-view-title:focus {
+  outline: none;
+}
+
+.ssg .ssg-view-text {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: var(--ssg-muted);
+}
+
+.ssg .ssg-warning {
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #b42318;
+  background: #fef3f2;
+  border-radius: 8px;
+}
+
+/* ---------- Payslip ---------- */
+
+.ssg-slip {
+  container-type: inline-size;
+  padding: 32px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ssg-text);
+  background: #fff;
+  border: 1px solid var(--ssg-border);
+  border-radius: var(--ssg-radius);
+  box-shadow: 0 16px 40px -20px rgba(16, 24, 40, 0.3);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* Used only while the PDF is being made: fixed A4 width, no card look */
+.ssg-slip.ssg-slip-pdf {
+  width: 794px;
+  max-width: none;
+  padding: 0;
+  font-size: 13px;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.ssg-slip p,
+.ssg-slip h3,
+.ssg-slip dl,
+.ssg-slip dd {
+  margin: 0;
+}
+
+.ssg-slip .ssg-empty {
+  color: var(--ssg-faint);
+}
+
+.ssg-slip-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--ssg-border);
+}
+
+.ssg-company {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+}
+
+.ssg-logo {
+    max-width: 120px;
+    max-height: 52px;
+    object-fit: contain;
+}
+
+.ssg-slip .ssg-company-name {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.ssg-slip .ssg-company-address {
+  margin-top: 2px;
+  font-size: 13px;
+  color: var(--ssg-muted);
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+.ssg-period {
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.ssg-period span {
+  display: block;
+  font-size: 12px;
+  color: var(--ssg-muted);
+}
+
+.ssg-period strong {
+  font-size: 16px;
+}
+
+.ssg-slip-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 20px;
+  padding: 18px 0;
+}
+
+.ssg-slip .ssg-slip-heading {
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ssg-muted);
+}
+
+/* Label column fits the longest label, so labels never wrap */
+.ssg-details {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 6px 16px;
+}
+
+.ssg-details > div {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: 130px minmax(0, 1fr); /* fallback for very old browsers */
+  grid-template-columns: subgrid;
+}
+
+.ssg-details dt,
+.ssg-days dt {
+  font-weight: 400; /* Bootstrap makes every <dt> bold */
+  color: var(--ssg-muted);
+}
+
+.ssg-details dd {
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.ssg-netbox {
+  align-self: start;
+  min-width: 200px;
+  padding: 16px 18px;
+  background: var(--ssg-accent-soft);
+  border: 1px solid rgba(150, 0, 107, 0.12);
+  border-radius: 10px;
+}
+
+.ssg-netbox > strong {
+  display: block;
+  font-size: 22px;
+  line-height: 1.2;
+  color: var(--ssg-accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.ssg-netbox > span {
+  display: block;
+  margin-top: 2px;
+  font-size: 13px;
+  color: var(--ssg-muted);
+}
+
+.ssg-slip .ssg-days {
+  display: grid;
+  gap: 2px;
+  margin-top: 12px;
+  padding-top: 10px;
+  font-size: 13px;
+  border-top: 1px dashed rgba(150, 0, 107, 0.25);
+}
+
+.ssg-days > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.ssg-days dd {
+  font-weight: 600;
+}
+
+/* Two stacked tables: only used when the payslip is narrow (see the @container rule) */
+.ssg-tables {
+  display: none;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+}
+
+.ssg-col-label {
+  width: 32%;
+}
+
+.ssg-col-amount {
+  width: 18%;
+}
+
+.ssg-table {
+  width: 100%;
+  border: 1px solid var(--ssg-border);
+  border-radius: 10px;
+  border-spacing: 0;
+  border-collapse: separate;
+  overflow: hidden;
+}
+
+.ssg-table th,
+.ssg-table td {
+  padding: 9px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.ssg-table thead th {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ssg-muted);
+  background: var(--ssg-subtle);
+  border-bottom: 1px solid var(--ssg-border);
+}
+
+.ssg-table tbody td {
+  border-bottom: 1px solid #f0f2f5;
+  overflow-wrap: anywhere;
+}
+
+.ssg-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.ssg-table tfoot th,
+.ssg-table tfoot td {
+  font-weight: 700;
+  background: var(--ssg-subtle);
+  border-top: 1px solid var(--ssg-border);
+}
+
+.ssg-table-combined th:nth-child(3),
+.ssg-table-combined td:nth-child(3) {
+  border-left: 1px solid var(--ssg-border);
+}
+
+.ssg-table .ssg-num {
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.ssg-net {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 16px;
+  padding: 14px 18px;
+  color: #fff;
+  background: var(--ssg-accent);
+  border-radius: 10px;
+}
+
+.ssg-net strong {
+  display: block;
+  font-size: 15px;
+}
+
+.ssg-net span {
+  display: block;
+  font-size: 12.5px;
+  opacity: 0.85;
+}
+
+.ssg-net .ssg-net-amount {
+  font-size: 20px;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.ssg-slip .ssg-words {
+  margin-top: 14px;
+  font-size: 13.5px;
+  color: var(--ssg-muted);
+}
+
+.ssg-words strong {
+  font-weight: 600;
+  color: var(--ssg-text);
+}
+
+.ssg-slip .ssg-footnote {
+  margin-top: 18px;
+  padding-top: 12px;
+  font-size: 12px;
+  text-align: center;
+  color: var(--ssg-muted);
+  border-top: 1px solid var(--ssg-border);
+}
+
+/* When the payslip itself is narrow (phones) */
+@container (max-width: 560px) {
+  .ssg-slip-head {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .ssg-period {
+    text-align: left;
+  }
+
+  .ssg-slip-summary {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ssg-netbox {
+    min-width: 0;
+  }
+}
+
+@container (max-width: 480px) {
+  .ssg-table-combined {
+    display: none;
+  }
+
+  .ssg-tables {
+    display: grid;
+  }
+}
+
+/* ---------- Smaller screens ---------- */
+
+@media (max-width: 900px) {
+  .ssg-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ssg-span-2 {
+    grid-column: 1 / -1;
+  }
+
+  .ssg-pay-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .ssg-steps {
+    gap: 8px;
+    font-size: 14px;
+  }
+
+  .ssg-steps li {
+    gap: 8px;
+  }
+
+  .ssg-steps li + li::before {
+    width: 16px;
+  }
+
+  .ssg-card {
+    padding: 16px;
+  }
+
+  .ssg-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ssg-slip {
+    padding: 18px;
+  }
+
+  .ssg-submit-bar {
+    bottom: 0;
+    padding: 12px 14px;
+  }
+
+  .ssg-submit-bar .ssg-actions,
+  .ssg-toolbar .ssg-actions {
+    width: 100%;
+  }
+
+  .ssg-submit-bar .ssg-btn,
+  .ssg-toolbar .ssg-btn {
+    flex: 1 1 0;
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 440px) {
+  .ssg-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed var(--ssg-border);
+  }
+
+  .ssg-row > .ssg-input {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ---------- Printing ---------- */
+
+.ssg-print-root {
+  display: none;
+}
+
+@media print {
+  body.ssg-print-scope > *:not(.ssg-print-root) {
+    display: none !important;
+  }
+
+  body.ssg-print-scope > .ssg-print-root {
+    display: block;
+    padding: 14mm;
+  }
+
+  .ssg-print-root .ssg-slip {
+    padding: 0;
+    font-size: 12.5px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}

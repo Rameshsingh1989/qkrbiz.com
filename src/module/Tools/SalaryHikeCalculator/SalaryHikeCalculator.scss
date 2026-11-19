@@ -1,0 +1,250 @@
+@use '@/styles/base/index';
+
+.salary-hike-calculator {
+  padding: 2rem 0 3.5rem;
+  background:
+    radial-gradient(ellipse at 85% 55%, rgba(index.$color-pink-700, 0.85), transparent 60%),
+    linear-gradient(180deg, index.$color-magenta-700 0%, index.$color-pink-600 55%, index.$color-magenta-700 100%);
+  color: index.$color-white;
+
+  .sh-hero {
+    margin-bottom: 2.75rem;
+  }
+
+  .sh-badge {
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 1.75rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: index.$color-pink-200;
+    background-color: rgba(index.$color-white, 0.15);
+    @include index.border-radius(0.25rem);
+  }
+
+  .sh-title {
+    margin-bottom: 0.75rem;
+    font-size: 3.25rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: index.$color-white;
+  }
+
+  .sh-subtitle {
+    max-width: 26rem;
+    margin-bottom: 0;
+    font-size: 0.9375rem;
+    color: index.$color-pink-100;
+  }
+
+  .sh-card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.75rem;
+    @include index.border-radius(0.75rem);
+  }
+
+  // ── Input card ───────────────────────────────────────────
+  .sh-input-card {
+    background-color: index.$color-white;
+    color: index.$color-gray-800;
+  }
+
+  .sh-modes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.75rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .sh-radio {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: index.$color-gray-800;
+    cursor: pointer;
+
+    input {
+      width: 1rem;
+      height: 1rem;
+      margin: 0;
+      appearance: none;
+      cursor: pointer;
+      border: 1px solid index.$color-gray-500;
+      border-radius: 50%;
+      background-color: index.$color-white;
+
+      &:checked {
+        border: 2px solid index.$color-magenta-700;
+        box-shadow: inset 0 0 0 2px index.$color-white;
+        background-color: index.$color-magenta-700;
+      }
+
+      &:focus-visible {
+        outline: 2px solid rgba(index.$color-magenta-700, 0.35);
+        outline-offset: 2px;
+      }
+    }
+  }
+
+  .sh-label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: index.$color-gray-800;
+  }
+
+  .sh-input-wrap {
+    position: relative;
+
+    .sh-input-affix {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.8125rem;
+      color: index.$color-gray-800;
+    }
+
+    .sh-prefix {
+      left: 1rem;
+    }
+
+    .sh-suffix {
+      right: 1rem;
+    }
+
+    .form-control {
+      height: 3.25rem;
+      padding-left: 2rem;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: index.$color-gray-800;
+      border: 1px solid index.$color-gray-400;
+      @include index.border-radius(0.25rem);
+
+      &.sh-suffix-input {
+        padding-left: 1rem;
+        padding-right: 2rem;
+      }
+
+      &:focus {
+        border-color: index.$color-magenta-500;
+        box-shadow: 0 0 0 0.2rem rgba(index.$color-magenta-500, 0.15);
+      }
+    }
+  }
+
+  // ── Result card ──────────────────────────────────────────
+  .sh-result-card {
+    justify-content: center;
+    background-color: rgba(index.$color-magenta-800, 0.6);
+    color: index.$color-white;
+  }
+
+  .sh-result-label {
+    margin-bottom: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: index.$color-pink-300;
+  }
+
+  .sh-result-value {
+    margin-bottom: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: index.$color-white;
+  }
+
+  .sh-result-meta {
+    margin: 0.25rem 0 0;
+    font-size: 0.8125rem;
+    color: index.$color-pink-200;
+  }
+
+  .sh-range {
+    --sh-progress: 0%;
+    width: 100%;
+    height: 3px;
+    margin-top: 2rem;
+    appearance: none;
+    cursor: pointer;
+    background: linear-gradient(
+      to right,
+      index.$color-pink-400 0%,
+      index.$color-pink-400 var(--sh-progress),
+      rgba(index.$color-white, 0.15) var(--sh-progress),
+      rgba(index.$color-white, 0.15) 100%
+    );
+    @include index.border-radius(2px);
+    outline: none;
+
+    &::-webkit-slider-thumb {
+      width: 18px;
+      height: 18px;
+      appearance: none;
+      background-color: index.$color-magenta-500;
+      border: 2px solid index.$color-pink-300;
+      border-radius: 50%;
+    }
+
+    &::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      background-color: index.$color-magenta-500;
+      border: 2px solid index.$color-pink-300;
+      border-radius: 50%;
+    }
+
+    &:focus-visible::-webkit-slider-thumb {
+      box-shadow: 0 0 0 4px rgba(index.$color-white, 0.25);
+    }
+  }
+
+  // ── How to use ───────────────────────────────────────────
+  .sh-how-to {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.75rem;
+    margin-top: 1.75rem;
+    font-size: 0.8125rem;
+    color: index.$color-pink-100;
+
+    strong {
+      color: index.$color-white;
+    }
+  }
+
+  .sh-step {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .sh-step-arrow {
+    color: index.$color-pink-300;
+  }
+
+  @media (max-width: 767.98px) {
+    padding: 2rem 0 3rem;
+
+    .sh-title {
+      font-size: 2.25rem;
+    }
+
+    .sh-card {
+      padding: 1.5rem;
+    }
+
+    .sh-result-value {
+      font-size: 2rem;
+    }
+  }
+}

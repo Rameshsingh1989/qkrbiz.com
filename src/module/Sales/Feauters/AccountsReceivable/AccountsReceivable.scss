@@ -1,0 +1,48 @@
+@use '@/styles/base/index';
+
+
+.forecast{
+    padding: 2.5rem 0rem;
+    background-color: index.$color-primary-100;
+}
+@media (min-width: 576px) {
+
+}
+@media (min-width:768px){
+
+}
+@media (min-width: 992px){
+
+}
+@media (min-width: 1200px){
+
+}
+// @media (min-width: 1400px){
+//     .forecast{
+//         padding:0rem;
+//         margin-top: 12rem;
+//         .forecast-row{
+//             min-height: 350px;
+//             position: relative;
+//             .img-fluid{
+//                 right: 0;
+//                 max-width: 100%;
+//                 bottom: 0;
+//                 position: absolute;
+//             }
+//         }
+//     }
+// }
+// @media(min-width:1900px){
+//     .forecast{
+//         padding:0rem;
+//         margin-top: 12rem;
+//         .forecast-row{
+//             min-height: 445px;
+//             .img-fluid{
+//                 max-width: 99%;
+//             }
+//         }
+//     }
+//  }
+

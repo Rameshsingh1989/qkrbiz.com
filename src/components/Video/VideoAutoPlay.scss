@@ -1,0 +1,32 @@
+// .video-player{
+//     max-width: 100%;
+//     border-radius: 1rem;
+//     &.video-shadow{
+//         box-shadow: 0px 2px 12px rgba(38, 38, 38, 0.12);
+//     }
+// }
+// video::-webkit-media-controls {
+//     display: none;
+// }
+.video-auto-play{
+    max-width: 100%;
+    // border-radius: 0.5rem;
+    // &.video-shadow{
+    //     box-shadow: 0px 2px 12px rgba(38, 38, 38, 0.12);
+    // }
+}
+
+
+video{
+ background-color: transparent;
+}
+video::-webkit-media-controls {
+    display: none;
+}
+video::-webkit-media-controls-panel {
+  background-color: transparent !important;
+}
+
+video::-webkit-media-controls {
+  background-color: transparent !important;
+}

@@ -1,0 +1,102 @@
+@use '@/styles/base/index.scss' as index;
+
+.compliances {
+  background-color: index.$color-deepsky-50;
+  padding: 2rem;
+  @include index.border-radius(1rem);
+  h2 {
+    color: index.$color-deepsky-800;
+  }
+  .btn-default {
+    background-color:index.$color-deepsky-800;
+    color: index.$color-white;
+    font-size: 1.25rem;
+    padding: 0.5rem 1.5rem;
+  }
+  .card {
+    background-color:index.$color-deepsky-100;
+    color: index.$color-deepsky-800;
+    border: unset;
+    @include index.border-radius(1rem);
+    ul {
+      margin-top: 1rem;
+    }
+  }
+}
+.box-with-image {
+  .card {
+    padding: 2rem;
+    background-color: index.$color-deepsky-50;
+    margin-bottom: 1.75rem;
+    border: unset;
+    @include index.border-radius(1rem);
+    .card-header {
+      padding: 0rem;
+      background-color: transparent;
+      border-bottom: unset;
+    }
+    .card-body {
+      flex: unset;
+      padding: 2rem 0rem;
+      background-color: transparent;
+    }
+    .card-footer {
+      display: flex;
+      flex: 1 ;
+      padding: 1rem;
+      background-color: index.$color-deepsky-100;
+      border-top: unset;
+      @include index.border-radius(0.5rem);
+       .icon-deepsky-list {
+        margin-top: 0rem;
+        margin-bottom: 0.5rem;
+        text-align: left;
+        padding-left: 0rem;
+        li {
+          position: relative;
+          padding-left: 1.5rem;
+          padding-top: 0.25rem;
+          padding-bottom: 0.25rem;
+          font-size: 0.9375rem;
+          &:before {
+            position: absolute;
+            content: "";
+            left: 0rem;
+            top: 0.625rem;
+            width: 8px;
+            height: 8px;
+            background-color: index.$color-deepsky-500;
+            @include index.border-radius(50%);
+          }
+        }
+      }
+    }
+    .solution-link{
+        background-color: index.$color-deepsky-800;
+        color: index.$color-white;
+        padding: 0.625rem 1rem;
+        text-align: center;
+    }
+  }
+}
+
+@media (min-width: 768px){
+
+}
+@media (min-width: 992px){
+    .compliances {
+        @include index.border-radius(2.5rem);
+        padding: 3rem;
+    }
+}       
+@media (min-width: 1200px){
+
+    
+}
+
+
+@media (min-width: 1400px){
+     
+}
+@media (min-width: 1900px){
+}

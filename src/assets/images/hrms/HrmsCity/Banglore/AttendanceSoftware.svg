@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44">
+  <g id="Icon" transform="translate(-1.25 -1.25)">
+    <path id="Path_39100" data-name="Path 39100" d="M45.25,21.419V10.674A7.672,7.672,0,0,0,37.576,3H8.924A7.675,7.675,0,0,0,1.25,10.674V35.233a7.675,7.675,0,0,0,7.674,7.674H23.25a1.535,1.535,0,1,0,0-3.07H8.924a4.6,4.6,0,0,1-4.6-4.6V10.674a4.6,4.6,0,0,1,4.6-4.6H37.576a4.6,4.6,0,0,1,4.6,4.6V21.419a1.535,1.535,0,0,0,3.07,0Z" transform="translate(0 1.831)" fill="#96006b" fill-rule="evenodd"/>
+    <path id="Path_39101" data-name="Path 39101" d="M43.715,9H2.785a1.535,1.535,0,1,0,0,3.07h40.93a1.535,1.535,0,1,0,0-3.07Z" transform="translate(0 8.11)" fill="#96006b" fill-rule="evenodd"/>
+    <path id="Path_39102" data-name="Path 39102" d="M6.75,2.785V9.948a1.535,1.535,0,1,0,3.07,0V2.785a1.535,1.535,0,1,0-3.07,0Z" transform="translate(5.756)" fill="#96006b" fill-rule="evenodd"/>
+    <path id="Path_39103" data-name="Path 39103" d="M15.75,2.785V9.948a1.535,1.535,0,1,0,3.07,0V2.785a1.535,1.535,0,1,0-3.07,0Z" transform="translate(15.174)" fill="#96006b" fill-rule="evenodd"/>
+    <path id="Path_39104" data-name="Path 39104" d="M22.994,12.25A10.744,10.744,0,1,0,33.738,22.994,10.748,10.748,0,0,0,22.994,12.25Zm0,3.07a7.674,7.674,0,1,1-7.674,7.674A7.677,7.677,0,0,1,22.994,15.32Z" transform="translate(11.512 11.512)" fill="#96006b" fill-rule="evenodd"/>
+    <path id="Path_39105" data-name="Path 39105" d="M15.2,20.166l3.07,3.07a1.533,1.533,0,0,0,2.169,0l5.116-5.116a1.534,1.534,0,1,0-2.169-2.169l-4.032,4.03L17.369,18A1.534,1.534,0,0,0,15.2,20.166Z" transform="translate(14.128 14.913)" fill="#96006b" fill-rule="evenodd"/>
+  </g>
+</svg>

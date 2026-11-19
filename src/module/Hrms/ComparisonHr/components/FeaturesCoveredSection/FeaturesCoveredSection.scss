@@ -1,0 +1,72 @@
+@use '@/styles/base/index';
+
+.feature-section {
+  margin-top: 2rem;
+  padding: 2.5rem 0;
+   background-color: rgba(index.$color-gray-50, 0.6);
+  .bg-light-pink{
+    background-color: index.$color-pink-50;
+    padding: 1.5rem;
+    margin-top: 1.75rem;
+    border-radius: 1rem;
+  }
+  .feature-card {
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+    h3 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      // color: index.$color-white;
+    }
+    p {
+      font-size: 1.25rem;
+      // color: index.$color-white;
+    }
+    &.bg-pinks {
+      background-color: index.$color-pink-100;
+       h3 {
+         color: index.$color-pink-600;
+       }
+    };
+    &.bg-orange {
+      background-color: index.$color-warning-100;
+      h3 {
+         color: index.$color-warning-600;
+       }
+    };
+    &.bg-blue {
+      background-color: index.$color-primary-100;
+      h3 {
+         color: index.$color-primary-600;
+       }
+    };
+    &.bg-green {
+      background-color: index.$color-success-100;
+      h3 {
+         color: index.$color-success-600;
+       }
+    };
+    &.bg-purple {
+      background-color: index.$color-purple-100;
+      h3 {
+         color: index.$color-purple-600;
+       }
+    }
+    &.bg-cyan {
+      background-color: index.$color-deepsky-100;
+      h3 {
+         color: index.$color-deepsky-600;
+       }
+    };
+    &.bg-red {
+      background-color: index.$color-danger-100;
+      h3 {
+         color: index.$color-danger-600;
+       }
+    };
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+}

@@ -1,0 +1,240 @@
+@use '@/styles/base/index';
+
+$dms-line: index.$color-gray-400;
+$dms-line-soft: index.$color-gray-300;
+$dms-muted: index.$color-gray-600;
+$dms-btn-line: index.$color-slateblue-200;
+$dms-dash: index.$color-gray-500;
+$dms-foot: index.$color-gray-50;
+
+
+// ---------------- Drawn product cards ----------------
+.dms-mock {
+  margin: 0;
+  background: index.$color-white;
+  border: 1px solid $dms-line;
+  border-radius: 1rem;
+  box-shadow: 0 1px 2px index.$shadow-05, 0 12px 32px index.$shadow-08;
+  overflow: hidden;
+  font-size: 0.875rem;
+  color: index.$color-gray-800;
+
+  small {
+    display: block;
+    color: $dms-muted;
+    font-size: 0.8rem;
+  }
+}
+
+.dms-mock-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.9rem 1.1rem;
+  border-bottom: 1px solid $dms-line;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.dms-mock-foot {
+  padding: 0.9rem 1.1rem;
+  background: $dms-foot;
+  border-top: 1px solid $dms-line;
+}
+
+.dms-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 1.1rem;
+  border-bottom: 1px solid $dms-line-soft;
+  &:last-child {
+    border-bottom: 0;
+  }
+  > small {
+    text-align: right;
+  }
+}
+
+.dms-row-flat {
+  padding: 0.35rem 0;
+  border-bottom: 0;
+}
+
+.dms-row-main {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.dms-pill {
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+}
+.dms-pill-info { color: index.$color-primary-800; }
+.dms-pill-warn { color: index.$color-warning-800; }
+.dms-pill-ok { background: index.$color-green-100; color: index.$color-spring-green-700; }
+.dms-pill-danger { background: index.$color-danger-100; color: index.$color-danger-900; }
+
+.dms-group {
+  padding: 0.55rem 1.1rem;
+  background: $dms-foot;
+  border-bottom: 1px solid $dms-line-soft;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $dms-muted;
+}
+
+.dms-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.3rem 0;
+}
+.dms-line-total {
+  border-top: 1px solid $dms-line;
+  margin-top: 0.3rem;
+  padding-top: 0.5rem;
+  font-weight: 700;
+}
+
+.dms-meter {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+  > small:first-child {
+    width: 4.5rem;
+  }
+}
+
+.dms-avatar {
+  width: 2rem;
+  height: 2rem;
+  font-size: 0.75rem;
+}
+.dms-avatar-blue { color: index.$color-primary-800; }
+.dms-avatar-warn { color: index.$color-warning-800; }
+
+.dms-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 55%;
+}
+.dms-bar {
+  flex: 1;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: $dms-line;
+  overflow: hidden;
+}
+.dms-bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: index.$color-magenta-700;
+}
+.dms-bar-warn {
+  background: index.$color-warning-700;
+}
+
+.dms-fake-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.25rem;
+  padding: 0 0.9rem;
+  border-radius: 0.5rem;
+  border: 1px solid $dms-btn-line;
+  background: index.$color-white;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.dms-fake-btn-primary {
+  background: index.$color-magenta-700;
+  border-color: index.$color-magenta-700;
+  color: index.$color-white;
+}
+
+// Letter
+.dms-mock-pair {
+  margin: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 1rem;
+  align-items: start;
+}
+.dms-mock-pair-single {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.dms-letter {
+  line-height: 1.7;
+  color: index.$color-gray-700;
+  p {
+    margin-bottom: 0.6rem;
+  }
+}
+.dms-letter-logo {
+  width: 5.5rem;
+  height: 0.6rem;
+  background: $dms-line;
+}
+.dms-token {
+  background: index.$color-magenta-50;
+  color: index.$color-magenta-700;
+  border-radius: 0.25rem;
+  padding: 0 0.3rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.dms-sign-slot {
+  border: 1.5px dashed $dms-dash;
+  padding: 0.5rem 1rem;
+  color: $dms-muted;
+  font-size: 0.8rem;
+}
+
+// Signing steps
+.dms-steps {
+  padding: 1.25rem 1.1rem;
+}
+.dms-step-line {
+  flex: 1;
+  width: 2px;
+  min-height: 2.5rem;
+  background: index.$color-magenta-700;
+}
+.dms-signature {
+  display: block;
+  margin-top: 0.4rem;
+  font-family: 'Brush Script MT', 'Segoe Script', cursive;
+  font-size: 1.75rem;
+  color: index.$color-primary-800;
+}
+
+@media (max-width: 991.98px) {
+
+  .dms-visual {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .dms-mock-pair {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .dms-progress {
+    width: 50%;
+  }
+  .dms-row {
+    padding: 0.7rem 0.9rem;
+  }
+}

@@ -1,0 +1,201 @@
+@use '@/styles/base/index';
+
+.tendars-features{
+    padding: 3.5rem 0rem;
+    background-color: index.$color-periwinkle-50;
+    h2{
+        margin-bottom: 2.25rem;
+        &:after {
+          width: 12rem;
+        }
+    }
+    p{
+        margin-bottom: 2.75rem;
+    }
+    .mb-space-4{
+        margin-bottom:1.5rem;
+    }
+    .card {
+        min-height: auto;
+        background-color: transparent;
+        margin-bottom: 1.5rem;
+        border:1px solid rgba(index.$color-periwinkle-300, 0.7);
+        border-radius: 1rem;
+        .card-body{
+            padding:1.5rem;
+            transition: all 0.4s;
+            .icons {
+                background-color:  rgba(index.$color-periwinkle-400, 0.7);
+                width: 3.5rem;
+                height: 3.5rem;
+                padding: 0.625rem;
+                margin-bottom: 1rem;
+                border-radius: .75rem;
+            }
+            h5{
+                font-size: 1rem;
+                margin-top: 1.5rem;
+                margin-bottom:1rem;
+            }
+        }
+        &:hover{
+            background-color: index.$color-white;
+            box-shadow: 0px 3px 20px index.$shadow-09;
+            transition: all 0.4s;
+        }    
+    }
+    .expense-hide-img{
+      display: none;
+    }
+    
+}
+.EMDStatus{
+    padding:1.5rem 1.5rem;
+    border-radius: 1.5rem 1.5rem;
+}
+@media (min-width: 768px){
+ 
+}
+
+
+@media (min-width: 992px){
+}
+@media (min-width: 1200px){
+
+    .tendars-features{
+         .mb-space-4{
+            margin-bottom:1.5rem;
+        }
+        .card {
+            margin-bottom:1.5rem;
+            height: 100% !important;
+            .card-body{
+                padding: 2.5rem;
+                h5{
+                    font-size: 1.25rem;
+                }   
+            }  
+        }
+    } 
+}
+@media (min-width: 1400px){
+    .EMDStatus{
+        padding: 2rem 2rem;
+        border-radius: 2rem;
+    }
+    .tendars-features{
+         .mb-space-4{
+            margin-bottom:1.5rem;
+        }
+        .card {
+            margin-bottom:1.5rem; 
+        }
+        .expense-hide-img{
+            display: block;
+        }
+    } 
+
+}
+
+.question-designs {
+  .card {
+    border: unset;
+    .card-space {
+      padding: 1.5rem 1.5rem 1.5rem 6.5rem;
+      font-size: 0.7rem;
+      z-index: 2;
+    }
+    &.q_img {
+      width: 100%;
+      height: 155px;
+      margin-bottom: 1.5rem;
+      position: relative;
+      &::before {
+        position: absolute;
+        top: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+    }
+    &.q_img_1 {
+      &:before {
+        background: url('@/assets/images/Qkrtenders/q_img_1.svg') no-repeat;
+        background-size: 100%;
+      }
+    }
+    &.q_img_2 {
+      &:before {
+        background: url('@/assets/images/Qkrtenders/q_img_2.svg') no-repeat;
+        background-size: 100%;
+      }
+    }
+    &.q_img_5 {
+      &:before {
+        background: url('@/assets/images/Qkrtenders/q_img_3.svg') no-repeat;
+        background-size: 100%;
+      }
+    }
+    &.q_img_4 {
+      &:before {
+        background: url('@/assets/images/Qkrtenders/q_img_4.svg') no-repeat;
+        background-size: 100%;
+      }
+    }
+    &.q_img_3 {
+      &:before {
+        background: url('@/assets/images/Qkrtenders/q_img_5.svg') no-repeat;
+        background-size: 100%;
+      }
+    }
+    &.q_img_6 {
+      &:before {
+        background: url('@/assets/images/Qkrtenders/q_img_6.svg') no-repeat;
+        background-size: 100%;
+      }
+    }
+  }
+}
+.question-designs {
+    .card {
+        &.q_img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            aspect-ratio: 360 / 195;
+            margin-bottom: 1.5rem;
+        }
+        .card-space {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 1rem 1rem 1rem 38%;
+            font-size: clamp(0.85rem, 1vw, 1.125rem);
+            line-height: 1.45;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .question-designs {
+        .card {
+            &.q_img {
+                margin-bottom: 2.5rem;
+            }
+            .card-space {
+                font-size: clamp(0.8rem, 1vw, 1rem);
+                padding-left: 38%;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1900px) {
+    .tendars-features {
+        padding-top: 3.5rem;
+    }
+}

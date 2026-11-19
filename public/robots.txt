@@ -1,0 +1,46 @@
+
+User-agent: *
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# --- Core search crawlers ---
+User-agent: Googlebot
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+# --- OpenAI ---
+# Training crawler
+User-agent: GPTBot
+Allow: /
+# Search indexing for ChatGPT / SearchGPT
+User-agent: OAI-SearchBot
+Allow: /
+
+# --- Common Crawl (feeds many LLMs)
+User-agent: CCBot
+Allow: /
+
+# --- Perplexity (AI search)
+User-agent: PerplexityBot
+Allow: /
+
+# --- Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+
+# --- DuckDuckGo AI answers
+User-agent: DuckAssistBot
+Allow: /
+
+# --- Apple AI (training)
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://www.qkrbiz.com/sitemap.xml
+
+
+

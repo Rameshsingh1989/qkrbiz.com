@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32.82" height="32.82" viewBox="0 0 32.82 32.82">
+  <g id="Group_8320" data-name="Group 8320" transform="translate(-2007.6 -7.6)">
+    <g id="Group_8319" data-name="Group 8319" transform="translate(2022.509 8)">
+      <path id="Path_24943" data-name="Path 24943" d="M2050.779,37a2,2,0,1,1,0,2H2037V37Z" transform="translate(-2037 -21.991)" fill="#fff" stroke="#fff" stroke-width="0.8" fill-rule="evenodd"/>
+      <path id="Path_24944" data-name="Path 24944" d="M2050.779,52a2,2,0,1,0,0-2h-1.856l-4-4H2037v2h7.089l4,4Z" transform="translate(-2037 -26.988)" fill="#fff" stroke="#fff" stroke-width="0.8" fill-rule="evenodd"/>
+      <path id="Path_24945" data-name="Path 24945" d="M2050.779,21a2,2,0,1,1,0,2h-1.856l-4,4H2037V25h7.089l4-4Z" transform="translate(-2037 -13.996)" fill="#fff" stroke="#fff" stroke-width="0.8" fill-rule="evenodd"/>
+      <path id="Path_24946" data-name="Path 24946" d="M2046.576,10.52a1.967,1.967,0,0,1-.07-.518,2,2,0,1,1,2,2,2.029,2.029,0,0,1-.521-.068l-5.068,5.071H2037V15h5.088Z" transform="translate(-2037 -8)" fill="#fff" stroke="#fff" stroke-width="0.8" fill-rule="evenodd"/>
+      <path id="Path_24947" data-name="Path 24947" d="M2047.987,59.071,2042.919,54H2037v2h5.088l4.488,4.485a1.977,1.977,0,0,0-.07.518,2,2,0,1,0,2-2,2.028,2.028,0,0,0-.52.068Z" transform="translate(-2037 -30.985)" fill="#fff" stroke="#fff" stroke-width="0.8" fill-rule="evenodd"/>
+    </g>
+    <path id="Path_24948" data-name="Path 24948" d="M2012.6,31.823l-.005.044a6.734,6.734,0,0,0-.095,1.15,7.007,7.007,0,0,0,7,7,5,5,0,0,0,5-5V13a5,5,0,0,0-5-5,7.508,7.508,0,0,0-7.5,7.5v.85a7.277,7.277,0,0,0-4,6.655,7.485,7.485,0,0,0,3.5,6.342,2.5,2.5,0,0,1,1.1,2.471Zm1.981.293-.015.079a5.565,5.565,0,0,0-.065.822,5.005,5.005,0,0,0,5,5,3,3,0,0,0,3-3V13a3,3,0,0,0-3-3,5.507,5.507,0,0,0-5.5,5.5v1.5a2.827,2.827,0,0,0,1.551,2.668l.836.553-1.106,1.669-.831-.552a4.844,4.844,0,0,1-2.276-2.76A5.363,5.363,0,0,0,2010,23.01a5.5,5.5,0,0,0,2.572,4.652l.005,0a4.521,4.521,0,0,1,1.261,1.226,3.847,3.847,0,0,1,1.866-1.332l.6,1.908a2.121,2.121,0,0,0-1.156,1.051,5.184,5.184,0,0,0-.565,1.6Z" fill="#fff" stroke="#fff" stroke-width="0.8" fill-rule="evenodd"/>
+  </g>
+</svg>

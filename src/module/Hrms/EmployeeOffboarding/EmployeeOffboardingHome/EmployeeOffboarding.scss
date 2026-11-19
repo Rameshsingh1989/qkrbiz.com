@@ -1,0 +1,47 @@
+@use '@/styles/base/index';
+
+
+.employee-offboarding{
+    .icon-size-md{
+        width: 3.75rem;
+        height: 3.75rem;
+    }
+}
+.offboarding-feature{
+    padding: 2rem 0rem;
+    ul.icon-magenta{
+        padding: 0;
+         li{
+            position: relative;
+            z-index: 1;
+            padding: 10px 10px 10px 40px;
+            list-style: none;
+            &::before{
+                position: absolute;
+                z-index: 3;
+                content: "";
+                left: 6px;
+                top: 18px;
+                width: 8px;
+                height: 8px;
+                background-color: index.$color-magenta-600;
+                border-radius: 50%;
+            }
+            &::after{
+                position: absolute;
+                z-index: 2;
+                content: "";
+                left: 0;
+                top: 12px;
+                width: 20px;
+                height: 20px;
+                background-color: index.$color-magenta-50;
+                border-radius: 5px;
+            }
+        }
+    }
+
+}  
+.employee-offboarding .payroll-cta {
+    background-color: index.$color-pink-200;
+}

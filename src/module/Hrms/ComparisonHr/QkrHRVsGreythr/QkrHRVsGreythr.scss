@@ -1,0 +1,21 @@
+.section-title{
+  font-size: 2rem;
+  font-weight: 600;
+  .text-underline {
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-thickness: 3px;
+  }
+}
+
+@media (min-width: 1400px) {
+ .section-title{
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+ .section-title{
+    font-size: 1.75rem;
+  }
+}

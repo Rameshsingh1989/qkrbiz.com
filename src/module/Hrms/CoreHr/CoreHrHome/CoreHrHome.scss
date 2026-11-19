@@ -1,0 +1,172 @@
+@use '@/styles/base/index';
+
+.elementor-element{
+    ul{
+        margin-bottom: 0rem;
+        li{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+            .cea-tab-link {
+                display: flex;
+                width: 100%;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                background: index.$color-primary-50;
+                border-radius: 100px;
+                .cea-tab-icon {
+                    width: 70px;
+                    height: 70px;
+                    align-content: center;
+                    text-align: center;
+                    padding: 0.75rem;
+                    background: index.$color-primary-50;
+                    border: 5px solid index.$color-white;
+                    border-radius: 50%;
+                    opacity: 0.7;
+                    transition: all 0.4s;
+                }
+                 .cea-tab-title {
+                      color: index.$color-gray-700;
+                      padding: 0rem 1.5rem; 
+                      font-size: 0.85rem; 
+                }
+                &.active,&:hover, &:focus, &:active{
+                    .cea-tab-title {
+                        color: index.$color-magenta-700; 
+                    }
+                    .cea-tab-icon {
+                        opacity: 1;
+                    }
+                    
+                }
+            }
+        }
+    }
+   
+}
+
+@media(min-width:540px){
+    .elementor-element{
+        ul{
+            li{
+                .cea-tab-link {
+                    justify-content: left;
+                    min-width: 26.5rem;
+                    position: relative;
+                    .cea-tab-icon {
+                        width: 70px;
+                        height: 70px;
+                        padding: 0.95rem;
+                    }
+                     .cea-tab-title {
+                          color: index.$color-gray-700;
+                          font-size: 1rem;
+                          padding: 0rem 1.5rem;  
+                    }
+                }
+            }
+        } 
+    }
+}
+
+// @media(min-width:768px){
+//     .elementor-element{
+//         ul{
+//             li{
+//                 .cea-tab-link {
+//                     min-width: 26.5rem;
+//                     .cea-tab-icon {
+//                         width: 70px;
+//                         height: 70px;
+//                     }
+//                      .cea-tab-title {
+//                           color: #383838;
+//                           padding: 0rem 1.5rem;  
+//                     }
+//                 }
+//             }
+//         }
+       
+//     }
+// }
+@media(min-width:992px){
+    .elementor-element{
+        position: relative;
+        z-index: 0;
+     }
+    .elementor-background-overlay {
+        height: 100%;
+        width: 100%;
+        top: 0rem;
+        left: -3rem;
+        position: absolute;
+        background-image: url('@/assets/images/hrms/corehr/shape-feature.png');
+        background-position: right center;
+        background-size: 30% 85%;
+        background-repeat: no-repeat;
+        z-index: 1;
+    }
+    .elementor-element{
+        ul{
+            li{
+                width: 100%;
+                display: inline-block;
+                margin-bottom: 1rem;
+                position: relative;
+                z-index: 2;
+                .cea-tab-link {
+                    width: auto;
+                    align-items: center;
+                    justify-content: left;
+                    float: left;
+                    .cea-tab-icon {
+                        width: 70px;
+                        height: 70px;
+                    }
+                     .cea-tab-title {
+                          padding: 0rem 1.5rem;  
+                    }
+                }
+                &:nth-child(1){
+                    margin-left: 7.5rem;
+                }
+                &:nth-child(2){
+                    margin-left: 2.5rem;
+                }
+                &:nth-child(3){
+                    margin-left: 0rem;
+                }
+                &:nth-child(4){
+                    margin-left: 2.5rem;
+                }
+                &:nth-child(5){
+                    margin-left: 7.5rem;
+                    margin-bottom: 0rem;
+                }
+                .cea-tab-link {
+                    min-width: 25rem;
+                }
+            }
+        }
+    }
+}
+@media(min-width:1200px){
+    .elementor-element{
+        ul{
+            li{
+                margin-bottom: 2rem;
+                .cea-tab-link {
+                    min-width: 26.5rem;
+                }
+            }
+        }
+    }
+}
+@media(min-width:1400px){
+
+}
+@media(min-width:1900px){
+
+}

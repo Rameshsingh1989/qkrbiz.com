@@ -1,0 +1,443 @@
+@use '@/styles/base/index';
+
+// Panel styles — loaded with the lazy ChatbotPanel chunk, not on every page.
+
+$chat-gradient: linear-gradient(135deg, index.$color-magenta-700, index.$color-pink-500);
+$chat-radius: 0.75rem;
+
+.qkr-chat-panel {
+  display: flex;
+  flex-direction: column;
+  width: 23rem;
+  height: min(36rem, calc(100vh - 8rem));
+  overflow: hidden;
+  background: index.$color-gray-50;
+  border-radius: $chat-radius;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  animation: qkr-chat-pop 0.25s ease-out;
+}
+
+.qkr-chat-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1rem;
+  background: $chat-gradient;
+  color: index.$color-white;
+}
+
+.qkr-chat-avatar {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.qkr-chat-heading {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+
+  strong {
+    font-size: 1rem;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.75rem;
+    opacity: 0.9;
+  }
+}
+
+.qkr-chat-online {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background:index.$color-spring-green-300
+}
+
+.qkr-chat-close {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: index.$color-white;
+  font-size: 1.1rem;
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+}
+
+/* ── Messages ────────────────────────────────────── */
+.qkr-chat-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.qkr-chat-msg {
+  display: flex;
+  flex-direction: column;
+  max-width: 85%;
+  padding: 0.5rem 0.5rem;
+  border-radius: $chat-radius;
+  word-wrap: break-word;
+  animation: qkr-chat-pop 0.2s ease-out;
+
+  p {
+    margin: 0 0 0.4rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &--bot {
+    align-self: flex-start;
+    background: index.$color-white;
+    color: index.$color-gray-800;
+    border-bottom-left-radius: 0.25rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+
+  &--user {
+    align-self: flex-end;
+    background: index.$color-magenta-100;
+    color: index.$color-magenta-700;
+    border-bottom-right-radius: 0.25rem;
+  }
+
+  &--wide {
+    max-width: 95%;
+    width: 95%;
+  }
+
+  a {
+    color: index.$color-magenta-700;
+  }
+}
+
+.qkr-chat-faq-title {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: index.$color-magenta-700;
+  font-weight: 600;
+}
+
+// FAQ answers carry the site's own markup (lists, headings) — tone it down for a chat bubble.
+.qkr-chat-faq-body {
+  font-size: 0.85rem;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0.5rem 0 0.25rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  ul, ol {
+    margin: 0.25rem 0 0.4rem;
+    padding-left: 1.1rem;
+  }
+  .ul-icon{
+    padding-left: 0rem;
+    .tick-icon-magenta{
+          padding-left: 1.5rem !important;
+          &::before{
+            background-size: 75%;
+            opacity: 0.8;
+          }
+    }
+  }
+
+  li {
+    margin-bottom: 0.15rem;
+    padding-left: 0 !important;
+    background: none !important; // drop the site's tick-icon list styling
+  }
+
+
+  table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    font-size: 0.8rem;
+  }
+}
+
+.qkr-chat-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.qkr-chat-plans,
+.qkr-chat-products {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    padding: 0.55rem 0.7rem;
+    border: 1px solid index.$color-gray-400;
+    border-radius: 0.6rem;
+  }
+
+  small {
+    display: block;
+    color: index.$color-gray-600;
+  }
+}
+
+.qkr-chat-plans li > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  strong{
+     font-weight: 600;
+  }
+  span {
+    color: index.$color-magenta-700;
+    font-weight: 600;
+  }
+}
+
+.qkr-chat-products li {
+  padding: 0;
+  strong{
+     font-weight: 600;
+  }
+  a {
+    display: block;
+    padding: 0.55rem 0.7rem;
+    color: index.$color-gray-800;
+    text-decoration: none;
+    border-radius: 0.6rem;
+
+    &:hover {
+      background: index.$color-gray-200;
+    }
+  }
+
+  strong {
+    color: index.$color-magenta-700;
+  }
+}
+
+.qkr-chat-contact {
+  line-height: 1.8;
+
+  svg {
+    margin-right: 0.35rem;
+    color: index.$color-magenta-700;
+    vertical-align: -0.125em;
+  }
+}
+
+/* typing dots */
+.qkr-chat-typing {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+  padding: 0.75rem 0.9rem;
+
+  span {
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: 50%;
+    background: index.$color-gray-500;
+    animation: qkr-chat-dot 1s infinite ease-in-out;
+
+    &:nth-child(2) { animation-delay: 0.15s; }
+    &:nth-child(3) { animation-delay: 0.3s; }
+  }
+}
+
+/* quick replies */
+.qkr-chat-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.4rem;
+
+  button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid index.$color-magenta-700;
+    border-radius: 999px;
+    background: index.$color-white;
+    color: index.$color-magenta-700;
+    font-size: 0.8rem;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+
+    &:hover,
+    &:focus-visible {
+      background: index.$color-magenta-700;
+      color: index.$color-white;
+    }
+  }
+}
+
+/* ── Lead form ───────────────────────────────────── */
+.qkr-chat-form {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.qkr-chat-field {
+  display: grid;
+  gap: 0.2rem;
+  margin: 0;
+
+  span {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: index.$color-gray-700;
+  }
+
+  input,
+  select {
+    width: 100%;
+    padding: 0.45rem 0.6rem;
+    border: 1px solid index.$color-gray-400;
+    border-radius: 0.5rem;
+    background: index.$color-white;
+    font-size: 0.85rem;
+
+    &:focus {
+      outline: none;
+      border-color: index.$color-magenta-700;
+      box-shadow: 0 0 0 3px rgba(150, 0, 107, 0.12);
+    }
+
+    &[aria-invalid="true"] {
+      border-color: index.$color-danger-500;
+    }
+  }
+
+  small {
+    color: index.$color-danger-500;
+    font-size: 0.72rem;
+  }
+}
+
+.qkr-chat-form-loading {
+  margin: 0;
+  color: index.$color-gray-600;
+  font-size: 0.8rem;
+}
+
+.qkr-chat-form-error {
+  margin: 0;
+  color: index.$color-danger-500;
+  font-size: 0.8rem;
+}
+
+.qkr-chat-submit {
+  margin-top: 0.25rem;
+  padding: 0.6rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: $chat-gradient;
+  color: index.$color-white;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: wait;
+  }
+}
+
+/* ── Input bar ───────────────────────────────────── */
+.qkr-chat-input {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.65rem 0.75rem;
+  border-top: 1px solid index.$color-gray-400;
+  background: index.$color-white;
+
+  input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.55rem 0.8rem;
+    border: 1px solid index.$color-gray-400;
+    border-radius: 999px;
+    font-size: 0.9rem;
+
+    &:focus {
+      outline: none;
+      border-color: index.$color-magenta-700;
+    }
+  }
+
+  button {
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: 2.4rem;
+    height: 2.4rem;
+    border: 0;
+    border-radius: 50%;
+    background: $chat-gradient;
+    color: index.$color-white;
+    cursor: pointer;
+
+    &:disabled {
+      opacity: 0.45;
+      cursor: default;
+    }
+  }
+}
+
+/* ── Phones: full-screen panel ───────────────────── */
+// @media (max-width: 575.98px) {
+//   .qkr-chat-panel {
+//     width: 100%;
+//     height: 100%;
+//     border-radius: 0;
+//   }
+// }
+
+@keyframes qkr-chat-dot {
+  0%, 80%, 100% { transform: scale(0.6); opacity: 0.5; }
+  40% { transform: scale(1); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .qkr-chat-panel,
+  .qkr-chat-msg,
+  .qkr-chat-typing span {
+    animation: none;
+  }
+}

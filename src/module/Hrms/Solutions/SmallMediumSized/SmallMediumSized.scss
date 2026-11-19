@@ -1,0 +1,16 @@
+@use '@/styles/base/index';
+
+.smes-page{
+  .content-top{
+    &.header-row{
+      .header-box{
+        &:before{
+          content: none;
+        }
+        &:after{
+          content: none;
+        }
+      }
+    }
+  }
+}

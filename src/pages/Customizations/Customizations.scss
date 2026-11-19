@@ -1,0 +1,90 @@
+@use '@/styles/base/index'; 
+
+.customizations-sec{
+    padding: 1rem 1.5rem;
+    margin-bottom: 2.5rem; 
+    border-radius: 1.5rem;
+    &.bg-1 {
+      background-color: index.$color-violet-50;
+    }
+    &.bg-2 {
+      background-color: index.$color-deepsky-50;
+    }
+    &.bg-3 {
+      background-color: index.$color-alice-50;
+    }
+    &.bg-4 {
+      background-color: index.$color-success-50;
+    }
+    &.bg-5 {
+      background-color: index.$color-orange-50;
+    }
+    .card{
+      margin-bottom: 1rem;
+      background-color: transparent;
+      border: unset;
+      .card-header{
+          padding-top: 3.5rem;
+          background-color: transparent;
+          border-bottom: unset;
+      }
+      .card-body{
+        background-color: index.$color-white;
+        padding: 0rem;
+        border-radius: 1rem;
+        .card-body-img{
+          margin-top: -4.5rem;
+          border-radius: 0.5rem;
+          img{
+              border-radius: 0.5rem;  
+          }
+        }
+        .card-content{
+          padding: 0rem 1.75rem 1rem;
+          h5 {
+            color: index.$color-magenta-800;
+            &:after {
+              background-color: index.$color-magenta-800;
+            }
+          }
+          h2{
+              position: relative;
+              font-size: 1.325rem;
+              margin-bottom: 1.5rem;
+              margin-top: 1rem;
+              &:after{
+              content: "";
+              position: absolute;
+              display: block;
+              width: 20%;
+              height: 2px;
+              opacity:0.5 ;
+              }
+
+          }
+        }
+      }
+    }
+}
+
+@media(min-width:768px){
+    
+}
+@media(min-width:992px){
+
+}
+@media(min-width:1200px){
+   .customizations-sec{
+        padding: 2rem 3rem;
+        border-radius: 2.5rem;
+      .card{
+        margin-bottom: 1.5rem;
+      }
+    }
+}
+@media(min-width:1400px){
+
+}
+@media(min-width:1900px){
+
+}

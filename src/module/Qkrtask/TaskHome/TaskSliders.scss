@@ -1,0 +1,32 @@
+@use '@/styles/base/index'; 
+
+  .slick-slide{
+      .topdiv{
+          .icons{
+              .img{
+                  &.EffortlessExperience{
+                      background: url('@/assets/images/Qkrtask/EffortlessExperience.svg') no-repeat;
+                      background-size: 100% 70%;
+                  }
+                  &.History{
+                      background: url('@/assets/images/Qkrtask/History.svg') no-repeat;
+                      background-size: 100% 70%;
+                  }
+                  &.TaskView{
+                      background: url('@/assets/images/Qkrtask/TaskView.svg') no-repeat;
+                      background-size: 100% 70%;
+                  }
+              }  
+          }
+      }
+  }  
+
+  @media (min-width: 1400px) {
+    .bg-deepsky-extralight{
+      .tabs-left{
+        .nav-arrow{
+            display:none;
+        }
+      }
+    }
+  }

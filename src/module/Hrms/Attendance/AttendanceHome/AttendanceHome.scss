@@ -1,0 +1,51 @@
+@use '@/styles/base/index';
+@use '../component/AttendanceSections';
+
+
+// ---------------- Flexibility ----------------
+.la-flexibility {
+  padding: 2.85rem 0;
+
+  .info-card {
+    background-color: index.$color-gray-100;
+    border-radius: 1rem;
+    padding: 1.75rem;
+  &.policies-steg-1{
+      background: linear-gradient(
+        180deg,
+        index.$color-warning-50 0%,
+        index.$color-warning-50,
+        index.$color-white
+      );
+      border: 1px solid index.$color-warning-100;
+    }
+     &.policies-steg-2{
+      background: linear-gradient(
+        180deg,
+        index.$color-success-50 0%,
+        index.$color-success-50,
+        index.$color-white
+      );
+      border: 1px solid index.$color-success-100;
+    }
+     &.policies-steg-3{
+      background: linear-gradient(
+        180deg,
+        index.$color-primary-50 0%,
+        index.$color-primary-50,
+        index.$color-white
+      );
+      border: 1px solid index.$color-primary-100;
+    }
+
+    .info-title {
+      // font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .info-desc {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+  }
+}

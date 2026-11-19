@@ -1,0 +1,137 @@
+@use '@/styles/base/index'; 
+// filter: hue-rotate(219deg);
+.slick-cloned *:focus {
+  outline: none !important;
+}
+.slick-slide{
+    .topdiv{
+        .icons{
+            .img{
+                &.TabIconSpreadSheets{
+                    background: url('@/assets/images/feature/TabScroll/TabIconSpreadSheets.svg') no-repeat;
+                    background-size: 100% 70%;
+                }
+                &.TabIconBoards{
+                    background: url('@/assets/images/feature/TabScroll/TabIconBoards.svg') no-repeat;
+                    background-size: 100% 70%;
+                }
+                &.TabIconForm{
+                    background: url('@/assets/images/feature/TabScroll/TabIconForm.svg') no-repeat;
+                    background-size: 100% 70%;
+                }
+                &.TabIconCard{
+                    background: url('@/assets/images/feature/TabScroll/TabIconCard.svg') no-repeat;
+                    background-size: 100% 70%;
+                }
+                &.TabIconPivotTable{
+                    background: url('@/assets/images/feature/TabScroll/TabIconPivotTable.svg') no-repeat;
+                    background-size: 100% 70%;
+                }
+                &.TabIconCalendar{
+                    background: url('@/assets/images/feature/TabScroll/TabIconCalendar.svg') no-repeat;
+                    background-size: 100% 70%;
+                } 
+                &.TabIconMap{
+                    background: url('@/assets/images/feature/TabScroll/TabIconMap.svg') no-repeat;
+                    background-size: 100% 70%;
+                } 
+                &.TabIconList{
+                    background: url('@/assets/images/feature/TabScroll/TabIconList.svg') no-repeat;
+                    background-size: 100% 70%;
+                } 
+                &.TabIconDashboard{
+                    background: url('@/assets/images/feature/TabScroll/TabIconDashboard.svg') no-repeat;
+                    background-size: 100% 70%;
+                }
+                &.TabIconChat{
+                    background: url('@/assets/images/feature/TabScroll/TabIconChat.svg') no-repeat;
+                    background-size: 100% 70%;
+                }
+            }  
+        }
+        &.active{
+        .icons{
+            .img{
+                &.TabIconSpreadSheets{
+                    background: url('@/assets/images/feature/TabScroll/TabIconSpreadSheetsW.svg') no-repeat;
+                    background-size: 100% 70%;
+                }
+                &.TabIconBoards{
+                    background: url('@/assets/images/feature/TabScroll/TabIconBoardsW.svg') no-repeat;
+                    background-size: 100% 70%;
+                }
+                &.TabIconForm{
+                    background: url('@/assets/images/feature/TabScroll/TabIconFormW.svg') no-repeat;
+                    background-size: 100% 70%;
+                }
+                &.TabIconCard{
+                    background: url('@/assets/images/feature/TabScroll/TabIconCardW.svg') no-repeat;
+                    background-size: 100% 70%;
+                }
+                &.TabIconPivotTable{
+                    background: url('@/assets/images/feature/TabScroll/TabIconPivotTableW.svg') no-repeat;
+                    background-size: 100% 70%;
+                }
+                &.TabIconCalendar{
+                    background: url('@/assets/images/feature/TabScroll/TabIconCalendarW.svg') no-repeat;
+                    background-size: 100% 70%;
+                } 
+                &.TabIconMap{
+                    background: url('@/assets/images/feature/TabScroll/TabIconMapW.svg') no-repeat;
+                    background-size: 100% 70%;
+                } 
+                &.TabIconList{
+                    background: url('@/assets/images/feature/TabScroll/TabIconListW.svg') no-repeat;
+                    background-size: 100% 70%;
+                } 
+                &.TabIconDashboard{
+                    background: url('@/assets/images/feature/TabScroll/TabIconDashboardW.svg') no-repeat;
+                    background-size: 100% 70%;
+                }
+                &.TabIconChat{
+                    background: url('@/assets/images/feature/TabScroll/TabIconChatW.svg') no-repeat;
+                    background-size: 100% 70%;
+                }  
+            }
+        
+        } 
+    }
+    }
+}
+.youtube-home-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 0;
+    z-index: 10090;
+   .youtube-popup {
+        position: relative;
+        margin: auto;
+        aspect-ratio: 16 / 9;
+        width: 100%;
+        iframe {
+        width: 100%;
+        height: 100%;
+        }
+    } 
+                   
+}
+
+@media (min-width:576px){
+}
+@media (min-width:768px){
+}
+@media (min-width:921px){
+}
+@media (min-width:1200px){
+}
+@media (min-width:1400px){
+}
+
+@media(min-width:1900){
+
+}

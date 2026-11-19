@@ -1,0 +1,119 @@
+@use '@/styles/base/index'; 
+
+.workflow-area {
+  .container {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 2.25rem;
+    &:after {
+      content: "";
+      bottom: 0rem;
+      right: 0rem;
+      width: 125px;
+      height: 124px;
+      position: absolute;
+      z-index: -1;
+      background-image: url("@/assets/images/feature/AlertsNotifications/CirclesVector.webp");
+      background-repeat: no-repeat;
+      rotate: 270deg;
+    }
+    .card {
+      margin-bottom: 1.5rem;
+      border: none;
+      @include index.border-radius(2rem);
+      box-shadow: unset;
+      .card-header {
+        text-align: center;
+        padding: 2rem 3rem;
+        padding-bottom: 0rem;
+        background-color: transparent;
+        border: unset;
+        img{
+          max-width: 100%;
+        }
+      }
+      .card-body {
+        text-align: center;
+        padding: 3rem 2rem;
+        background-color: index.$color-white;
+        @include index.border-radius(2rem);
+        @include index.box-shadow(0px 3px 12px index.$shadow-12);
+        h3 {
+          position: relative;
+          margin-bottom: 2rem;
+          &:after {
+            content: "";
+            left: 0;
+            right: 0;
+            position: absolute;
+            width: 30%;
+            height: 2px;
+            margin: 0 auto;
+            bottom: -5px;
+            display: inherit;
+            background-color: index.$color-gray-800;
+            opacity: 0.4;
+          }
+        }
+        p {
+          font-size: 1.125rem;
+          color: index.$color-gray-700;
+        }
+      }
+      &.enhance-efficiency {
+        background-color: index.$color-pink-50;
+        .card-body {
+          h3 {
+            &:after {
+              background-color: index.$color-pink-500;
+            }
+          }
+        }
+      }
+      &.improve-decision {
+        background-color: index.$color-orange-50;
+        .card-body {
+          h3 {
+            &:after {
+              background-color: index.$color-orange-700;
+            }
+          }
+        }
+      }
+      &.Eliminate-errors {
+        background-color: index.$color-magenta-100;
+        .card-body {
+          h3 {
+            &:after {
+              background-color: index.$color-magenta-700;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.simple-yet {
+    .container {
+      padding-bottom: 0rem;
+      &:after {
+        content: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .workflow-area {
+    margin-bottom: 3rem;
+    .container {
+      .card{
+          margin-bottom:0rem;
+          height: 100%;
+       }
+      }
+    &.simple-yet{
+        margin-bottom: 0rem;
+    }  
+  }
+   
+}

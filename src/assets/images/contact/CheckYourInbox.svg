@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="61.555" height="61.555" viewBox="0 0 61.555 61.555">
+  <g id="Flat" transform="translate(-24 -24)">
+    <path id="Path_36563" data-name="Path 36563" d="M99.674,112H129.39a11.674,11.674,0,0,1,11.674,11.674v18.042H88V123.674A11.674,11.674,0,0,1,99.674,112Z" transform="translate(-55.51 -76.326)" fill="#266cad"/>
+    <path id="Path_36564" data-name="Path 36564" d="M24,160H60.084v23.348H24Z" transform="translate(0 -117.958)" fill="#fa9f0c"/>
+    <path id="Path_36565" data-name="Path 36565" d="M206.595,236.476v1.584h-1.43L193.276,224.9l-.356-.394,1.575-1.423.472.523Z" transform="translate(-146.511 -172.67)" fill="#f2951b"/>
+    <path id="Path_36566" data-name="Path 36566" d="M37.675,224.5l-.356.394L25.43,238.06H24v-1.584L35.628,223.6l.472-.523Z" transform="translate(0 -172.67)" fill="#f2951b"/>
+    <path id="Path_36567" data-name="Path 36567" d="M60.084,160,42.042,173.8,24,160Z" transform="translate(0 -117.958)" fill="#ffb531"/>
+    <path id="Path_36568" data-name="Path 36568" d="M224,368h8.49v15.919H224Z" transform="translate(-173.468 -298.365)" fill="#d9d9d7"/>
+    <path id="Path_36569" data-name="Path 36569" d="M224,368h8.49v3.184H224Z" transform="translate(-173.468 -298.365)" fill="#cfcfcd"/>
+    <path id="Path_36570" data-name="Path 36570" d="M217.406,123.674v18.042H187.69V123.674A11.676,11.676,0,0,0,176.018,112h29.714A11.674,11.674,0,0,1,217.406,123.674Z" transform="translate(-131.851 -76.326)" fill="#348fd9"/>
+    <circle id="Ellipse_1391" data-name="Ellipse 1391" cx="2.5" cy="2.5" r="2.5" transform="translate(65 50)" fill="#d75246"/>
+    <path id="Path_36571" data-name="Path 36571" d="M352,24h8.49v6.368H352Z" transform="translate(-284.487)" fill="#c74242"/>
+    <path id="Path_36572" data-name="Path 36572" d="M344,24h2.123V51.593H344Z" transform="translate(-277.548)" fill="#d75246"/>
+    <path id="Path_36573" data-name="Path 36573" d="M288,296h2.123v2.123H288Z" transform="translate(-228.978 -235.916)" fill="#266cad"/>
+    <path id="Path_36574" data-name="Path 36574" d="M24,336H55.839v4.245H24Z" transform="translate(0 -270.61)" fill="#e0e0de"/>
+    <path id="Path_36575" data-name="Path 36575" d="M264,336h29.716v4.245H264Z" transform="translate(-208.161 -270.61)" fill="#cfcfcd"/>
+    <path id="Path_36576" data-name="Path 36576" d="M274.123,39.429H272A7.437,7.437,0,0,1,279.429,32v2.123A5.312,5.312,0,0,0,274.123,39.429Z" transform="translate(-215.1 -6.939)" fill="#a8deea"/>
+  </g>
+</svg>

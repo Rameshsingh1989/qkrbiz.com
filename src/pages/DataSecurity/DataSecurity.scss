@@ -1,0 +1,19 @@
+@use '@/styles/base/index';
+
+.sec-card {
+  border-color: index.$color-gray-400;
+  box-shadow: 0 1px 2px index.$shadow-05, 0 12px 32px index.$shadow-08;
+}
+.sec-card-alt {
+  border-color: index.$color-magenta-200;
+}
+.sec-text-gray {
+  color: index.$color-gray-700;
+}
+.sec-when {
+  border-color: index.$color-gray-400 !important;
+  box-shadow: 0 1px 2px index.$shadow-05, 0 12px 32px index.$shadow-05;
+  li + li {
+    border-top: 1px solid index.$color-gray-400;
+  }
+}

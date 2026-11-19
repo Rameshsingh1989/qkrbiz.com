@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="33.246" height="33.221" viewBox="0 0 33.246 33.221">
+  <g id="Connect" transform="translate(0.608 0.6)">
+    <g id="Group_8325" data-name="Group 8325" transform="translate(0.004)">
+      <g id="Group_8322" data-name="Group 8322" transform="translate(11.32)">
+        <path id="Path_24955" data-name="Path 24955" d="M185.691,9.381a4.691,4.691,0,1,1,4.691-4.691A4.7,4.7,0,0,1,185.691,9.381Zm0-7.505a2.814,2.814,0,1,0,2.814,2.814A2.818,2.818,0,0,0,185.691,1.876Z" transform="translate(-181)" fill="#fff" stroke="#fff" stroke-width="1.2"/>
+      </g>
+      <g id="Group_8323" data-name="Group 8323" transform="translate(0 19.764)">
+        <path id="Path_24956" data-name="Path 24956" d="M.632,323.05a4.691,4.691,0,1,1,6.408,1.717A4.7,4.7,0,0,1,.632,323.05Zm2.655-4.783a2.814,2.814,0,1,0,3.845,1.03A2.818,2.818,0,0,0,3.287,318.267Z" transform="translate(-0.004 -316.015)" fill="#fff" stroke="#fff" stroke-width="1.2"/>
+      </g>
+      <g id="Group_8324" data-name="Group 8324" transform="translate(22.639 19.764)">
+        <path id="Path_24957" data-name="Path 24957" d="M364.331,324.767a4.691,4.691,0,1,1,6.408-1.717A4.688,4.688,0,0,1,364.331,324.767Zm-.092-5.469a2.814,2.814,0,1,0,3.845-1.03A2.813,2.813,0,0,0,364.239,319.3Z" transform="translate(-361.984 -316.015)" fill="#fff" stroke="#fff" stroke-width="1.2"/>
+      </g>
+    </g>
+    <g id="Group_8326" data-name="Group 8326" transform="translate(1.964 6.112)">
+      <path id="Path_24958" data-name="Path 24958" d="M33.217,108.819l-1.873-.1a14.063,14.063,0,0,1,6.343-10.99l1.029,1.569A12.244,12.244,0,0,0,33.217,108.819Z" transform="translate(-31.344 -97.726)" fill="#fff" stroke="#fff" stroke-width="1.2"/>
+    </g>
+    <g id="Group_8327" data-name="Group 8327" transform="translate(22.694 6.112)">
+      <path id="Path_24959" data-name="Path 24959" d="M368.288,108.819a12.244,12.244,0,0,0-5.5-9.524l1.029-1.569a14.063,14.063,0,0,1,6.343,10.99Z" transform="translate(-362.79 -97.726)" fill="#fff" stroke="#fff" stroke-width="1.2"/>
+    </g>
+    <g id="Group_8328" data-name="Group 8328" transform="translate(9.671 28.84)">
+      <path id="Path_24960" data-name="Path 24960" d="M160.918,464.3a13.926,13.926,0,0,1-6.343-1.508l.847-1.674a12.221,12.221,0,0,0,10.993,0l.847,1.674A13.927,13.927,0,0,1,160.918,464.3Z" transform="translate(-154.575 -461.123)" fill="#fff" stroke="#fff" stroke-width="1.2"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+
+@media (min-width:1400px) {
+    .why-choose-section {
+        .feature-card {
+            &.min-height{
+                min-height: 26rem;
+            }
+
+        }
+    }
+}

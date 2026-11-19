@@ -1,0 +1,117 @@
+@use '@/styles/base/index';
+
+.slider-view-multi {
+  padding: 3rem 0;
+  background-color: index.$color-primary-50;
+  .slider-layout {
+      /* LEFT MENU */
+      .slider-menu {
+        .menu-item {
+          padding: 1.125rem 1rem;
+          margin-bottom: 1rem;
+          cursor: pointer;
+          background: index.$color-white;
+          border: 1px solid #ddd;
+          border-left: 0.25rem solid index.$color-gray-600;
+          border-radius: 1rem;
+          transition: all 0.7s ease;
+          h3 {
+            margin-bottom:0.5rem;
+            font-size: 1.25rem;
+          }
+          p{
+            font-size: 0.95rem;
+            color:index.$color-gray-700;
+          }
+         .flex-shrink-0{
+            img{
+                width: 2rem;
+            }
+          }
+          &:hover {
+            border-color: index.$color-pink-700;
+            background: index.$color-white;
+          }
+          &.active {
+            border-color: index.$color-pink-700 ;
+            background: index.$color-white;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+            h3 {
+                color:index.$color-pink-700;
+            }
+          }
+        }
+      }
+      /* RIGHT SLIDER */
+      .slider-content {
+        border-radius: 1rem;
+        .keen-slider{
+            margin-bottom: 2.5rem;
+            .slide-card {
+                padding: 0rem;
+                img {
+                    width: 100%;
+                    border-radius: 1rem;
+                }
+            }
+        }
+        .keen-dots{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+      }
+  }
+} 
+  @media (min-width: 1200px) {
+    .slider-view-multi {
+       .slider-layout {
+        .slider-menu {
+          .menu-item {
+            padding: 1.5rem 1rem;
+            h3 {
+              font-size: 1.25rem;
+            }
+          }
+        }
+        .keen-dots {
+          display: none;
+        }
+      }
+    }
+  }
+  /* RESPONSIVE */
+  @media (max-width: 1199px) {
+    .slider-view-multi {
+      .slider-layout {
+        flex-direction: column;
+        .slider-menu{
+          display:none;
+        }
+        .slider-menu,
+        .slider-content {
+          width: 100%;
+          .keen-dots {
+            text-align: center;
+            .keen-dot {
+              width: 12px;
+              height: 12px;
+              margin-top:0.5rem;
+              padding: 0;
+              border: 0;
+              border-radius: 50%;
+              cursor: pointer;
+              background-color: index.$color-pink-500;
+              opacity: 1;
+              &.is-active {
+                background-color: index.$color-pink-800; ;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+  }
+

@@ -1,0 +1,778 @@
+@use '@/styles/base/index';
+
+// ── Hero ──────────────────────────────────────────────────────────────
+
+.manufacturing-page{
+  .content-top{
+    &.header-row{
+      .header-box{
+        &:before{
+          content: none;
+        }
+        &:after{
+          content: none;
+        }
+      }
+    }
+  }
+}
+// ── Trusted by ────────────────────────────────────────────────────────
+.trusted-by {
+  padding: 3rem 0rem;
+  .heading-title {
+    margin-bottom:0rem !important;
+        .border-magenta-rounded{
+            color: index.$color-white;
+            border-color: index.$color-white;;
+        }
+        h2,p{
+            color: index.$color-white;
+        }
+    }
+  .industry-pill {
+    padding: 0.5rem 1rem;
+    color: index.$color-white;
+    font-size: 0.95rem;
+    border-radius: 50rem;
+    border: 1px solid rgba(index.$color-white, 0.4);
+    background-color: rgba(index.$color-white, 0.08);
+  }
+}
+
+// ── Shared card blocks ────────────────────────────────────────────────
+.why-generic-fails {
+    padding: 2.85rem 0rem;
+    background-color: index.$color-gray-100;
+    .card {
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        .icons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 600;
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+        .card-body{
+          padding: 1.75rem;
+        }
+    }
+}
+
+// Shared colored-card variants (why-generic-fails + shop-floor)
+.why-generic-fails,
+.shop-floor {
+    .card {
+        background-color: index.$color-white;
+        border-radius: 1rem;
+        transition: 0.4s all;
+        .card-desc {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: index.$color-gray-700;
+            margin-bottom: 0;
+        }
+        &:hover {
+            box-shadow: 0px 3px 12px index.$shadow-13;
+        }
+        &.light-green{
+            border: 1px solid index.$color-forest-green-300;
+            .card-title{ color: index.$color-forest-green-700; }
+        }
+        &.light-deepsky{
+            border: 1px solid index.$color-deepsky-200;
+            .card-title{ color: index.$color-deepsky-800; }
+        }
+        &.light-magenta{
+            border: 1px solid index.$color-magenta-200;
+            .card-title{ color: index.$color-magenta-700; }
+        }
+        &.light-warning{
+            border: 1px solid index.$color-warning-200;
+            .card-title{ color: index.$color-warning-800; }
+        }
+        &.light-periwinkle{
+            border: 1px solid index.$color-periwinkle-200;
+            .card-title{ color: index.$color-periwinkle-800; }
+        }
+        &.light-danger{
+            border: 1px solid index.$color-danger-100;
+            .card-title{ color: index.$color-danger-700; }
+        }
+    }
+}
+
+.how-to-choose {
+  .choose-card {
+    padding: 1.75rem;
+    border-radius: 1rem;
+    background-color: index.$color-gray-50;
+    .choose-head {
+      padding-bottom: 1rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px solid index.$color-gray-500;
+      .num {
+        flex-shrink: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.85rem;
+        height: 1.85rem;
+        margin-right: 0.75rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: index.$color-magenta-700;
+        background-color: index.$color-magenta-50;
+        border: 1px solid index.$color-magenta-100;
+        border-radius: 50%;
+      }
+      .card-title {
+        font-size: 1.15rem;
+      }
+    }
+    .check-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        position: relative;
+        padding: 0.4rem 0 0.4rem 1.6rem;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        color: index.$color-gray-700;
+        &:before {
+          content: "✓";
+          position: absolute;
+          left: 0;
+          top: 0.4rem;
+          font-size: 0.8rem;
+          font-weight: 700;
+          color: index.$color-magenta-700;
+        }
+      }
+    }
+  }
+}
+
+// ── Section badge + underlined heading highlight (shared) ─────────────
+.section-badge {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  padding: 0.4rem 1.1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: index.$color-white;
+  background-color: index.$color-magenta-700;
+  border-radius: 50rem;
+}
+.section-heading .text-pink {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
+// ── Compliance laws ───────────────────────────────────────────────────
+.compliance-laws {
+  background-color: index.$color-gray-100;
+  .card {
+    border: 1px solid index.$color-gray-400;
+    border-radius: 1rem;
+    margin-bottom: 0;
+    background-color: index.$color-white;
+    box-shadow: 0px 0px 4px index.$shadow-05;
+    transition: 0.4s all;
+    &:hover {
+      box-shadow: 0px 3px 12px index.$shadow-13;
+    }
+    .card-body {
+      padding: 1.75rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      .check-box {
+        display: flex;
+        flex: 1;
+        padding: 1.25rem 1.25rem;
+        border-radius: 0.75rem;
+        .check-list {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          li {
+            position: relative;
+            padding: 0.5rem 0 0.5rem 1.85rem;
+            font-size: 0.9rem;
+            color: index.$color-gray-700;
+            &:before {
+              content: "✓";
+              position: absolute;
+              left: 0;
+              top: 0.45rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 1.15rem;
+              height: 1.15rem;
+              font-size: 0.65rem;
+              color: index.$color-white;
+              border-radius: 50%;
+            }
+          }
+        }
+        // colour variants: box tint + check colour
+        &.light-periwinkle {
+          background-color: index.$color-periwinkle-100;
+          .check-list li:before { background-color: index.$color-violet-600; }
+        }
+        &.light-magenta {
+          background-color: index.$color-magenta-50;
+          .check-list li:before { background-color: index.$color-magenta-600; }
+        }
+        &.light-green {
+          background-color: index.$color-green-50;
+          .check-list li:before { background-color: index.$color-green-600; }
+        }
+        &.light-deepsky {
+          background-color: index.$color-deepsky-50;
+          .check-list li:before { background-color: index.$color-deepsky-500; }
+        }
+        &.light-olive {
+          background-color: index.$color-forest-green-50;
+          .check-list li:before { background-color: index.$color-forest-green-700; }
+        }
+        &.light-danger {
+          background-color: index.$color-danger-50;
+          .check-list li:before { background-color: index.$color-danger-500; }
+        }
+      }
+    }
+    .card-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+    .card-desc {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: index.$color-gray-700;
+      margin-bottom: 1.25rem;
+    }
+  }
+  
+}
+
+// ── Shop floor (lock chain box) ───────────────────────────────────────
+.shop-floor {
+  padding: 2.85rem 0rem;
+    .card {
+        .card-body {
+            padding: 1.5rem;
+        }
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+    }
+  .lock-box {
+    padding: 1.5rem .5rem;
+    font-size: .9rem;
+    font-weight: 500;
+    border-radius: 1rem;
+    background-color: index.$color-pink-50;
+    border: 1px solid index.$color-pink-100;
+    .lock-title {
+      margin-bottom: 1rem;
+    }
+    .lock-desc {
+      color: index.$color-gray-800;
+    }
+    .lock-flow {
+      gap: 0.75rem;
+      .flow-step {
+        padding: 0.75rem .5rem;
+        font-weight: 500;
+        color: index.$color-gray-700;
+        background-color: index.$color-white;
+        border-radius: 0.5rem;
+        box-shadow: 0px 0px 8px index.$shadow-08;
+      }
+      .flow-arrow {
+        color: index.$color-magenta-700;
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+// ── Factory features ──────────────────────────────────────────────────
+// ── Self service ──────────────────────────────────────────────────────
+.self-service {
+  background-color: index.$color-gray-100;
+  .card {
+    border: none;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    transition: 0.4s all;
+    &:hover {
+      background-color: index.$color-white;
+      box-shadow: 0px 3px 12px index.$shadow-13;
+    }
+    .card-body {
+      padding: 1.75rem 1.5rem;
+      .flex-shrink-0 {
+        img {
+          width: 3.5rem;
+          height: 3.5rem;
+        }
+      }
+      p{
+        color: index.$color-gray-700;
+      }
+    }
+  }
+  .stat-circle-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    background-color: index.$color-gray-100;
+    border-radius: 1.5rem;
+  }
+  .stat-circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 12.5rem;
+    height: 12.5rem;
+    border-radius: 50%;
+    color: index.$color-white;
+    background-color: index.$color-magenta-700;
+    box-shadow: 0px 14px 32px rgba(index.$color-gray-900, 0.22);
+    .circle-value {
+      font-size: 3rem;
+      line-height: 1;
+    }
+    .circle-label {
+      font-size: 1rem;
+      margin-top: 0.25rem;
+    }
+  }
+}
+
+// ── Tables (comparison) ───────────────────────────────────────────────
+.vs-generic {
+  .table-wrap {
+    overflow-x: auto;
+    border-radius: 0.75rem;
+    box-shadow: 0px 0px 8px index.$shadow-10;
+  }
+  table {
+    width: 100%;
+    min-width: 40rem;
+    border-collapse: collapse;
+    background-color: index.$color-white;
+    th {
+      padding: 1rem 1.25rem;
+      text-align: left;
+      font-weight: 600;
+      color: index.$color-white;
+      background-color: index.$color-magenta-700;
+    }
+    td {
+      padding: 1rem 1.25rem;
+      color: index.$color-gray-700;
+      border-bottom: 1px solid index.$color-gray-400;
+    }
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+  }
+}
+
+// ── Best HRMS ranking table (all-magenta) ─────────────────────────────
+.best-hrms {
+  .table-wrap {
+    overflow-x: auto;
+    border-radius: 0.75rem;
+    box-shadow: 0px 0px 4px index.$shadow-10;
+  }
+  .rank-table {
+    width: 100%;
+    min-width: 48rem;
+    border-collapse: collapse;
+    background-color: index.$color-gray-100;
+    color: index.$color-white;
+    th {
+      padding: 1rem 1.5rem;
+      text-align: left;
+      font-weight: 600;
+      color: index.$color-gray-700;
+      background-color: index.$color-gray-300;
+      border-bottom: 1px solid rgba(index.$color-white, 0.25);
+    }
+    td {
+      padding: 1.15rem 1.5rem;
+      color: index.$color-white;
+      vertical-align: top;
+      border-bottom: 1px solid rgba(index.$color-white, 0.15);
+    }
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+    .col-sno {
+      text-align: center;
+      background-color: index.$color-magenta-800;
+      font-weight: 600;
+    }
+    .col-software {
+      white-space: nowrap;
+    }
+    tr.highlighted {
+      td {
+        background-color: index.$color-magenta-800;
+      }
+      .col-sno {
+        background-color: index.$color-magenta-700;
+      }
+    }
+  }
+  .list-note {
+    padding: 1.25rem 1.5rem;
+    border-radius: 0.75rem;
+    background-color: index.$color-pink-50;
+    border: 1px solid index.$color-pink-100;
+    p {
+      font-size: 0.85rem;
+      line-height: 1.7;
+      color: index.$color-gray-700;
+    }
+  }
+}
+
+// ── QkrHR vs generic comparison table ─────────────────────────────────
+.vs-generic {
+  .table-wrap {
+    overflow-x: auto;
+    border-radius: 0.75rem;
+    box-shadow: 0px 0px 4px index.$shadow-10;
+  }
+  .compare-table {
+    width: 100%;
+    min-width: 52rem;
+    border-collapse: collapse;
+    background-color: index.$color-white;
+    th {
+      padding: 1rem 1.25rem;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: index.$color-white;
+      background-color: index.$color-gray-800;
+      vertical-align: top;
+      &.col-qkrhr {
+        background-color: index.$color-magenta-700;
+      }
+    }
+    td {
+      padding: 0.9rem 1.25rem;
+      font-size: 0.9rem;
+      color: index.$color-gray-700;
+      border-bottom: 1px solid index.$color-gray-400;
+      vertical-align: middle;
+    }
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+    td.col-feature {
+      font-weight: 500;
+      color: index.$color-gray-800;
+    }
+    td.col-qkrhr {
+      color: index.$color-gray-800;
+      font-weight: 500;
+      background-color: index.$color-magenta-50;
+    }
+    // status text colours
+    td.status-warn { color: index.$color-gray-700; }
+    td.status-bad { color: index.$color-danger-800; }
+    // status marks
+    .cmark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      vertical-align: middle;
+      margin-right: 0.5rem;
+      &.good {
+        width: 1.15rem;
+        height: 1.15rem;
+        border-radius: 50%;
+        color: index.$color-white;
+        background-color: index.$color-magenta-600;
+        font-size: 0.65rem;
+        &:before { content: "✓"; }
+      }
+      &.warn {
+        color: index.$color-gray-800;
+        font-size: 0.95rem;
+        &:before { content: "⚠"; }
+      }
+      &.bad {
+        color: index.$color-danger-800;
+        font-weight: 700;
+        font-size: 0.95rem;
+        &:before { content: "✕"; }
+      }
+    }
+  }
+}
+
+// ── Setup timeline ────────────────────────────────────────────────────
+.setup-timeline {
+  .steps-row {
+    .step-col {
+      padding: 0.5rem 1.5rem;
+      margin-bottom: 2rem;
+      h3 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        color: index.$color-gray-800;
+      }
+      p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        color: index.$color-gray-700;
+      }
+    }
+  }
+  .timeline-note {
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: index.$color-pink-50;
+    border: 1px solid index.$color-pink-100;
+    .note-title {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: index.$color-gray-700;
+      max-width: 60rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+// ── Real cost ─────────────────────────────────────────────────────────
+.real-cost {
+  .impact-panel {
+    padding: 3rem 0rem;
+    background-color: rgba(index.$color-pink-500, 0.08);
+    .impact-head {
+      .impact-label {
+        font-size: 1.125rem;
+        color: index.$color-gray-800;
+      }
+      .impact-amount {
+        font-size: 3.5rem;
+        line-height: 1.1;
+      }
+      .impact-sub {
+        font-size: 2rem;
+        color: index.$color-gray-800;
+        margin-bottom: 1.5rem;
+      }
+      .impact-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.65rem 1.5rem;
+        font-weight: 600;
+        color: index.$color-white;
+        background-color: index.$color-magenta-700;
+        border-radius: 50rem;
+      }
+    }
+    .savings-title {
+      display: flex;
+      align-items: center;
+      margin: 2.75rem 0 2rem;
+      span {
+        padding: 0 1rem;
+        font-weight: 600;
+        color: index.$color-magenta-700;
+      }
+      &::before,
+      &::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background-color: index.$color-magenta-200;
+      }
+    }
+    .savings-row {
+      margin-bottom: 1rem;
+      .saving-col {
+        padding: 0.75rem 1rem;
+        // margin-bottom: 1.5rem;
+        .saving-icon {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 3.5rem;
+          height: 3.5rem;
+          margin-bottom: 0.75rem;
+        }
+        .saving-label {
+          font-size: 0.95rem;
+          line-height: 1.45;
+          color: index.$color-gray-800;
+        }
+        .saving-value {
+          font-size: 1.35rem;
+        }
+        .saving-note {
+          font-size: 0.95rem;
+          color: index.$color-gray-800;
+        }
+      }
+    }
+    .impact-cards {
+      margin-top: 1.5rem;
+      .impact-card {
+        padding: 1.75rem 1.5rem;
+        border-radius: 1rem;
+        background-color: rgba(index.$color-pink-500, 0.13);
+        .card-eyebrow {
+          font-size: 0.9rem;
+          margin-bottom: 0.25rem;
+        }
+        .card-value {
+          font-size: 2.25rem;
+          line-height: 1.1;
+          margin-bottom: 0.5rem;
+        }
+        .card-heading {
+          font-size: 1.25rem;
+          color: index.$color-gray-800;
+          margin-bottom: 0.75rem;
+        }
+        p {
+          font-size: 0.85rem;
+          line-height: 1.6;
+          color: index.$color-gray-800;
+        }
+      }
+    }
+  }
+}
+
+// ── Final CTA ─────────────────────────────────────────────────────────
+.final-cta {
+  background: linear-gradient(135deg, index.$color-pink-100);
+  padding: 3rem 0rem 3.5rem;
+}
+
+// ── Responsive ────────────────────────────────────────────────────────
+@media (min-width: 992px) {
+  
+  .manufacturing-hero {
+      position: relative;
+      min-height: 600px;
+      overflow: hidden;
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("@/assets/images/hrms/solutions/manufacturing/manufacturing-bg.webp");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        z-index: -1;
+      }
+    .content-btn{
+      justify-content: start;
+    }
+  }
+  .real-cost {
+    .impact-panel {
+      .savings-row {
+        margin-bottom: 1rem;
+        .saving-col {
+          border-right: 1px solid index.$color-magenta-200;
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+      .impact-cards {
+        margin-top: 2.5rem;
+      }
+    }
+  }
+  .compliance-laws,
+  .setup-timeline {
+    .steps-row {
+      .step-col {
+        margin-bottom: 0;
+        border-right: 1px solid index.$color-gray-400;
+      }
+      .step-col:last-child {
+        border-right: none;
+      }
+    }
+  }
+  .self-service {
+    .card {
+      min-height: 8.5rem;
+    }
+  }
+  .shop-floor {
+    padding: 2.85rem 0rem;
+    .lock-box {
+      padding: 1.75rem 1.5rem;
+      .lock-flow{
+      .flow-step{
+          padding: 0.75rem 1.5rem;
+      }
+      }
+    }
+}
+
+}
+
+@media (max-width: 991px) {
+  .manufacturing-hero {
+    .hero-stats {
+      .stat-box .stat-value {
+        font-size: 2rem;
+      }
+    }
+  }
+  .real-cost {
+    .saving-box .saving-amount {
+      font-size: 2.75rem;
+    }
+    .cost-stats .stat-value {
+      font-size: 2rem;
+    }
+  }
+  .self-service {
+    .stat-circle {
+      width: 11rem;
+      height: 11rem;
+      .circle-value {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}

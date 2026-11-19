@@ -1,0 +1,15 @@
+ .welcome-page {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center !important;
+    width: 100%;
+    height: 100vh;
+    .img-fluid {
+        max-width: 420px;
+        height: auto;
+    }
+    .leads{
+        margin-top: 2rem;
+
+    }
+ }

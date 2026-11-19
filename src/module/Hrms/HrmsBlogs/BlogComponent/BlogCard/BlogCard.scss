@@ -1,0 +1,36 @@
+  @use '@/styles/base/index';
+  .component-blog{
+    padding: 2.75rem 0rem;
+    // .heading-title.mb-5{
+    //   margin-bottom: 1.75rem !important;
+    // }
+    .blog-card {
+      border: unset;
+      border-radius: 0.75rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      @include index.box-shadow(0px 3px 9px index.$shadow-09);
+      .blog-card-title{
+          font-size: 1.25rem;
+          margin-bottom: 1.125rem;
+
+      }
+      .blog-card-ratio {
+          --bs-aspect-ratio: 52.33%;
+          overflow: hidden;
+          border-top-left-radius: 0.75rem;
+          border-top-right-radius: 0.75rem;
+      }
+      .card-img-top {
+          transition: transform 0.3s ease;
+      }
+  
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0.75rem 1.75rem rgba(16, 24, 40, 0.12) !important; 
+  
+      .card-img-top {
+        transform: scale(1.03);
+      }
+    }
+  }
+}

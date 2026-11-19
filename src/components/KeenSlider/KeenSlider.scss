@@ -1,0 +1,82 @@
+@use '@/styles/base/index';
+
+.keen-wrap {
+  position: relative;
+}
+
+// keen-slider base (.keen-slider / .keen-slider__slide) comes from
+// keen-slider.min.css imported in KeenSlider.jsx. Ensure equal-height slides.
+.keen-slider__slide {
+  height: auto;
+  display: flex;
+}
+
+/* ── Navigation arrows (replaces .swiper-button-next/prev) ─────────────── */
+.keen-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  color: index.$color-pink-500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, opacity 0.2s;
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  &:hover {
+    background: index.$color-pink-500;
+    color: #fff;
+  }
+
+  &--prev {
+    left: 0.25rem;
+  }
+  &--next {
+    right: 0.25rem;
+  }
+
+  // Disabled at the ends (non-loop) — mirrors Swiper's .swiper-button-disabled
+  &:disabled,
+  &.is-disabled {
+    opacity: 0.35;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+/* ── Pagination dots (replaces .swiper-pagination-bullet) ──────────────── */
+.keen-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.keen-dot {
+  width: 0.825rem;
+  height: 0.825rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+
+  &.is-active {
+    background: index.$color-pink-500;
+    transform: scale(1.2);
+  }
+}

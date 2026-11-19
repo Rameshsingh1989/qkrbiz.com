@@ -1,0 +1,61 @@
+@use "@/styles/base/index";
+
+.comparison-table-section {
+  padding: 2.5rem 0;
+  .show-more-btn {
+    background-color: index.$color-alice-100;
+    color: index.$color-gray-800;
+    border: 0;
+    border-radius: 999px;
+    padding: 0.75rem 2rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    &:hover,
+    &:focus {
+      background-color: index.$color-alice-200;
+    }
+  }
+  .comparison-table{
+    border: 1px solid index.$color-gray-400;
+    border-radius: 8px;
+    tr{
+      th,td {
+        font-size: 1rem;
+        padding: 1.5rem;
+      }
+    }
+    thead{
+      tr {
+        th {
+          font-weight: 600;
+          &:nth-child(1) {
+            background: index.$color-gray-100
+          }
+          &:nth-child(2) {
+            background: index.$color-magenta-100
+          }
+          &:nth-child(3) {
+            background: index.$color-gray-200
+          }
+        }
+      }
+    }  
+    tbody{
+      tr {
+        &:nth-child(even) {
+          td{
+            background: index.$color-gray-100;
+          }
+          
+        }
+        &:nth-child(odd) {
+          td{
+              background: index.$color-white;
+          }
+        }
+      }
+    } 
+  }
+}
+@media (max-width: 767px) {
+}

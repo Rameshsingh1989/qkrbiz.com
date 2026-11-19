@@ -1,0 +1,77 @@
+@use '@/styles/base/index';
+
+$emp-line: index.$color-gray-400;
+$emp-line-soft: index.$color-gray-300;
+$emp-muted: index.$color-gray-600;
+
+// ---------------- Sections ----------------
+.emp-section {
+  border-top: 1px solid $emp-line;
+  .ul-icon a {
+    color: index.$color-magenta-700;
+    text-decoration: underline;
+  }
+}
+
+// Bento, lifecycle and extra tiles
+.emp-tile {
+  height: 100%;
+  padding: 1.5rem;
+  background: index.$color-white;
+  border: 1px solid $emp-line;
+  border-radius: 1rem;
+  box-shadow: 0 1px 2px index.$shadow-05, 0 12px 32px index.$shadow-08;
+  h3 {
+    font-size: 1.2rem;
+    margin: 0.75rem 0 0.5rem;
+  }
+  p {
+    color: $emp-muted;
+    margin-bottom: 0;
+  }
+  a {
+    color: index.$color-magenta-700;
+    font-weight: 600;
+  }
+}
+.emp-tile-lg h3 {
+  font-size: 1.6rem;
+}
+
+// Custom-field list in the large "Employee record" tile
+.emp-fields {
+  border: 1px solid $emp-line;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  font-size: 0.875rem;
+  small {
+    color: $emp-muted;
+    font-size: 0.8rem;
+  }
+}
+
+.emp-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 1.1rem;
+  border-bottom: 1px solid $emp-line-soft;
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.emp-pill {
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+}
+.emp-pill-info { color: index.$color-primary-800; }
+.emp-pill-warn { color: index.$color-warning-800; }
+.emp-pill-ok { color: index.$color-success-700; }
+
+@media (max-width: 991.98px) {
+  .emp-visual {
+    margin-top: 1.5rem;
+  }
+}

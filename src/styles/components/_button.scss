@@ -1,0 +1,246 @@
+@use '../base/index';
+
+.btn {
+    padding: 0.625rem 1.25rem;
+    cursor: pointer;
+    font-size: 1rem;
+    @include index.border-radius(0.325rem);
+  }
+  .btn:focus,
+  .btn:active,
+  button:focus,
+  button:active {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  .btn-magenta {
+    color: index.$color-white;
+    // background: linear-gradient(135deg, index.$color-magenta-700 ,index.$color-pink-700);
+    background-color: index.$color-magenta-700 !important;
+    border-color: index.$color-magenta-700 !important;
+  }
+  .btn-magenta:hover,
+  .btn-magenta:focus,
+  .btn-magenta:active {
+    color: index.$color-white !important;
+    background-color: index.$color-magenta-800 !important;
+    border-color: index.$color-magenta-800 !important;
+  }
+    .btn-outline-magenta {
+    color: index.$color-magenta-700;
+    background-color: index.$color-white !important;
+    border-color: index.$color-magenta-700 !important;
+  }
+  .btn-outline-magenta:hover,
+  .btn-outline-magenta:focus,
+  .btn-outline-magenta:active {
+    background: linear-gradient(-45deg, index.$color-danger-500, index.$color-magenta-700, index.$color-pink-500, index.$color-success-300);
+    background-size: 400% 400%;
+    animation: gradientMoveBg 4s ease infinite;
+    color:index.$color-white !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-color: index.$color-magenta-700 !important;
+  }
+  .btn-pink {
+    color: index.$color-white;
+    background-color: index.$color-pink-500 !important;
+    border-color: index.$color-pink-500 !important; 
+  }
+  .btn-pink:hover,
+  .btn-pink:focus,
+  .btn-pink:active {
+    color: index.$color-white !important;
+    background-color: index.$color-pink-700 !important;
+    border-color: index.$color-pink-700 !important;
+  }
+  .btn-outline-pink {
+    color: index.$color-pink-500;
+    background-color: index.$color-white !important;
+    border-color: index.$color-pink-500 !important;
+  }
+  .btn-outline-pink:hover,
+  .btn-outline-pink:focus,
+  .btn-outline-pink:active {
+    color: index.$color-white !important;
+    background-color: index.$color-pink-700 !important;
+    border-color: index.$color-pink-700 !important;
+  }
+  .magenta-border {
+    color: index.$color-magenta-700;
+    background-color: index.$color-white !important;
+    border-color: index.$color-magenta-700 !important;
+  }
+  .btn-success {
+    color: index.$color-white;
+    background-color: index.$color-success-500 !important;
+    border-color: index.$color-success-500 !important;
+  }
+  .btn-success:hover,
+  .btn-success:focus,
+  .btn-success:active {
+    color: index.$color-white !important;
+    background-color: index.$color-success-600 !important;
+    border-color: index.$color-success-600 !important;
+  }
+  .btn-outline-success {
+    color: index.$color-success-600;
+    background-color: index.$color-white !important;
+    border-color: index.$color-success-600 !important;
+  }
+  .btn-outline-success:hover,
+  .btn-outline-success:focus,
+  .btn-outline-success:active {
+    color: index.$color-white !important;
+    background-color: index.$color-success-600 !important;
+    border-color: index.$color-success-600 !important;
+  }
+  .btn-warning {
+    color: index.$color-white;
+    background-color: index.$color-orange-700 !important;
+    border-color: index.$color-orange-700 !important;
+  }
+  .btn-warning:hover,
+  .btn-warning:focus,
+  .btn-warning:active {
+    color: index.$color-white !important;
+    background-color: index.$color-orange-800 !important;
+    border-color: index.$color-orange-800 !important;
+  }
+  .btn-violet {
+    color: index.$color-white;
+    background-color: index.$color-violet-600 !important;
+    border-color: index.$color-violet-600 !important;
+  }
+  .btn-violet:hover,
+  .btn-violet:focus,
+  .btn-violet:active {
+    color: index.$color-white !important;
+    background-color: index.$color-violet-700 !important;
+    border-color: index.$color-violet-700 !important;
+  }
+  .btn-white {
+    color: index.$color-gray-800;
+    background-color: index.$color-white !important;
+    border-color: index.$color-white !important;
+  }
+  .btn-white:hover,
+  .btn-white:focus,
+  .btn-white:active {
+    color: index.$color-gray-900 !important;
+    background-color: index.$color-white !important;
+    border-color: index.$color-white !important;
+  }
+  // The moving gradient lives on ::before and is animated with `transform`
+  // (compositor-only). Animating `background-position` directly forced a
+  // repaint every frame, for as long as the page was open — this showed up
+  // as Rendering/"Other" main-thread time in Lighthouse. The ::before box is
+  // 400% x 400% of the button (same as the old background-size) and slides
+  // left by 3 button-widths (-75% of itself) = background-position 0% → 100%.
+  .btn-gradient {
+      background: linear-gradient(-45deg, index.$color-danger-500, index.$color-magenta-700, index.$color-pink-500, index.$color-magenta-700);
+      background-size: 400% 400%;
+      color:index.$color-white !important;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      &::before {
+        content: "";
+        position: absolute;
+        top: -150%;
+        left: 0;
+        width: 400%;
+        height: 400%;
+        z-index: -1;
+        background: inherit;
+        background-size: 100% 100%;
+        animation: gradientMove 4s ease infinite;
+        will-change: transform;
+        pointer-events: none;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        &::before { animation: none; }
+      }
+      &:hover { 
+        // content: "";
+        // position: absolute;
+        // inset: -3px;
+        // border-radius: 40px;
+        // background: conic-gradient(from var(index.$color-magenta-700), transparent 70%, #46DF93 90%, #CFF242 100%);
+        // z-index: -1;
+        // animation: rotate-glow 3s linear infinite;
+        // filter: blur(8px);
+
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+  }
+  .btn-gradient-outline{
+      background: transparent;
+      background-size: 400% 400%;
+      color: index.$color-pink-800;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      border: 1px solid index.$color-pink-800;
+      &::before {
+        content: "";
+        position: absolute;
+        top: -150%;
+        left: 0;
+        width: 400%;
+        height: 400%;
+        z-index: -1;
+        background: inherit;
+        background-size: 100% 100%;
+        animation: gradientMove 4s ease infinite;
+        will-change: transform;
+        pointer-events: none;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        &::before { animation: none; }
+      }
+      &:hover { 
+       background: linear-gradient(-45deg, index.$color-danger-500, index.$color-magenta-700, index.$color-pink-500, index.$color-magenta-700);
+       color: index.$color-white; 
+       transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+  }
+  // Hover-only (btn-outline-magenta): runs briefly, so background-position is fine here.
+  @keyframes gradientMoveBg {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  @keyframes gradientMove {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    50% {
+      transform: translate3d(-75%, 0, 0);
+    }
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  @media (min-width: 768px) {
+
+  }
+  @media (min-width: 992px) {
+
+  }
+  @media (min-width: 1200px) {
+    
+  }
+  @media (min-width: 1400px) {
+    // .btn {
+    //   padding: 0.625rem 1.125rem;
+    //   font-size: 1rem;
+    // }
+  }
+  @media (min-width: 1900px) {
+    
+  }

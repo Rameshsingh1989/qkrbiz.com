@@ -1,0 +1,17 @@
+@use '@/styles/base/index';
+
+.see-qkrhr{
+    padding: 0rem 0 3rem 0;
+    .card{
+      border-radius: 1rem;
+      border: 2px solid index.$color-gray-400;
+      .card-body{
+          padding: 2rem 1.75rem;
+      }
+    }
+}
+@media (max-width: 767px) {
+    .see-qkrhr {
+      padding: 0rem 0 3rem 0;
+}
+}

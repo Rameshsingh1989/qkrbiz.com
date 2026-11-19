@@ -1,0 +1,119 @@
+@use '@/styles/base/index';
+
+.user-experience {
+  padding: 2.5rem 0;
+  .section-title {
+    .text-underline {
+      text-decoration: underline;
+      text-underline-offset: 0.5rem;
+      text-decoration-thickness: 3px;
+    }
+  }
+  .ux-compare {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .ux-compare__left {
+    flex: 0 0 55%;
+    background-color: index.$color-white;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 2px solid index.$color-gray-400;
+    box-shadow: 0 0px 1px rgba(0, 0, 0, 0.16) inset;
+  }
+  .ux-compare__left-header {
+    background-color: index.$color-magenta-700;
+    color: index.$color-white;
+    font-weight: 600;
+    font-size: 1.125rem;
+    padding: 1rem 1.5rem;
+  }
+  .ux-feature-list {
+    padding: 0.5rem 0;
+  }
+  .ux-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    border-bottom: 2px solid index.$color-gray-400;
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+  .ux-feature__icon {
+    flex-shrink: 0;
+    color: index.$color-gray-800;
+    font-size: 1rem;
+  }
+  .ux-feature__title {
+    font-weight: 600;
+    margin-bottom: 0.375rem;
+    color: index.$color-gray-800;
+    font-size: 1rem;
+  }
+  .ux-feature__desc {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: index.$color-gray-600;
+    margin: 0;
+  }
+
+  .ux-compare__vs {
+    flex-shrink: 0;
+    align-self: center;
+  }
+
+  .ux-compare__right {
+    flex: 1 1 0;
+    background-color: index.$color-white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .ux-compare__right-header {
+    background-color: index.$color-violet-600;
+    color: index.$color-white;
+    font-weight: 600;
+    font-size: 1.125rem;
+    padding: 1rem 1.5rem;
+  }
+  .ux-compare__right-body {
+    padding: 1.85rem;
+    flex: 1;
+  }
+  .ux-compare__right-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: index.$color-gray-700;
+    margin: 0;
+    strong {
+      font-size: 1.25rem;
+    }
+  }
+  .ux-compare__right-footer {
+    background-color: index.$color-violet-600;
+    height: 1rem;
+  }
+}
+@media (max-width: 767px) {
+     .user-experience {
+          padding: 1.5rem 0;
+    .ux-compare {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .ux-compare__left,
+    .ux-compare__right {
+      flex: 1 1 100%;
+      width: 100%;
+    }
+    .ux-compare__vs {
+      margin: .5rem auto;
+    }
+  }
+}

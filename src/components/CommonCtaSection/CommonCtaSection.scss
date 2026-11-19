@@ -1,0 +1,37 @@
+@use '@/styles/base/index';
+
+.payroll-cta {
+    padding: 4rem 0;
+    background-color: index.$color-gray-200;
+    .cta-buttons {
+        margin-top: 1.85rem;
+        .btn {
+            display: inline-block;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: all 0.2s ease-in-out;
+            white-space: nowrap;
+            border-radius: 0.75rem;
+            &.cta-btn-magenta {
+                background-color: index.$color-magenta-700;
+                color: index.$color-white;
+                border: 1px solid index.$color-magenta-700;
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+            &.cta-btn-outline {
+                background-color: index.$color-white;
+                color: index.$color-gray-800;
+                border: 1px solid index.$color-gray-700;
+                &:hover {
+                    border-color: index.$color-magenta-700;
+                    color: index.$color-magenta-700;
+                }
+            }
+        }
+        
+        }
+}

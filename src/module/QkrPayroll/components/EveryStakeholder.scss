@@ -1,0 +1,137 @@
+@use '@/styles/base/index';
+
+.every-stakeholder{
+    padding: 2.5rem 0rem;
+    .every-stakeholder-card{
+        overflow: hidden;
+        opacity: .9;
+        .every-stakeholder-tabs{
+            padding: 0.5rem 0.5rem;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: stretch;
+            border-radius: 50rem;
+            .stage-tab{
+                flex: 1 1 0;
+                min-width: 0;
+                background-color: transparent;
+                border: 0;
+                padding: 0.5rem 0.5rem;
+                font-size: 0.75rem;
+                font-weight: 500;
+                color: index.$color-gray-900;
+                text-align: center;
+                position: relative;
+                transition: color 0.2s ease, background-color 0.2s ease;
+                border-radius: 50rem;
+                &.active{
+                    background-color: index.$color-white;
+                }
+            }
+        }
+        .every-stakeholder-body{
+            padding-top: 2.5rem;
+            .every-stakeholder-info{
+                background-color: index.$color-white;
+                padding: 2rem 2rem;
+                height: 100%;
+                border-radius: 2rem;
+                .info-title{
+                    font-size: 1.25rem;
+                    font-weight: 500;
+                    margin-bottom: 1.5rem;
+                }
+                .info-features{
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    li{
+                        padding: .5rem 0;
+                        font-size: 1.125rem;
+                    }
+                }
+            }
+            .every-stakeholder-preview{
+                background-color: index.$color-white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 2rem;
+                .img{
+                    object-fit: contain;
+                }
+            }
+        }
+        &.bg-dangers{
+            .every-stakeholder-tabs{
+                background-color: index.$color-danger-400;
+            }
+            .every-stakeholder-body{
+                .every-stakeholder-info{
+                    background-color: index.$color-danger-100;
+                }
+                .info-features{
+                    li{
+                        color:index.$color-danger-700;
+                    }
+                }
+            }
+        }
+        &.bg-warnings{
+            .every-stakeholder-tabs{
+                background-color: index.$color-warning-500;
+            }
+            .every-stakeholder-info{
+                    background-color: index.$color-warning-100;
+                }
+            .info-features{
+                li{
+                    color:index.$color-warning-900;
+                }
+            }
+        }
+        &.bg-voilet{
+            .every-stakeholder-tabs{
+                background-color: index.$color-periwinkle-300;
+            }
+            .every-stakeholder-info{
+                background-color: index.$color-periwinkle-100;
+            }
+                .every-stakeholder-preview{
+                    background-color: index.$color-periwinkle-200;
+            }
+            .info-features{
+                li{
+                    color:index.$color-periwinkle-700;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+
+    .every-stakeholder{
+        .every-stakeholder-card{ 
+            .every-stakeholder-body{
+                .every-stakeholder-info {
+                    padding: 2rem 3rem;
+                    border-radius: 2rem;
+                    .info-features li {
+                         padding: 1.5rem 0;
+                        font-size: 1.5rem;
+                    }
+                }
+
+            }
+            .every-stakeholder-tabs{
+                padding: 1rem 1.25rem;
+                .stage-tab {
+                    padding: 1.25rem 1rem;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+}

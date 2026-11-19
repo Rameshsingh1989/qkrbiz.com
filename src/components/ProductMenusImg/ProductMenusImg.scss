@@ -1,0 +1,106 @@
+
+@use '@/styles/base/index';
+
+.all-product-menus {
+  padding: 2.5rem 0;
+  background-color: index.$color-white;
+  .card {
+    margin-bottom: 1.5rem;
+    background-color: index.$color-white;
+    border: 1px solid index.$color-gray-400;
+    @include index.border-radius(1rem);
+    @include index.transition(all 0.7s);
+    .card-header {
+      position: relative;
+      overflow: hidden;
+      height: auto;
+      padding: 1rem 1rem 0rem 1rem;
+      text-align: center;
+      background-color: transparent;
+      border-bottom: none;
+      @include index.border-top-left-radius(1rem);
+      @include index.border-top-right-radius(1rem);
+      img {
+        max-width: 100%;
+        border-bottom: unset;
+        @include index.border-top-left-radius(1rem);
+        @include index.border-top-right-radius(1rem);
+        @include index.transition(all 2s cubic-bezier(0.19, 1, 0.22, 1) 0ms);
+      }
+    }
+    .card-body {
+      background-color: transparent;
+      padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+      h3 {
+        // color: index.$color-magenta-700;
+        margin-top: 1rem;
+        padding-bottom: 0.25rem;
+        // font-size: 1.25rem;
+      }
+      p {
+        margin-bottom: 0;
+      }
+    }
+     &.core-hr {
+      background-color: index.$color-danger-50;
+      border-color: index.$color-orange-50;
+      .card-header {
+         background-color: index.$color-danger-50;
+      }
+    }
+    &.onboarding {
+      background-color: index.$color-primary-50;
+      border-color: index.$color-primary-50;
+    }
+    &.field-force-automation {
+      background-color: index.$color-periwinkle-100;
+      border-color: index.$color-periwinkle-100;
+    }
+    &.time-attendance {
+      background-color: index.$color-orange-50;
+      border-color: index.$color-orange-50;
+    }
+    &.hr-payroll {
+      background-color: index.$color-violet-100;
+      border-color: index.$color-violet-100;
+    }
+    &.employee-expense {
+      background-color: index.$color-green-50;
+      border-color: index.$color-green-100;
+    }
+    &.employee-engagement {
+      background-color: index.$color-warning-100;
+      border-color: index.$color-warning-100;
+    }
+    &.employee-task{
+      background-color: index.$color-purple-100;
+      border-color: index.$color-purple-100;
+    }
+    &:hover {
+      @include index.box-shadow(0 2px 5px rgba(16, 30, 54, 0.04));
+      .card-header {
+        img {
+          @include index.transform(scale(1.05));
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px){
+
+}
+@media (min-width: 1200px){
+
+}
+@media (min-width: 1400px){
+
+}
+@media (min-width: 1900px){
+
+}
+
+
+
+
+

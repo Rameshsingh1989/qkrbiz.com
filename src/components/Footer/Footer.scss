@@ -1,0 +1,115 @@
+@use '@/styles/base/index';
+
+
+// fotter
+ .footer-section {
+    width: 100%;
+    position: relative;
+    padding: 2rem 0rem;
+    background-color: index.$color-magenta-950;
+    background-size: 100% 100%;
+    font-size: 1rem;
+    font-weight: 300;
+    
+    .f-logo {
+      align-items: center;
+      font-weight: 500;
+      font-size: 1.85rem;
+      line-height: 1;
+      padding: 0 0.25rem;
+      width: 7rem;
+      img{
+        width: 32px;
+        height: 32px;
+      }
+    }
+    .footer-logo{
+      width: 8.5rem;
+      background-color: index.$color-white;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.5rem;
+    }
+    h2, h3 {
+      font-size: 1.325rem;
+      color: index.$color-gray-200;
+      margin-bottom: 1.25rem;
+    }
+    p, a.touch-target{
+      color: index.$color-gray-200;
+    }
+    .list-unstyled {
+      &.footer-list{
+        li {
+          padding: 0.25rem 0rem;
+          a {
+             color: index.$color-gray-200;
+            @include index.transition(all 0.7s);
+            &:hover {
+              @include index.transition(all 0.7s);
+              color: index.$color-white;
+            }
+          }
+        }
+      }
+    }
+    .apps-link {
+      display: flex;
+      margin: 1.25rem 0rem;
+      .play-store {
+        background-color: index.$color-magenta-800;
+        border: 1px solid index.$color-magenta-700;
+        padding: 0.5rem 0.75rem;
+        @include index.border-radius(0.35rem);
+        .flex-shrink-0 {
+          padding-right: 0.5rem;
+          img {
+            width: 1rem;
+          }
+        }
+        .flex-grow-1 {
+          .fn-app {
+            font-size: 0.45rem;
+            font-weight: 500;
+            color: index.$color-white;
+            margin: 0rem;
+          }
+          p {
+            font-size: 0.45rem;
+            color: index.$color-white;
+            margin: 0rem;
+            margin-bottom: 0.125rem;
+          }
+        }
+      }
+    }
+    .bottomTop {
+      position: fixed;
+      z-index: 60;
+      top: auto;
+      bottom: 6rem; // sits above the chatbot launcher (Chatbot.scss)
+      right: 2rem;
+      font-size: 1rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      background: index.$color-magenta-700;
+      color: index.$color-gray-200;
+      text-align: center;
+      cursor: pointer;
+      @include index.border-radius(50%);
+      @include index.box-shadow(0px 1px 10px rgba(150, 0, 107, 0.1490196078));
+    }
+    .bg-copyright{
+      background-color: index.$color-magenta-900;
+       color: index.$color-gray-200;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .footer-section {
+        z-index: 1;
+        font-size: 0.9rem;
+      }
+  }
+  @media (min-width: 1200px) {}
+  @media (min-width: 1400px) {}
+  @media (min-width: 1900px) {}

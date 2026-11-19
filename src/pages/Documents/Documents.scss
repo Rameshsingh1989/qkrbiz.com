@@ -1,0 +1,20 @@
+@use '@/styles/base/index';
+
+.doc-app-card {
+  border-color: index.$color-gray-400;
+  box-shadow: 0 1px 2px index.$shadow-05, 0 12px 32px index.$shadow-08;
+}
+.doc-chip {
+  color: index.$color-gray-700;
+}
+
+@media (min-width: 992px){
+
+}
+@media (min-width: 1200px){
+}
+@media (min-width: 1400px){
+}
+@media (min-width: 1900px){
+
+}

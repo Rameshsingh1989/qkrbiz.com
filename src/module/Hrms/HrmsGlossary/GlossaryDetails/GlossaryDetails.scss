@@ -1,0 +1,112 @@
+@use '@/styles/base/index' as index;
+
+.hr-glossary-details{
+      padding: 2rem 0 0;
+      // background: url('@/assets/images/hrms/glossary/glossary-detail.webp') no-repeat;
+      background: linear-gradient(to right, lch(80 25.92 344.53 / 0.57), hsla(303.59, 90.36%, 74.82%, 0.07));
+      background-size: 100% 100%;
+      background-position: center top;
+      background-repeat: no-repeat;
+      .breadcrumbs{
+        .breadcrumb{
+            padding: 0.75rem 0rem;
+        }
+      } 
+      h1 {
+        font-weight: 600;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+      b{
+        font-weight: 600 !important;
+      }
+      .center{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-bottom: 1.5rem;
+      }
+      .breadcrumbs{
+          background-color: transparent;
+      }
+}
+.glossary-details{
+  .glossary-detail-left{
+      .glossary-section {
+        scroll-behavior: smooth;
+        scroll-padding-top: 6.5rem; 
+        margin-bottom: 1.5rem;
+        h2 {
+          scroll-margin-top: 100px;
+          margin-bottom: 1rem;
+          font-size: 2rem;
+        }
+        b{
+          font-weight: 600 !important;
+        }
+        blockquote {
+          padding: 1rem !important;
+          font-style: italic;
+          color: index.$color-gray-800;
+          border: 1px solid index.$color-gray-300;
+          border-left: 4px solid index.$color-orange-600;
+          background-color: index.$color-warning-50;
+          border-radius: 0.5rem;
+
+        }
+        .table{
+          &>thead{
+            vertical-align: middle;
+            background: linear-gradient(135deg, index.$color-pink-500 0%, index.$color-magenta-800 100%);
+            th{
+              background-color: transparent;
+              color: index.$color-white;
+              font-weight: 600 !important;
+              text-shadow: unset !important;
+            }
+          }
+          &.table-hover{
+            tbody{
+              tr{
+                &:hover{
+                  &>*{
+                    background-color: index.$color-alice-100;
+                    --bs-table-bg-state: unset;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .blog-call-to-action{
+        .btn{
+          min-width: 9rem;
+        }
+      }
+  }
+  .example {
+      background-color: index.$color-deepsky-50;
+      border-left: 4px solid index.$color-orange-800;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 5px;
+      .fn-sb {
+        color: index.$color-orange-800;
+    }
+  }
+  ol, ul{
+    margin-bottom: 0rem;
+    li{
+      padding: 0.25rem 0rem;
+      b{
+        font-weight: 600 !important;
+      }
+    }
+  }
+}
+.accordion-body{
+  p{
+    margin-top: 0 !important;
+  }
+}

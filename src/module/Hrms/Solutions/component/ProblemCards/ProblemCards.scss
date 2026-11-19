@@ -1,0 +1,109 @@
+@use '@/styles/base/index';
+
+
+// ── Hero ──────────────────────────────────────────────────────────────
+.solution-page {
+  .content-top {
+    &.header-row {
+      .header-box {
+        &:before,
+        &:after {
+          content: none;
+        }
+      }
+    }
+  }
+}
+
+// ── Coloured card variants (problem + payroll sections) ───────────────
+.st-problem {
+  .card {
+    background-color: index.$color-white;
+    border-radius: 1rem;
+    transition: 0.4s all;
+    .card-title {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .card-desc {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: index.$color-gray-700;
+      margin-bottom: 0;
+    }
+    &:hover {
+      box-shadow: 0px 3px 12px index.$shadow-13;
+    }
+    &.card-plain {
+      border: 1px solid index.$color-gray-400;
+      .card-title { color: index.$color-gray-900; }
+    }
+    &.light-green {
+      border: 1px solid index.$color-forest-green-300;
+      .card-title { color: index.$color-forest-green-700; }
+      .card-note { color: index.$color-forest-green-700; background-color: index.$color-forest-green-50; }
+    }
+    &.light-olive {
+      border: 1px solid index.$color-warning-100;
+      .card-title { color: index.$color-forest-green-500; }
+      .card-note { color: index.$color-forest-green-500; background-color: index.$color-warning-50; }
+    }
+    &.light-deepsky {
+      border: 1px solid index.$color-deepsky-200;
+      .card-title { color: index.$color-deepsky-800; }
+      .card-note { color: index.$color-deepsky-800; background-color: index.$color-deepsky-50; }
+    }
+    &.light-magenta {
+      border: 1px solid index.$color-magenta-200;
+      .card-title { color: index.$color-magenta-700; }
+    }
+    &.light-warning {
+      border: 1px solid index.$color-warning-200;
+      .card-title { color: index.$color-warning-800; }
+      .card-note { color: index.$color-warning-800; background-color: index.$color-warning-100; }
+    }
+    &.light-periwinkle {
+      border: 1px solid index.$color-periwinkle-200;
+      .card-title { color: index.$color-periwinkle-800; }
+      .card-note { color: index.$color-periwinkle-800; background-color: index.$color-periwinkle-100; }
+    }
+    &.light-danger {
+      border: 1px solid index.$color-danger-100;
+      .card-title { color: index.$color-danger-800; }
+      .card-note { color: index.$color-danger-800; background-color: index.$color-danger-50; }
+    }
+  }
+}
+// ── Problem cards ─────────────────────────────────────────────────────
+.st-problem {
+  .card {
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem;
+    }
+    .icons {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 3.5rem;
+      height: 3.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 50%;
+      img {
+        max-width: 100%;
+      }
+    }
+    .card-desc {
+      flex: 1;
+      margin-bottom: 1.5rem;
+    }
+    .card-note {
+      padding: 0.75rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      line-height: 1.4;
+      border-radius: 1.5rem;
+    }
+  }
+}

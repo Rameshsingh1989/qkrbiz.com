@@ -1,0 +1,109 @@
+
+@use '@/styles/base/index';
+
+ .social-network {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    li {
+      a {
+        width: 2.125rem;
+        height: 2.125rem;
+        line-height: 2.125rem;
+        font-size: 1rem;
+        float: left;
+        text-align: center;
+        background-color: index.$color-white;
+        color: index.$color-gray-900;
+        @include index.border-radius(50%);
+
+        i {
+          @include index.transition(all 0.7s);
+        }
+        &:hover {
+           color: index.$color-white;
+          i {
+            @include index.transform(rotate(360deg));
+            @include index.transition(all 0.7s);
+          }
+        }
+        &.icoFacebook {
+          &:hover {
+            background-color: index.$social-facebook;
+          }
+        }
+        &.icoInstagram{
+          &:hover {
+            color: index.$color-white;
+            background: linear-gradient( to right, index.$social-instagram, index.$color-danger-500, index.$color-orange-700);
+          }
+        }
+        &.icoTwitter {
+          &:hover {
+            background-color: index.$social-twitter;
+          }
+        }
+        &.icoYoutube {
+          &:hover {
+            color: index.$color-white;
+            background-color: index.$social-youtube;
+          }
+        }
+        &.icoLinkedin {
+          &:hover {
+            background-color: index.$social-linkedin;
+          }
+        }
+        
+      }
+    }
+  }
+  .blog-social-network {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+    li{
+      display: flex ;
+      gap: 0.5rem;
+      a {
+          display: flex ;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 2.125rem;
+          height: 2.125rem;
+          font-size: 1rem;
+          border-radius: 50%;
+          &.icoFacebook {
+            color: index.$color-white;
+              background-color: index.$social-facebook;
+          }
+          &.icoInstagram{
+            color: index.$color-white;
+            background: linear-gradient( to right, index.$social-instagram, index.$color-danger-500, index.$color-orange-700);
+          }
+          &.icoTwitter {
+            color:index.$color-white;
+            background-color:index.$social-twitter;
+          }
+          &.icoYoutube {
+            color: index.$color-white;
+            background-color: index.$social-youtube;
+          }
+          &.icoLinkedin {
+            color: index.$color-white;
+            background-color: index.$social-linkedin;
+          }
+      }
+    }
+
+  }
+
+  @media (min-width: 992px) {
+  }
+  @media (min-width: 1200px) {}
+  @media (min-width: 1400px) {}
+  @media (min-width: 1900px) {}

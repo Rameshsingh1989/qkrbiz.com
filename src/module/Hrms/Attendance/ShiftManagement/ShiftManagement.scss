@@ -1,0 +1,120 @@
+@use '@/styles/base/index';
+@use '../component/AttendanceSections';
+
+// ---------------- Built to solve real leave problems ----------------
+.fixed-all {
+  padding: 2.85rem 0;
+
+  .card {
+    background-color: index.$color-white;
+    border: 1px solid index.$color-gray-300;
+    border-radius: 1rem;
+    box-shadow: 0 0px 2px #00000029 inset;
+    .card-body {
+       padding: 1.5rem;
+      .solve-list {
+        li {
+          display: flex;
+          align-items: center;
+          gap: 1.25rem;
+          font-size: 1rem;
+          padding: 1rem 0;
+
+          &.solve-problem {
+            border-bottom: 1px solid index.$color-gray-400;
+            color: index.$color-gray-800;
+          }
+
+          &.solve-solution {
+            color: index.$color-magenta-800;
+          }
+          .solve-img{
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+// ---------------- Flexibility ----------------
+.builtfor-complex {
+  padding: 2.85rem 0;
+
+  .info-card {
+    background-color: index.$color-gray-100;
+    border-radius: 1rem;
+    padding: 1.75rem;
+    img{
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+    &.policies-steg-1{
+      background: linear-gradient(
+        180deg,
+        index.$color-warning-100 0%,
+        index.$color-warning-50,
+        index.$color-white
+      );
+      border: 1px solid index.$color-warning-100;
+    }
+     &.policies-steg-2{
+      background: linear-gradient(
+        180deg,
+        index.$color-green-100 0%,
+        index.$color-green-50,
+        index.$color-white
+      );
+      border: 1px solid index.$color-green-100;
+    }
+     &.policies-steg-3{
+      background: linear-gradient(
+        180deg,
+        index.$color-primary-100 0%,
+        index.$color-primary-50,
+        index.$color-white
+      );
+      border: 1px solid index.$color-primary-100;
+    }
+    &.policies-steg-4{
+      background: linear-gradient(
+        180deg,
+        index.$color-deepsky-100 0%,
+        index.$color-deepsky-50,
+        index.$color-white
+      );
+      border: 1px solid index.$color-deepsky-100;
+    }
+
+    .info-title {
+      // font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .info-desc {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+  }
+}
+
+// ---------------- Advanced shift  ----------------
+.advanced-shift{
+  .card{
+    border: unset;
+    border-radius:1rem ;
+    .card-body{
+      border-radius:1rem ;
+      background-color: index.$color-gray-50;
+      padding: 1.5rem;
+      img{
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+
+    }
+  }
+}

@@ -1,0 +1,88 @@
+
+@use '@/styles/base/index';
+
+.platformfeatures_home {
+  padding: 3rem 0rem;
+  background-color: index.$color-white;
+  .card {
+    font-weight: 500;
+    background-color: index.$color-gray-200;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border: unset;
+    @include index.border-radius(1rem);
+    box-shadow: unset;
+    @include index.transition(all 0.7s);
+    .card-body {
+      .platfrom-img {
+        width: 4rem;
+        height: 4rem;
+        margin: 1rem auto;
+        img {
+          width: 100%;
+        }
+      }
+      h3 {
+        font-size: 1.125rem;
+        color: index.$color-gray-900;
+        margin: 0 auto;
+      }
+      p {
+        font-size: 1rem;
+        margin-bottom: 0rem;
+        opacity: 0.8;
+      }
+    }
+    .card-footer {
+      padding-bottom: 2rem;
+      background-color: transparent;
+      border-top: unset;
+      .link {
+        position: relative;
+        color: index.$color-magenta-700;
+        font-size: 0.9rem;
+        @include index.transition(all 0.7s);
+        &:after {
+          content: "\f105";
+          position: relative;
+          left: 10px;
+          top: 0rem;
+          font-size: 0.85rem;
+          font-family: "Font Awesome 6 Free";
+          color: index.$color-magenta-700;
+          font-weight: 600;
+          @include index.transition(all 0.7s);
+        }
+      }
+    }
+    &:hover {
+      background-color: index.$color-white;
+      @include index.box-shadow(0px 2px 44px rgba(110, 110, 110, 0.26));
+      .card-body {
+        img {
+          opacity: 1;
+        }
+        p {
+          opacity: 1;
+        }
+      }
+      .card-footer {
+        .link {
+          font-size: 1rem;
+          &:before {
+            font-size: 0.95rem;
+            top: 0rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 768px) {
+
+}
+@media (min-width: 1900px) {
+
+}

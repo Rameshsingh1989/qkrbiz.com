@@ -1,0 +1,10 @@
+@use '@/styles/base/index';
+.keen-dot{
+    background-color: index.$color-pink-500;
+    opacity: unset;
+    width: 0.75rem;
+    height: 0.75rem;
+    &.is-active{
+        background-color: index.$color-magenta-700;
+    }
+}

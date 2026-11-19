@@ -1,0 +1,155 @@
+
+  .slick-slider-dots{
+    position: relative;
+    z-index: 1;
+
+  }
+  .process{
+    padding: 3rem 0rem;
+    .row{
+        .col-lg-3{
+            h2{
+                font-size: 3rem;
+                font-weight: 600;
+            }
+            p{
+                font-size: 1.25rem;
+                font-weight: 600;
+            }
+        }
+    }
+  }
+    .question-design {
+        .card {
+            border: unset;
+            .card-space {
+            padding: 1.5rem 1.5rem 1.5rem 6.5rem;
+            font-size: 0.7rem;
+            z-index: 2;
+            }
+            &.q_img {
+            width: 100%;
+            height: 155px;
+            margin-bottom: 1.5rem;
+            position: relative;
+            &::before {
+                position: absolute;
+                top: 0;
+                content: "";
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+            }
+            &.q_img_1 {
+            &:before {
+                background: url('@/assets/images/Qkrtenders/q_img_1.svg') no-repeat;
+                background-size: 100%;
+            }
+            }
+            &.q_img_2 {
+            &:before {
+                background: url('@/assets/images/Qkrtenders/q_img_2.svg') no-repeat;
+                background-size: 100%;
+            }
+            }
+            &.q_img_5 {
+            &:before {
+                background: url('@/assets/images/Qkrtenders/q_img_3.svg') no-repeat;
+                background-size: 100%;
+            }
+            }
+            &.q_img_4 {
+            &:before {
+                background: url('@/assets/images/Qkrtenders/q_img_4.svg') no-repeat;
+                background-size: 100%;
+            }
+            }
+            &.q_img_3 {
+            &:before {
+                background: url('@/assets/images/Qkrtenders/q_img_5.svg') no-repeat;
+                background-size: 100%;
+            }
+            }
+            &.q_img_6 {
+            &:before {
+                background: url('@/assets/images/Qkrtenders/q_img_6.svg') no-repeat;
+                background-size: 100%;
+            }
+            }
+        }
+    }
+
+.question-sales {
+    .card {
+        &.q_img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            aspect-ratio: 360 / 195;
+            margin-bottom: 1.5rem;
+        }
+        .card-space {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 1rem 1rem 1rem 38%;
+            font-size: clamp(0.85rem, 1vw, 1.125rem);
+            line-height: 1.45;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .process {
+        .row {
+            .col-lg-3 {
+                text-align: center;
+                width: 20%;
+            }
+        }
+    }
+    .question-sales {
+        .card {
+            .card-space {
+                font-size: clamp(0.8rem, 1vw, 1rem);
+                padding-left: 42%;
+            }
+        }
+    }
+}
+
+// @media (min-width: 1200px) {
+//     .question-sales {
+//         .card {
+//             .card-space {
+//                 font-size: 0.875rem;
+//                 padding-left: 42%;
+//             }
+//         }
+//     }
+// }
+
+// @media (min-width: 1400px) {
+//     .question-sales {
+//         .card {
+//             .card-space {
+//                 font-size: 0.95rem;
+//                 padding-left: 42%;
+//             }
+//         }
+//     }
+// }
+
+// @media (min-width: 1900px) {
+//     .question-sales {
+//         .card {
+//             .card-space {
+//                 font-size: 1.125rem;
+//                 padding-left: 44%;
+//             }
+//         }
+//     }
+// }

@@ -1,0 +1,6 @@
+@use '../base/index';
+
+.card {
+    border-color: index.$color-gray-400;
+
+}

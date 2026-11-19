@@ -1,0 +1,16 @@
+@use '@/styles/base/index';
+
+.wf-card {
+  border-color: index.$color-gray-400;
+  box-shadow: 0 1px 2px index.$shadow-05, 0 12px 32px index.$shadow-08;
+}
+.wf-card-alt {
+  border-color: index.$color-magenta-200;
+}
+.wf-text-gray {
+  color: index.$color-gray-700;
+}
+.wf-guard {
+  padding: 1.25rem 1.375rem;
+  border-color: index.$color-gray-400 !important;
+}

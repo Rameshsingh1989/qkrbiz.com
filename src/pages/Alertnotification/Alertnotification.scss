@@ -1,0 +1,23 @@
+@use '@/styles/base/index';
+
+.alert-card {
+  border-color: index.$color-gray-400;
+  box-shadow: 0 1px 2px index.$shadow-05, 0 12px 32px index.$shadow-08;
+}
+.alert-text-gray {
+  color: index.$color-gray-700;
+}
+.alert-app-box {
+  padding: 1rem 1.125rem;
+}
+.alert-step-card {
+  padding: 1.125rem 1rem;
+  border-color: index.$color-gray-400 !important;
+}
+.alert-step-no {
+  width: 1.75rem;
+  height: 1.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

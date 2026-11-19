@@ -1,0 +1,219 @@
+@use 'sass:color';
+@use '@/styles/base/index';
+
+.hra-calculator {
+  padding: 3rem 0 4rem;
+  background:
+    radial-gradient(circle at 15% 0%, rgba(index.$color-magenta-800, 0.45), transparent 55%),
+    linear-gradient(180deg, index.$color-magenta-700 0%, index.$color-pink-700 60%, index.$color-magenta-700 100%);
+  color: index.$color-white;
+
+  .hc-hero {
+    margin-bottom: 2.5rem;
+  }
+
+  .hc-badge {
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 1.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: index.$color-pink-100;
+    background-color: rgba(index.$color-white, 0.1);
+    @include index.border-radius(0.25rem);
+  }
+
+  .hc-title {
+    margin-bottom: 0.75rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: index.$color-white;
+  }
+
+  .hc-subtitle {
+    max-width: 26rem;
+    margin-bottom: 0;
+    font-size: 1.0625rem;
+    color: index.$color-magenta-100;
+  }
+
+  .hc-card {
+    display: flex;
+    flex-direction: column;
+    @include index.border-radius(0.5rem);
+    overflow: hidden;
+  }
+
+  .hc-card-title {
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  // ── Input card ───────────────────────────────────────────
+  .hc-input-card {
+    margin: 0;
+    padding: 2rem;
+    background-color: index.$color-white;
+    color: index.$color-gray-800;
+
+    .hc-card-title {
+      color: index.$color-gray-800;
+    }
+  }
+
+  .hc-label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: index.$color-gray-800;
+  }
+
+  .form-control {
+    height: 3.125rem;
+    font-size: 0.9375rem;
+    color: index.$color-gray-800;
+    border: 1px solid index.$color-gray-400;
+    @include index.border-radius(0.25rem);
+
+    &:focus {
+      border-color: index.$color-magenta-500;
+      box-shadow: 0 0 0 0.2rem rgba(index.$color-magenta-500, 0.15);
+    }
+  }
+
+  .hc-metro {
+    margin: 2rem 0;
+    padding: 0;
+    border: 0;
+
+    legend {
+      float: none;
+      margin-bottom: 0.75rem;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: index.$color-gray-800;
+    }
+  }
+
+  .hc-radio {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 1.5rem;
+    font-size: 0.9375rem;
+    color: index.$color-gray-800;
+    cursor: pointer;
+
+    input {
+      width: 1.125rem;
+      height: 1.125rem;
+      margin: 0;
+      accent-color: index.$color-magenta-500;
+      cursor: pointer;
+    }
+  }
+
+  .hc-submit {
+    width: 100%;
+    margin-top: auto;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: index.$color-white;
+    background-color: index.$color-magenta-500;
+    border: 0;
+    @include index.border-radius(0.25rem);
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: index.$color-magenta-700;
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 0.25rem rgba(index.$color-magenta-500, 0.25);
+    }
+  }
+
+  // ── Result card ──────────────────────────────────────────
+  .hc-result-card {
+    background-color: index.$color-magenta-900;
+    color: index.$color-white;
+
+    .hc-card-title {
+      margin-bottom: 0.75rem;
+      color: index.$color-white;
+    }
+  }
+
+  .hc-result-body {
+    flex: 1;
+    padding: 2rem 2rem 1rem;
+    background-color: color.mix(index.$color-magenta-800, index.$color-pink-800, 35%);
+  }
+
+  .hc-result-hint {
+    margin-bottom: 1.5rem;
+    font-size: 0.75rem;
+    color: index.$color-magenta-200;
+  }
+
+  .hc-result-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 0;
+    font-size: 0.9375rem;
+    color: index.$color-magenta-100;
+
+    & + .hc-result-row {
+      border-top: 1px solid rgba(index.$color-white, 0.15);
+    }
+
+    strong {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: index.$color-white;
+      white-space: nowrap;
+    }
+  }
+
+  .hc-result-total {
+    padding: 0.5rem 2rem;
+    background-color: index.$color-magenta-800;
+    font-weight: 600;
+
+    .hc-result-row {
+      color: index.$color-white;
+    }
+  }
+
+  .hc-note {
+    margin: 1.5rem 0 0;
+    font-size: 0.8125rem;
+    color: index.$color-magenta-200;
+  }
+
+  @media (max-width: 767.98px) {
+    padding: 2rem 0 3rem;
+
+    .hc-title {
+      font-size: 2.25rem;
+    }
+
+    .hc-input-card,
+    .hc-result-body {
+      padding: 1.5rem;
+    }
+
+    .hc-result-total {
+      padding: 0.25rem 1.5rem;
+    }
+  }
+}

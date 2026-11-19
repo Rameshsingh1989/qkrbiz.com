@@ -1,0 +1,268 @@
+@use '@/styles/base/index';
+
+.integrated-platform {
+    padding: 2.85rem 0rem;
+
+    .integrated-platform-table {
+        border: 1px solid index.$color-gray-200;
+        border-radius: 1rem;
+        overflow: hidden;
+
+        .ipt-row {
+            display: grid;
+            grid-template-columns: 1.1fr 1.4fr 1.4fr;
+            border-bottom: 1px solid index.$color-gray-500;
+
+            &:last-child {
+                border-bottom: 0;
+            }
+
+            .ipt-cell {
+                padding: 1.25rem 1.5rem;
+                font-size: 1rem;
+                color: index.$color-gray-800;
+                display: flex;
+                align-items: flex-start;
+                gap: 0.75rem;
+                line-height: 1.5;
+            }
+
+            .ipt-affects {
+                background-color: index.$color-gray-100;
+                font-weight: 600;
+            }
+
+            .ipt-integrated {
+                background-color: index.$color-magenta-50;
+            }
+
+            .ipt-icon {
+                flex-shrink: 0;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 1.25rem;
+                height: 1.25rem;
+                font-size: 1rem;
+                line-height: 1;
+                margin-top: 0.125rem;
+            }
+
+            .ipt-icon-x {
+                color: index.$color-magenta-700;
+            }
+
+            .ipt-icon-check {
+                color: index.$color-magenta-700;
+            }
+        }
+
+        .ipt-head {
+            .ipt-cell {
+                font-weight: 600;
+                font-size: 1.125rem;
+            }
+
+            .ipt-separate {
+                background-color: index.$color-magenta-700;
+                color: index.$color-white;
+            }
+
+            .ipt-integrated {
+                background-color: index.$color-magenta-50;
+                color: index.$color-magenta-700;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .integrated-platform {
+        .integrated-platform-table {
+            .ipt-row {
+                grid-template-columns: 1fr;
+
+                .ipt-cell {
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.hr-payroll-structure {
+    padding: 2.85rem 0rem;
+ 
+      ul.icon-magenta{
+        padding: 0;
+        li{
+            position: relative;
+            z-index: 1;
+            padding: 10px 10px 10px 40px;
+            list-style: none;
+            &::before{
+                position: absolute;
+                z-index: 3;
+                content: "";
+                left: 6px;
+                top: 18px;
+                width: 8px;
+                height: 8px;
+                background-color: index.$color-magenta-600;
+                border-radius: 50%;
+            }
+            &::after{
+                position: absolute;
+                z-index: 2;
+                content: "";
+                left: 0;
+                top: 12px;
+                width: 20px;
+                height: 20px;
+                background-color: index.$color-magenta-50;
+                border-radius: 5px;
+            }
+        }
+    }
+    .salary-back-link {
+        display: inline-block;
+        text-decoration: underline;
+        font-size: 1.125rem;
+    }
+  
+}
+.compliance-fear {
+    background-color: index.$color-magenta-700;
+    padding: 4rem 0;
+    h2, p{
+       color: index.$color-white;
+    }
+    .border-magenta-rounded{
+      color: index.$color-white;
+      border-color: index.$color-white;
+    }
+    .compliance-pill {
+        display: inline-block;
+        color: index.$color-white;
+        border: 1px solid index.$color-white;
+        background-color: transparent;
+        padding: 0.625rem 2rem;
+        border-radius: 999px;
+    }
+
+    .compliance-card {
+        background-color: index.$color-white;
+        border-radius: 1rem;
+        padding: 1.75rem;
+        display: flex;
+        flex-direction: column;
+        .compliance-title {
+            margin-bottom: 1rem;
+        }
+        .compliance-desc {
+            font-size: 0.95rem;
+            color: index.$color-gray-700;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        .img{
+            width: 3rem;
+            height: 3rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+.go-deep-either-side {
+    padding: 2.85rem 0rem;
+    .go-deep-card {
+        background-color: index.$color-magenta-50;
+        border-radius: 1rem;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+
+        .go-deep-label {
+            font-size: 0.95rem;
+            color: index.$color-gray-700;
+            margin-bottom: 1rem;
+        }
+
+        .go-deep-title {
+            font-size: 1.75rem;
+            color: index.$color-gray-800;
+            margin-bottom: 1rem;
+        }
+
+        .go-deep-desc {
+            font-size: 1rem;
+            color: index.$color-gray-700;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .go-deep-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.75rem;
+
+            .go-deep-tag {
+                display: inline-block;
+                background-color: transparent;
+                color: index.$color-gray-700;
+                background-color: index.$color-magenta-100;
+                border: 1px solid index.$color-magenta-200;
+                padding: 0.5rem 1rem;
+                border-radius: 999px;
+                font-size: 0.875rem;
+            }
+        }
+
+        .go-deep-btn {
+            display: inline-block;
+            background-color: index.$color-magenta-800;
+            color: index.$color-white;
+            padding: 0.875rem 1.75rem;
+            border-radius: 0.75rem;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            align-self: flex-start;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    // .payroll-stats {
+    //     .col-lg {
+    //         flex: 1 0 0;
+    //     }
+    //     .stat-divider {
+    //         &::before {
+    //             display: block;
+    //             position: absolute;
+    //             top: 25%;
+    //             left: 0;
+    //             width: 1px;
+    //             height: 50%;
+    //             background-color: index.$color-gray-200;
+    //         }
+    //     }
+    // }
+    .hr-payroll-structure{
+         .ul-icon{
+            li{
+                margin: 0.5rem 0rem;
+
+            }
+         }
+    }
+
+}

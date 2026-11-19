@@ -1,0 +1,114 @@
+@use '@/styles/base/index';
+
+.game-changer{
+    .card{
+        margin-bottom: 1.5rem;
+        border: 1px solid index.$color-white;
+        transition: transform 0.3s ease;
+        border-left-width: 0.325rem;
+        border-radius:1.125rem;
+        // box-shadow:0 3px 25px rgba(0, 0, 0, .078); 
+        &.card-magenta{
+            border-color: index.$color-magenta-700;
+        }
+        &.card-info{
+            border-color: index.$color-alice-600;
+        }
+        &.card-pink{
+            border-color: index.$color-pink-500;
+        }
+        &.card-success{
+            border-color: index.$color-success-500;
+        }
+         &.card-warning{
+            border-color: index.$color-orange-800;
+        }
+        &:hover {
+            transform: translateY(-10px);
+        }
+        .card-body{
+            padding: 1.5rem 1.5rem;
+            .hr-icon {
+                width: 3.25rem;
+                height: 3.25rem;
+                margin-bottom: 1.5rem;
+                img{
+                    width: 100%;
+                } 
+            }
+            p{
+                font-size: 1.125rem;
+            }
+        }
+    }
+}
+.revolutionizing-hr{
+    padding: 2rem 0rem;
+   .card{
+        margin-bottom: 1.5rem;
+        border-radius: 1rem;
+        border: unset;
+        box-shadow:0 3px 25px rgba(0, 0, 0, .078); 
+        .card-body{
+          padding: 1.5rem;
+          .ul-icon{
+            margin-bottom: 0;
+          }
+        }
+   }
+}
+
+@media (min-width: 768px){
+
+}
+@media (min-width: 992px){
+   .game-changer{
+      .card{
+          margin-bottom: 2.5rem;
+          .card-body{
+              padding: 2.5rem 2.5rem;
+          }
+        }
+    }
+ 
+}       
+@media (min-width: 1200px){
+
+}
+@media (min-width: 1400px){
+    
+}
+@media (min-width: 1900px){
+
+
+  .revolutionizing-hr{
+    padding-bottom: 3rem;
+    .revolutionizing-img{
+        padding-left: 0rem;
+        padding-right: 0rem;
+        position: relative;
+        z-index: 0;
+        height: 505px;
+      .img-ab{
+        top: -1rem;
+        left: -2rem;
+        position: absolute;
+        z-index: 1;
+        max-width: 112%;
+      }
+    }
+   .card{
+        width: 90%;
+        &.mr-auto{
+                margin-left: auto !important;
+        }
+        &.ml-auto{
+                margin-left: auto !important;
+        }
+        &.mt-5 {
+            margin-top: 7rem !important;
+        }
+   }
+  }
+    
+}

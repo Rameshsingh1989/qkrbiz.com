@@ -1,0 +1,15 @@
+// @use '@/styles/base/index'; 
+
+.security-page{
+    .card{
+        margin-bottom: 1.5rem;
+        .card-body{
+            padding: 1.5rem;
+             .icons{
+                width: 3.5rem;
+                height: 3.5rem;
+                margin-bottom: 1.85rem;
+            }
+        }
+    }
+}

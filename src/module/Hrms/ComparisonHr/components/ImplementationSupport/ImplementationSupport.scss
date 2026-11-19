@@ -1,0 +1,129 @@
+@use '@/styles/base/index';
+
+.implementation-support {
+  padding: 2.5rem 0;
+  .impl-card {
+    border: 1px solid index.$color-gray-400;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+    .card-body {
+      padding: 1.75rem;
+    }
+  }
+  .impl-card__header {
+    padding: 1.75rem 1rem 0 1rem;
+    border-bottom: 0;
+  }
+  .impl-card__title {
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin: 0;
+    color: index.$color-gray-800;
+  }
+  > .impl-card > .card-body {
+    padding: 0 1.5rem 1.5rem;
+  }
+  .impl-side {
+    border: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    .card-body {
+      padding: 1.75rem;
+    }
+    .keka-body {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &--left {
+      background-color: index.$color-magenta-700;
+    }
+    &--right {
+       &.bg-purple-violet{
+        background-color: index.$color-violet-600;
+       }
+       &.bg-purple-electric{
+        background-color: index.$color-purple-600;
+       }
+      h4{
+        font-size: 1.75rem;
+      }
+    }
+  }
+  .impl-side__logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    img {
+      background-color: index.$color-white;
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem;
+      max-height: 2.5rem;
+      object-fit: contain;
+    }
+  }
+  .impl-side__logo-text {
+    background-color: index.$color-white;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: index.$color-violet-600;
+    &::after {
+      content: "*";
+      color: index.$color-magenta-700;
+      margin-left: 0.125rem;
+    }
+  }
+  .impl-feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .impl-feature {
+    border: 0;
+    border-radius: 0.75rem;
+    background-color:transparent;
+    border: 1px solid index.$color-magenta-600;
+    .card-body {
+      padding: 1rem 1.25rem;
+    }
+  }
+  .impl-feature__title {
+    font-weight: 600;
+    font-size: 1.325rem;
+    color: index.$color-white;
+    margin-bottom: 0.5rem;
+  }
+  .impl-feature__desc {
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    color: index.$color-magenta-50;
+    margin: 0;
+  }
+  .impl-side__desc {
+    color: index.$color-white;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+  }
+}
+@media (max-width: 767px) {
+    .implementation-support {
+        padding: 2.5rem 0;
+        .impl-card{
+          border: unset;
+          box-shadow: unset;
+          .card-body {
+                padding:0;
+          }
+          .card{
+            .card-body {
+                padding: 1.75rem 1rem;
+            }
+          }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+@use '@/styles/base/index';
+
+.who-should-choose {
+  padding: 2.5rem 0;
+  .card{
+    border-radius: 1rem;
+  }
+  .qkrh-bg{
+    .text-purple{
+       color: index.$color-violet-600;
+    }
+    .who-list__icon{
+      color: index.$color-magenta-700;
+    }
+  }
+  .compare-bg{
+    .text-purple{
+       color: index.$color-violet-600;
+    }
+    .who-list__icon{
+      color: index.$color-violet-600;
+    }
+  }
+  .greythr{
+     .text-purple{
+       color: index.$color-purple-600;
+    }
+    .who-list__icon{
+      color: index.$color-purple-600;
+    }
+  }
+  .hrone-bg{
+     .text-purple{
+       color: index.$color-success-900;
+    }
+    .who-list__icon{
+      color: index.$color-success-900;
+    }
+  }
+  
+  .text-underline{
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-thickness: 1px;
+  }
+  .who-list{
+    li{
+        font-size: 1.125rem;
+        color: index.$color-gray-700;
+         .who-list__icon {
+          flex: 0 0 1.85rem;
+          font-size: 1.5rem;
+          margin-top: 0.25rem;
+          width: 2rem;
+          height: 2rem;
+        }
+     }
+  }
+}
+@media (max-width: 767px) {
+  .who-should-choose {
+      padding: 1.5rem 0;
+  }
+}

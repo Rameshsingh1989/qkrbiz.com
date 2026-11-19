@@ -1,0 +1,156 @@
+@use '@/styles/base/index';
+
+.qkrvisit-addon {
+    /* ---------- Top banner ---------- */
+    .qkrvisit-banner {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.5rem;
+        background-color: index.$color-magenta-50;
+        border: 1px solid index.$color-magenta-100;
+        border-radius: 1rem;
+        padding: 2.5rem 2.5rem;
+        margin-bottom: 3rem;
+        .banner-icon {
+            img {
+                width: 8.5rem;
+                height: 4.5rem;
+            }
+        }
+        .banner-text {
+            text-align: center;
+            margin: 0;
+            font-size: 1.25rem;
+            line-height: 1.5;
+            color: index.$color-gray-800;
+            strong {
+                color: index.$color-magenta-900;
+                font-weight: 600;
+            }
+        }
+    }
+    /* ---------- Main card ---------- */
+    .qkrvisit-addon-card {
+        border: 1px solid index.$color-gray-300;
+        border-radius: 1.25rem;
+        padding: 2.5rem 2rem;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+    }
+    .addon-intro {
+        .addon-badge {
+            display: inline-block;
+            background-color: index.$color-pink-50;
+            color: index.$color-magenta-700;
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 0.4rem 1rem;
+            border-radius: 2rem;
+            margin-bottom: 1.25rem;
+        }
+        .addon-name {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: index.$color-gray-900;
+            margin-bottom: 1rem;
+        }
+        .addon-desc {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            color: index.$color-gray-600;
+            margin-bottom: 1.75rem;
+        }
+        .addon-cta {
+            display: inline-block;
+            background-color: index.$color-magenta-900;
+            color: index.$color-white;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 0.85rem 2rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+            transition: background-color 0.25s ease;
+            &:hover {
+                background-color: index.$color-magenta-800;
+            }
+        }
+    }
+    /* ---------- Feature columns ---------- */
+    .feature-col {
+        .feature-col-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: index.$color-gray-500;
+            margin-bottom: 1rem;
+        }
+
+        .feature-check-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                position: relative;
+                padding: 0.4rem 0 0.4rem 1.75rem;
+                font-size: 1.1rem;
+                line-height: 1.5;
+                color: index.$color-gray-900;
+
+                &::before {
+                    font-family: "Font Awesome 6 Free";
+                    content: "\f00c";
+                    position: absolute;
+                    left: 0;
+                    top: 0.4rem;
+                    color: index.$color-magenta-900;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    @media (min-width: 992px) {
+        .qkrvisit-banner{
+          gap: 2.5rem;
+          flex-direction: row;
+          .banner-text {
+            text-align: left;
+          }
+        }
+        // .feature-col + .feature-col {
+        //     border-left: 1px solid index.$color-gray-200;
+        // }
+        .feature-col{
+            + .feature-col {
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: -12px;
+                    width: 1px;
+                    height: 100%;
+                    background-color: index.$color-gray-200;
+                }
+            }
+        }
+    }
+    @media (min-width: 1400px) {
+        .feature-col{
+            + .feature-col {
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: -12px;
+                    width: 1px;
+                    height: 100%;
+                    background-color: index.$color-gray-200;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,191 @@
+@use '@/styles/base/index';
+
+.price-plans {
+    .plan-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: index.$color-white;
+        border: 1px solid index.$color-gray-400;
+        border-radius: 1.25rem;
+        padding: 2.75rem 1.75rem 2.25rem;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+        &:hover {
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.09);
+            transform: translateY(-4px);
+        }
+        &.popular {
+            border-top: 1px solid index.$color-magenta-700;
+            border-left: 1px solid index.$color-magenta-700;
+            border-right: 1px solid index.$color-pink-700;
+            border-bottom: 1px solid index.$color-pink-700;
+            box-shadow: 0 4px 18px rgba(index.$color-magenta-700, 0.18);
+        }
+    }
+
+    /* ---------- Popular ribbon ---------- */
+    .popular-ribbon {
+        position: absolute;
+        top: -0.95rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: index.$color-magenta-700;
+        color: index.$color-white;
+        padding: 0.45rem 1.5rem;
+        border-radius: 2rem;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        white-space: nowrap;
+        box-shadow: 0 6px 16px rgba(index.$color-magenta-700, 0.35);
+    }
+
+    /* ---------- Card head ---------- */
+    .plan-head {
+        text-align: center;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid index.$color-gray-200;
+    }
+
+    .plan-name {
+        font-size: 1.6rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: index.$color-gray-900;
+        margin-bottom: 0.5rem;
+    }
+
+    .plan-tagline {
+        color: index.$color-gray-700;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 1.25rem;
+    }
+
+    .plan-price {
+        margin-bottom: 0.35rem;
+        .amount {
+            font-size: 2.75rem;
+            font-weight: 700;
+            color: index.$color-gray-800;
+        }
+        .unit {
+            font-size: 1rem;
+            color: index.$color-gray-700;
+            margin-left: 0.25rem;
+        }
+    }
+
+    .users-line {
+        color: index.$color-magenta-700;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+    }
+
+    .sub-price-line {
+        color: index.$color-gray-800;
+        font-weight: 600;
+        font-size: 0.95rem;
+        margin-bottom: 0rem;
+    }
+
+    .legal-entities-pill {
+        display: inline-block;
+        padding: 0.4rem 1.1rem;
+        background-color: index.$color-pink-50;
+        border: 1px solid index.$color-pink-200;
+        border-radius: 2rem;
+        color: index.$color-magenta-700;
+        font-size: 0.82rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+
+    /* ---------- CTA ---------- */
+    .plan-cta {
+        display: block;
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border-radius: 2rem;
+        font-size: 0.95rem;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+        transition: all 0.25s ease;
+
+        &.outline {
+            border: 1px solid index.$color-gray-300;
+            color: index.$color-gray-900;
+            background-color: index.$color-white;
+            &:hover {
+                border-color: index.$color-magenta-700;
+                color: index.$color-magenta-700;
+            }
+        }
+    }
+
+    /* ---------- Features ---------- */
+    .plan-features {
+        padding-top: 1rem;
+    }
+
+    .features-heading {
+        font-size: 1.075rem;
+        font-weight: 700;
+        color: index.$color-gray-800;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid index.$color-gray-400;
+    }
+
+    .feature-group {
+        margin-bottom: 1.25rem;
+    }
+
+    .feature-category {
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        color: index.$color-gray-800;
+        margin-bottom: 0.65rem;
+    }
+
+    .feature-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            position: relative;
+            padding: 0.3rem 0 0.3rem 1.35rem;
+            font-size: 0.92rem;
+            color: index.$color-gray-700;
+            line-height: 1.45;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0.6rem;
+                border-style: solid;
+                // border-width: 5px 0 5px 7px;
+                // border-color: transparent transparent transparent index.$color-magenta-700;
+                border-width: 3px 3px 3px 3px;
+                border-color: index.$color-magenta-800;
+                border-radius: 50%;
+               
+            }
+        }
+    }
+
+    @media (min-width: 1900px) {
+        .plan-card {
+            padding: 3.25rem 2.25rem 2.75rem;
+        }
+    }
+}

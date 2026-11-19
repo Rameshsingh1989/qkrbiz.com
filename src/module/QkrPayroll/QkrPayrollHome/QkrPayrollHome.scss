@@ -1,0 +1,452 @@
+@use '@/styles/base/index';
+
+
+.payroll-system{
+    padding: 2.5rem 0;
+    .card{ 
+        border-top-right-radius: 0rem;
+        border-top-left-radius: 0rem;
+        border-bottom-right-radius: 1.75rem;
+        border-bottom-left-radius: 1.75rem;
+        box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+        transition: transform 0.4s, 
+        box-shadow 0.3s;
+        &.bg-greens{
+            background-color:  index.$color-forest-green-50;
+            border-color:index.$color-forest-green-50;
+            .arrow-link{
+                color: index.$color-forest-green-700;
+            }
+            &:hover{
+                border-bottom: 7px solid index.$color-forest-green-700;
+           }
+        }
+        &.bg-magentas{
+            background-color: index.$color-magenta-50;
+            border-color:index.$color-magenta-50;
+            .arrow-link{
+                color: index.$color-magenta-700;
+            }
+            &:hover{
+                border-bottom: 7px solid index.$color-magenta-700;
+            }
+        }
+        &.bg-infos{
+            background-color: index.$color-primary-100;
+            border-color:index.$color-primary-100;
+            .arrow-link{
+                 color: index.$color-primary-700;
+            }
+            &:hover{
+                border-bottom: 7px solid index.$color-primary-700;
+            }
+        }
+         &:hover{
+                border-top-right-radius: 0rem;
+                border-top-left-radius: 0rem;
+                border-bottom-right-radius: 1.75rem;
+                border-bottom-left-radius: 1.75rem;
+                transform: translateY(-5px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                transition: all 0.4s ease;
+        }
+        .card-header{
+            padding: 0;
+        }
+        
+        .card-body{
+            padding: 2rem 1.75rem;
+            .img{
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 0.5rem;
+            }
+            
+        }
+    } 
+    &.payroll-foundation{
+        .foundation-slider{
+            .keen-slider__slide{
+                height: auto;
+                display: flex;
+            }
+            .card{
+                width: 100%;
+                border-radius: 1rem;
+                border: none;
+                .card-body{
+                    padding: 0;
+                    position: relative;
+                }
+                .card-footer{
+                    background-color: index.$color-gray-600;
+                    padding: 1.25rem 1.7rem;
+                    border-bottom-right-radius: 1rem;
+                    border-bottom-left-radius: 1rem;
+                    .arrow-link {
+                        font-size: 1.25rem;
+                        color: index.$color-white ;
+                    }
+                }
+            }
+            .foundation-controls{
+                .foundation-pagination{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 0.5rem;
+                    .keen-dot{
+                        width: 12px;
+                        height: 12px;
+                        padding: 0;
+                        border: 0;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        background-color: index.$color-gray-300;
+                        opacity: 1;
+                        transition: background-color 0.2s ease;
+                        &.is-active{
+                            background-color: index.$color-magenta-700;
+                        }
+                    }
+                }
+                .foundation-nav{
+                    margin-top: 1rem;
+                    .nav-btn{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        border: 1px solid index.$color-gray-400;
+                        background-color: index.$color-white;
+                        color: index.$color-gray-800;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: all 0.2s ease;
+                        &:hover{
+                            background-color: index.$color-magenta-700;
+                            border-color: index.$color-magenta-700;
+                            color: index.$color-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.accurate-payroll{
+    padding: 2.5rem 0rem;
+}
+
+/* Disabled state for the external carousel nav buttons (at first/last slide) */
+.foundation-nav .nav-btn,
+.accuracy-nav .nav-btn {
+    &:disabled,
+    &.is-disabled {
+        opacity: 0.35;
+        cursor: default;
+        pointer-events: none;
+    }
+}
+
+.payroll-problems{
+    padding: 2.5rem 0;
+    .problem-card{
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 1.5rem;
+        height: 100%;
+        border-radius: 1.5rem;
+        .problem-head{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            .problem-icon{
+                width: 3.5rem;
+                height: 3.5rem;
+                img{
+                    max-width:100%
+                }
+            }
+        }
+        .problem-content{
+            position: relative;
+            background:rgba(255, 255, 255, 0.52);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            flex: 1 1 auto;
+            overflow: hidden;
+            p{
+                position: relative;
+                z-index: 1;
+                font-size: 1rem;
+                color: index.$color-gray-700;
+                line-height: 1.6;
+            }
+        }
+        &.bg-blue{
+            background-color: index.$color-deepsky-50;
+        }
+        &.bg-rose{
+            background-color: index.$color-danger-50;
+
+        }
+        &.bg-violets{
+            background-color: index.$color-violet-50;
+        }
+        &.bg-viole{
+            background-color: index.$color-violet-50;
+        }
+        &.bg-pink{
+            background-color: index.$color-pink-50;
+        }
+        &.bg-peach{
+            background-color: index.$color-orange-50;
+        }
+    }
+}
+
+.run-payroll{
+    padding: 2.5rem 0rem;
+    .run-payroll-card{
+        background-color: index.$color-violet-50;
+        border-radius: 1.5rem;
+        overflow: hidden;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+        .run-payroll-tabs{
+            background-color: index.$color-violet-200;
+            padding: 1rem 1.25rem;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            
+            .stage-tab{
+                background: transparent;
+                border: 0;
+                padding: 0.75rem 0.25rem;
+                font-size: 1.125rem;
+                font-weight: 500;
+                color: index.$color-gray-800;
+                position: relative;
+                transition: color 0.2s ease;
+                &.active{
+                    font-weight: 600;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        height: 3px;
+                        background-color: index.$color-gray-800;
+                        border-radius: 2px;
+                    }
+                }
+                &:hover{
+                    color: index.$color-magenta-700;
+                }
+            }
+        }
+        .run-payroll-body{
+            background-color: index.$color-violet-50;
+            padding: 2rem;
+            .run-payroll-info{
+                background-color: index.$color-white;
+                border-radius: 1rem;
+                padding: 2rem 1.75rem;
+                height: 100%;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+                .info-title{
+                    font-size: 1.325rem;
+                    margin-bottom: 1.25rem;
+                }
+                .info-features{
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    li{
+                        padding: 1rem 0;
+                        font-size: 1.25rem;
+                        color: index.$color-gray-600;
+                        border-bottom: 1px solid index.$color-gray-400;
+                        &:last-child{
+                            border-bottom: 0;
+                        }
+                    }
+                }
+            }
+            .run-payroll-preview{
+                background-color: index.$color-white;
+                border-radius: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .img{
+                    border-radius: 1rem;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}
+.built-accuracy{
+     padding: 2.5rem 0rem;
+    .accuracy-slider{
+        .keen-slider__slide{
+            height: auto;
+            display: flex;
+        }
+        .accuracy-card{
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            .accuracy-card-img{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 1.5rem;
+                .img{
+                    object-fit: contain;
+                    border-radius: 1.5rem;
+                }
+            }
+            .accuracy-card-label{
+                padding: 1.75rem 1.75rem;
+                font-size: 1.5rem;
+                text-align: center;
+                font-weight: 500;
+                color: index.$color-gray-900;
+                border-radius: 1.5rem;
+            }
+            &.bg-1{
+                .accuracy-card-label{
+                    background-color: index.$color-forest-green-300;
+                }
+            }
+            &.bg-2{
+                .accuracy-card-label{
+                    background-color: index.$color-slateblue-300;
+                }
+            }
+            &.bg-3{
+                .accuracy-card-label{
+                    background-color: index.$color-danger-300;
+                }
+            }
+            &.bg-4{
+                .accuracy-card-label{
+                    background-color: index.$color-purple-300;
+                }
+            }
+            &.bg-5{
+                .accuracy-card-label{
+                    background-color: index.$color-success-200;
+                }
+            }
+            &.bg-6{
+                .accuracy-card-label{
+                    background-color: index.$color-green-300;
+                }
+            }
+        }
+        .accuracy-controls{
+            flex-direction: column;
+            .accuracy-pagination{
+                 margin-bottom: 1.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.5rem;
+                .keen-dot{
+                    width: 12px;
+                    height: 12px;
+                    padding: 0;
+                    border: 0;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    background-color: index.$color-gray-300;
+                    opacity: 1;
+                    transition: background-color 0.2s ease;
+                    &.is-active{
+                        background-color: index.$color-gray-800;
+                    }
+                }
+            }
+            .accuracy-nav{
+               
+                .nav-btn{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    border: 1px solid index.$color-gray-400;
+                    background-color: index.$color-white;
+                    color: index.$color-gray-800;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all 0.2s ease;
+                    &:hover{
+                        background-color: index.$color-magenta-700;
+                        border-color: index.$color-magenta-700;
+                        color: index.$color-white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 992px){
+    .payroll-problems{
+        .problem-card{
+            padding: 1.85rem;
+            gap: 1.25rem;
+            &.bg-violets{
+                .problem-content{
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        top: 1rem;
+                        bottom: 0rem;
+                        width: 380px;
+                        background: url('@/assets/images/qkrpayroll/wrong-pt.svg') no-repeat;
+                        z-index: 0;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (min-width: 1400px){
+    .run-payroll{
+        .run-payroll-card{
+            .run-payroll-tabs{
+                padding: 1rem 1.5rem;
+                .stage-tab{
+                    font-size: 1.5rem;
+                }
+            }
+            .run-payroll-body{
+                .run-payroll-info{
+                    .info-title{
+                        font-size: 1.625rem;
+                    }
+                    .info-features{
+                        li{
+                             padding: 1.85rem 0;
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
